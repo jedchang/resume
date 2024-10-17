@@ -1,0 +1,102 @@
+@import "bootstrap/scss/bootstrap-grid.scss";
+
+// @import '~bootstrap/scss/functions';
+// @import '~bootstrap/scss/variables';
+// @import '~bootstrap/scss/mixins';
+
+// @import '~bootstrap/scss/nav';
+// @import '~bootstrap/scss/bootstrap-grid';
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family:
+    "Microsoft JhengHei",
+    "微軟正黑體",
+    -apple-system,
+    Helvetica,
+    Arial,
+    sans-serif;
+  // font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  // font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #fff;
+  background-color: $primaryBgColor;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+a {
+  display: inline-block;
+  background-color: none;
+  border: none;
+  color: $primaryTextColor;
+  outline: 0;
+  text-decoration: none;
+  transition: $setTransition;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+  li {
+    line-height: 1.6;
+  }
+}
+
+p {
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  // object-fit: cover;
+  // image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
+
+section {
+  padding: 120px 0;
+  overflow: visible; // because of use sticky
+}
+
+// scrollbar
+span.main-color {
+  color: $primaryColor;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background: $primaryColor;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-track {
+  background-color: #0f141c;
+}

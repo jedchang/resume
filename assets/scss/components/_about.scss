@@ -1,0 +1,101 @@
+section#about {
+  background: $primaryBgColor2;
+  & > .container {
+    & > .row {
+      margin-top: 80px;
+      .vertical-align {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .profile-img {
+        position: relative;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        .img {
+          border-radius: 50%;
+          width: 350px;
+          height: 350px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+      .info {
+        margin: 0 20px;
+      }
+      .text {
+        text-align: left;
+        h4 {
+          font-size: 26px;
+          margin: 0 0 30px;
+        }
+      }
+      .features {
+        margin: 50px 0;
+        .feature-item {
+          margin-bottom: 15px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          h6 {
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            span.iconify {
+              color: $primaryColor;
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+      .contacts {
+        margin-top: 20px;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 30px 40px;
+        border-radius: 10px;
+        .contact-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .icon {
+          width: 42px;
+          height: 42px;
+          background: $primaryColor;
+          color: $primaryTextColor;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span.iconify {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        .text {
+          margin-left: 12px;
+          span {
+            font-size: 13px;
+            display: inline-block;
+            margin-bottom: 7px;
+            opacity: 0.5;
+          }
+          h6 {
+            font-size: 16px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

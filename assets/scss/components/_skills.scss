@@ -1,0 +1,77 @@
+section#skills {
+  background: $primaryBgColor2;
+  .skill-item {
+    padding: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+    height: 395px;
+    transition: $setTransition;
+    &:hover {
+      border: 1px solid $primaryColor;
+      .skill-name {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $primaryColor;
+        color: transparent;
+      }
+      .skill-icon span.iconify {
+        filter: saturate(100%) grayscale(0%);
+        opacity: 1;
+      }
+      ul li {
+        color: #fff;
+      }
+    }
+    .skill-icon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 120px;
+      span.iconify {
+        width: 50px;
+        height: 50px;
+        filter: saturate(0%) grayscale(100%);
+        opacity: 0.5;
+        margin-right: 10px;
+        transition: $setTransition;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .skill-name {
+      margin: 20px 0;
+      font-size: 30px;
+      font-weight: 600;
+      font-family: "Roboto", sans-serif;
+      transition: $setTransition;
+    }
+    ul {
+      li {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        font-family: "Microsoft JhengHei", sans-serif;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: $primaryTextColor2;
+        transition: $setTransition;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        span.iconify {
+          width: 18px;
+          height: 18px;
+          margin-right: 5px;
+          color: $primaryTextColor2;
+        }
+      }
+    }
+  }
+}
