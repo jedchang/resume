@@ -1,11 +1,25 @@
 .navbar {
-  background-color: transparent;
   box-shadow: none;
   font-size: 14px;
-  position: relative;
+  padding: 20px 0;
+  // position: relative;
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: transparent;
+  transition: $setTransition;
+  z-index: 999;
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.05);
+  }
   & > .container {
     display: flex;
     justify-content: space-between;
@@ -24,11 +38,6 @@ a.navbar-brand {
   span.special {
     color: $primaryColor;
   }
-  // img {
-  //   display: block;
-  //   // width: 60px;
-  //   height: 42px;
-  // }
 }
 .navbar-collapse {
   display: flex !important;
@@ -45,13 +54,22 @@ a.navbar-brand {
     margin-left: auto;
     .nav-item {
       margin: 0 15px;
+      &.active {
+        a.nav-link {
+          color: $primaryColor2;
+        }
+      }
       a.nav-link {
         color: #fff;
-        padding: 26px 8px;
+        padding: 12px 8px;
         font-family: Montserrat, sans-serif;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 14px;
         text-transform: uppercase;
+        transition: $setTransition;
+        &:hover {
+          color: $primaryColor2;
+        }
       }
     }
   }

@@ -7,14 +7,15 @@
   opacity: 0;
 }
 
-// list
-@keyframes zoomIn {
+// pulse
+@keyframes pulse {
   0% {
-    opacity: 0;
-    transform: scale3d(1, 0.3, 0.3);
-    transform-origin: center bottom;
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(10px);
   }
   100% {
-    opacity: 1;
+    transform: translate(0);
   }
 }

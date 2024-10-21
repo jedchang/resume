@@ -1,63 +1,62 @@
 section#contact {
-  background: $primaryBgColor;
-  .info {
-    .item {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 30px 25px;
+  background: $primaryBgColor2;
+  .item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 22px;
+    border-radius: 10px;
+    background: $primaryBgColor2;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border-radius: 10px;
-      background: $primaryBgColor;
-      margin-bottom: 30px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        z-index: 1;
-        background: linear-gradient(
-          140deg,
-          rgba(255, 255, 255, 0.24),
-          rgba(255, 255, 255, 0.04)
-        );
-        opacity: 0.3;
-        pointer-events: none;
-      }
-      span.iconify {
-        width: 36px;
-        height: 36px;
-        margin-right: 8px;
-        color: $primaryColor;
-      }
-      h6 {
-        font-size: 16px;
-        font-weight: 500;
-        font-family: "Montserrat", sans-serif;
-        margin-left: 16px;
-        color: $primaryTextColor2;
-      }
-      p {
-        margin-left: auto;
-        font-size: 18px;
-        font-weight: 400;
-        font-family: "Montserrat", sans-serif;
-      }
+      z-index: 1;
+      background: linear-gradient(
+        140deg,
+        rgba(255, 255, 255, 0.24),
+        rgba(255, 255, 255, 0.04)
+      );
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    span.iconify {
+      width: 36px;
+      height: 36px;
+      margin-right: 8px;
+      color: $primaryColor;
+    }
+    h6 {
+      font-size: 16px;
+      font-weight: 500;
+      font-family: "Montserrat", sans-serif;
+      margin-left: 16px;
+      color: $primaryTextColor2;
+    }
+    p {
+      margin-left: auto;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Montserrat", sans-serif;
     }
   }
+
   .form-group {
     position: relative;
     margin-bottom: 30px;
     label {
       display: inline-block;
       padding: 5px 10px;
-      background: $primaryBgColor;
+      background: $primaryBgColor2;
       position: absolute;
       top: -12px;
       left: 18px;
@@ -67,7 +66,7 @@ section#contact {
     }
     input {
       width: 100%;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid $borderColor;
       border-radius: 10px;
       background: transparent;
       color: #fff;
@@ -80,7 +79,7 @@ section#contact {
     textarea {
       min-height: 180px;
       width: 100% !important;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid $borderColor;
       border-radius: 10px;
       background: transparent;
       color: #fff;
@@ -91,58 +90,48 @@ section#contact {
       }
     }
   }
-  button.submit {
-    padding: 15px 35px;
-    width: 100%;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 700;
-    height: 40px;
-    line-height: 40px;
-    transform-style: preserve-3d;
-    position: relative;
-    background: transparent;
-    border: 0;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: $setTransition2;
-    &:hover {
-      transform-style: preserve-3d;
-      &::before {
-        transform: translateY(0) rotateX(0deg);
-      }
-      &::after {
-        transform: translateY(100%) rotateX(90deg);
-      }
-    }
-    &::before {
-      content: attr(back);
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: #c49b66;
-      color: #fff;
-      line-height: 38px;
-      transition: $setTransition2;
-      transform-origin: bottom;
-      transform: translateY(-100%) rotateX(90deg);
-    }
-    &::after {
-      content: attr(front);
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      color: #c49b66;
-      background: transparent;
-      border: 1px solid #c49b66;
-      transition: $setTransition2;
-      transform-origin: top;
-      transform: translateY(0) rotateX(0deg);
-    }
-  }
+  // button.btn {
+  //   position: relative;
+  //   overflow: hidden;
+  //   padding: 15px 35px;
+  //   width: 100%;
+  //   height: 55px;
+  //   line-height: 55px;
+  //   font-size: 16px;
+  //   letter-spacing: 0.5px;
+  //   font-weight: 700;
+  //   font-family: "Montserrat", sans-serif;
+  //   text-transform: uppercase;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   background: transparent;
+  //   color: $primaryColor;
+  //   border: 1px solid $primaryColor;
+  //   border-radius: 10px;
+  //   z-index: 0;
+  //   cursor: pointer;
+  //   transition: all 0.5s ease;
+  //   &:hover {
+  //     color: #ffffff;
+  //     background: transparent;
+  //     &::before {
+  //       opacity: 1;
+  //       transform: skewX(-33deg) scaleX(1.2);
+  //     }
+  //   }
+  //   &::before {
+  //     content: "";
+  //     opacity: 0;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     z-index: -1;
+  //     background: $primaryColor none repeat scroll 0 0;
+  //     transform: skewX(-33deg) scaleX(0);
+  //     transition: all 0.3s ease;
+  //   }
+  // }
 }

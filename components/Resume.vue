@@ -3,10 +3,10 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <Subtitle>
+          <SectionTitle>
             <template #tw> 工作經驗 & 教育背景 </template>
             <template #en> My Resume </template>
-          </Subtitle>
+          </SectionTitle>
         </div>
         <div class="col-lg-6">
           <div class="experience">
@@ -20,6 +20,7 @@
                 :key="index"
                 class="item"
               >
+                <span class="ripple"></span>
                 <h2 class="exp-time">
                   <Icon name="bxs:calendar"></Icon>
                   {{ item.time }}
@@ -43,6 +44,7 @@
                 :key="index"
                 class="item"
               >
+                <span class="ripple"></span>
                 <h2 class="edu-time">
                   <Icon name="bxs:calendar"></Icon>
                   {{ item.time }}
@@ -111,7 +113,7 @@
 
 <style lang="scss" scoped>
   @import '../assets/scss/components/_resume.scss';
-  :deep(.subtitle) {
+  :deep(.section-title) {
     h3.tw {
       span {
         &::before {

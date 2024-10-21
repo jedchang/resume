@@ -3,10 +3,10 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <Subtitle>
+          <SectionTitle>
             <template #tw> 主要技能 </template>
             <template #en> Main Skills </template>
-          </Subtitle>
+          </SectionTitle>
         </div>
         <div v-for="item in skillsData" :key="item.name" class="col-lg-4">
           <div class="skill-item">
@@ -49,8 +49,22 @@
       name: 'JavaScript / jQuery',
       content: [
         '熟悉 JavaScript 基礎與 ES6 用法',
+        '使用 jQuery、plugin 應用',
         '熟悉串接 Restful API',
-        '使用 jQuery、plugin 應用'
+        '使用 AJAX / JSON 串接第三方 API',
+        '瞭解 ESLint 強化程式碼品質'
+      ]
+    },
+    {
+      icon1: 'devicon:css3',
+      icon2: 'vscode-icons:file-type-scss',
+      name: 'CSS / SCSS',
+      content: [
+        '熟悉 CSS 基礎與 SCSS 用法',
+        '手刻 RWD 響應式網頁',
+        '瞭解 Tailwind CSS 用法',
+        '瞭解 UnoCSS 用法',
+        '瞭解 Prettier 統一程式碼風格'
       ]
     },
     {
@@ -86,7 +100,7 @@
 
 <style lang="scss" scoped>
   @import '../assets/scss/components/_skills.scss';
-  :deep(.subtitle) {
+  :deep(.section-title) {
     h3.tw {
       span {
         &::before {

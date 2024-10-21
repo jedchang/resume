@@ -1,4 +1,4 @@
-.social-media {
+.social-position {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -28,7 +28,7 @@
     }
   }
 
-  ul.social-icons {
+  ul.social-media {
     width: 100%;
     list-style-type: none;
     font-size: 20px;
@@ -40,7 +40,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  li.social-icon {
+  li.icon {
     display: inline-block;
   }
   a.circle-btn {

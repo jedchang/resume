@@ -3,28 +3,31 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <Subtitle>
+          <SectionTitle>
             <template #tw> 聯絡我 </template>
             <template #en> Contact Us </template>
-          </Subtitle>
+          </SectionTitle>
         </div>
         <div class="col-lg-5">
-          <div class="info">
-            <div class="item">
-              <Icon name="bi:telephone"></Icon>
-              <h6>Phone</h6>
-              <p>0922-641-110</p>
-            </div>
-            <div class="item">
-              <Icon name="bi:envelope"></Icon>
-              <h6>Email</h6>
-              <p>march.24@gmail</p>
-            </div>
-            <div class="item">
-              <Icon name="bi:geo-alt"></Icon>
-              <h6>Address</h6>
-              <p>Neihu Dist., Taipei City, Taiwan</p>
-            </div>
+          <div class="item">
+            <Icon name="bi:telephone"></Icon>
+            <h6>Phone</h6>
+            <p>0922-641-110</p>
+          </div>
+          <div class="item">
+            <Icon name="bi:envelope"></Icon>
+            <h6>Email</h6>
+            <p>march.24@gmail</p>
+          </div>
+          <div class="item">
+            <Icon name="bi:geo-alt"></Icon>
+            <h6>Address</h6>
+            <p>Neihu Dist., Taipei City, Taiwan</p>
+          </div>
+          <div class="item">
+            <Icon name="lineicons:website"></Icon>
+            <h6>Website</h6>
+            <p>www.jedchang.com.tw/resume</p>
           </div>
         </div>
         <div class="col-lg-7">
@@ -61,12 +64,9 @@
                     required="required"
                   ></textarea>
                 </div>
-                <button
-                  type="submit"
-                  class="submit disabled"
-                  front="送出"
-                  back="👍️"
-                ></button>
+                <button type="submit" class="btn btn-outline disabled">
+                  Send Message
+                </button>
               </div>
             </div>
           </div>
@@ -80,4 +80,5 @@
 
 <style lang="scss" scoped>
   @import '../assets/scss/components/_contact.scss';
+  @import '../assets/scss/components/_button.scss';
 </style>

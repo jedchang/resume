@@ -1,18 +1,18 @@
 <template>
-  <div class="subtitle">
+  <div class="section-title">
     <h3 class="tw">
       <span>
-        <slot name="tw">副標題</slot>
+        <slot name="tw">標題</slot>
       </span>
     </h3>
     <h2 class="en">
-      <slot name="en">Subtitle</slot>
+      <slot name="en">Section Title</slot>
     </h2>
   </div>
 </template>
 
 <style lang="scss">
-  .subtitle {
+  .section-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@
       text-transform: uppercase;
       text-align: center;
       letter-spacing: 0.05em;
-      color: rgb(255, 255, 255);
+      color: #ffffff;
       margin: 0px;
       span {
         letter-spacing: 6px;

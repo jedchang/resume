@@ -1,8 +1,8 @@
 <template>
-  <div class="social-media social-position-primary">
+  <div class="social-position">
     <h3 class="follow-me">Follow Me</h3>
-    <ul class="social-icons">
-      <li class="social-icon">
+    <ul class="social-media">
+      <li class="icon">
         <a
           href="https://gitlab.com/jedchang"
           target="_blank"
@@ -11,7 +11,7 @@
           <Icon name="uil:github" />
         </a>
       </li>
-      <li class="social-icon">
+      <li class="icon">
         <a
           href="https://codepen.io/jedchang"
           target="_blank"
@@ -20,7 +20,7 @@
           <Icon name="fa6-brands:codepen" />
         </a>
       </li>
-      <li class="social-icon">
+      <li class="icon">
         <a
           href="https://github.com/jedchang"
           target="_blank"

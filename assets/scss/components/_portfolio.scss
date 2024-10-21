@@ -1,0 +1,56 @@
+section#portfolio {
+  background: $primaryBgColor;
+}
+
+:deep(.el-tabs--card) {
+  .el-tabs__content {
+    padding: 15px;
+  }
+  .el-tabs__header {
+    border-bottom: none;
+    margin-bottom: 30px;
+    .el-tabs__nav {
+      float: none;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0;
+      border: none;
+    }
+    .el-tabs__item {
+      height: 46px;
+      border-radius: 25px;
+      color: $primaryTextColor2;
+      padding: 12px 45px;
+      border: 2px solid $borderColor;
+      background-color: $primaryBgColor;
+      margin: 0 10px;
+      transition: $setTransition;
+      &:nth-child(2) {
+        padding-left: 45px;
+      }
+      &:last-child {
+        padding-right: 45px;
+      }
+      &:hover {
+        color: $primaryColor;
+        border: 2px solid $primaryColor;
+      }
+      &.is-active {
+        color: #fff;
+        border: 2px solid $primaryColor;
+        background-color: $primaryColor;
+      }
+      span.item-title {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+  }
+  .el-tabs__nav {
+    border: 1px solid $borderColor;
+  }
+}

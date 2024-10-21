@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/resume/' : '/',
-    buildAssetsDir: '/static/'
+    baseURL: process.env.NODE_ENV === 'production' ? '/resume/' : '/'
+    // buildAssetsDir: '/public/'
   },
   devServer: {
     host: process.env.HOST || 'localhost',
@@ -35,6 +35,11 @@ export default defineNuxtConfig({
           `
         }
       }
+    }
+  },
+  routeRules: {
+    'manifest-route-rule': {
+      override: true
     }
   }
 })
