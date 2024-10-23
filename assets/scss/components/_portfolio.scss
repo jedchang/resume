@@ -1,5 +1,5 @@
 section#portfolio {
-  background: $primaryBgColor;
+  background: $primaryBgColor2;
 }
 
 :deep(.el-tabs--card) {
@@ -23,8 +23,8 @@ section#portfolio {
       border-radius: 25px;
       color: $primaryTextColor2;
       padding: 12px 45px;
-      border: 2px solid $borderColor;
-      background-color: $primaryBgColor;
+      border: 1px solid $borderColor;
+      background-color: $primaryBgColor2;
       margin: 0 10px;
       transition: $setTransition;
       &:nth-child(2) {
@@ -35,16 +35,16 @@ section#portfolio {
       }
       &:hover {
         color: $primaryColor;
-        border: 2px solid $primaryColor;
+        border: 1px solid $primaryColor;
       }
       &.is-active {
         color: #fff;
-        border: 2px solid $primaryColor;
+        border: 1cqb solid $primaryColor;
         background-color: $primaryColor;
       }
       span.item-title {
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 500;
         text-transform: uppercase;
         font-family: "Montserrat", sans-serif;
       }

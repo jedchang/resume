@@ -15,6 +15,7 @@
                 <span class="item-title"> All </span>
               </template>
               <PortfolioCard></PortfolioCard>
+              <LoadMore></LoadMore>
               <!-- <Category :selected-works="selectedWeb"></Category> -->
             </el-tab-pane>
             <el-tab-pane label="Web Develop" name="tab2">

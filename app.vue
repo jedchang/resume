@@ -7,6 +7,7 @@
   <Portfolio></Portfolio>
   <Contact></Contact>
   <Footer></Footer>
+  <ScrollTop></ScrollTop>
 </template>
 
 <script setup>

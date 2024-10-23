@@ -1,6 +1,6 @@
 footer {
   position: relative;
-  background-color: $primaryBgColor;
+  background-color: $primaryBgColor2;
   .info {
     display: flex;
     justify-content: space-between;
@@ -31,6 +31,10 @@ footer {
       transition: $setTransition;
       &:hover {
         color: $primaryColor;
+      }
+      &.pipe {
+        color: $primaryTextColor2;
+        margin: 0 6px 0 4px;
       }
     }
   }

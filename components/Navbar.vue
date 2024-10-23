@@ -7,55 +7,61 @@
       <div class="navbar-collapse justify-content-between collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item" :class="{ active: activeSection === 'home' }">
-            <a
-              href="#home"
+            <button
+              type="button"
               class="nav-link"
-              @click.prevent="scrollToSection('home')"
-              >Home</a
+              @click="scrollToSection('home')"
             >
+              Home
+            </button>
           </li>
           <li class="nav-item" :class="{ active: activeSection === 'about' }">
-            <a
-              href="#about"
+            <button
+              type="button"
               class="nav-link"
-              @click.prevent="scrollToSection('about')"
-              >About</a
+              @click="scrollToSection('about')"
             >
+              About
+            </button>
           </li>
           <li class="nav-item" :class="{ active: activeSection === 'resume' }">
-            <a
-              href="#resume"
+            <button
+              type="button"
               class="nav-link"
-              @click.prevent="scrollToSection('resume')"
-              >Resume</a
+              @click="scrollToSection('resume')"
             >
+              Resume
+            </button>
           </li>
           <li class="nav-item" :class="{ active: activeSection === 'skills' }">
-            <a
-              href="#skills"
+            <button
+              type="button"
               class="nav-link"
-              @click.prevent="scrollToSection('skills')"
-              >Skills</a
+              @click="scrollToSection('skills')"
             >
+              Skills
+            </button>
           </li>
           <li
             class="nav-item"
             :class="{ active: activeSection === 'portfolio' }"
           >
-            <a
-              href="#portfolio"
+            <button
+              type="button"
               class="nav-link"
-              @click.prevent="scrollToSection('portfolio')"
-              >Portfolio</a
+              @click="scrollToSection('portfolio')"
             >
+              Portfolio
+            </button>
           </li>
           <li class="nav-item" :class="{ active: activeSection === 'contact' }">
-            <a
-              href="#contact"
+            <button
+              type="button"
               class="nav-link"
-              @click.prevent="scrollToSection('contact')"
-              >Contact</a
+              @click="scrollToSection('contact')"
             >
+              Contact
+            </button>
           </li>
         </ul>
       </div>
@@ -64,8 +70,7 @@
 </template>
 
 <script setup>
-  const activeSection = ref('home')
-
+  // const activeSection = ref('home')
   const handleScroll = () => {
     const navbar = document.querySelector('.navbar')
     if (window.scrollY > 95) {
@@ -96,13 +101,21 @@
         currentSection = sectionId
       }
     })
-    activeSection.value = currentSection
+    // 更新 activeSection
+    activeSectionStore.setActiveSection(currentSection)
   }
+
+  import { useActiveSectionStore } from '~/stores/useActiveSection.js'
+  const activeSectionStore = useActiveSectionStore()
+  // 使用 computed 函數來獲取 activeSection
+  const activeSection = computed(() => activeSectionStore.activeSection)
 
   const scrollToSection = (sectionId) => {
     const section = document.querySelector(`#${sectionId}`)
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' })
+      // 更新 activeSection
+      activeSectionStore.setActiveSection(sectionId)
     }
   }
 

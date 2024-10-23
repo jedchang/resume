@@ -55,11 +55,11 @@ a.navbar-brand {
     .nav-item {
       margin: 0 15px;
       &.active {
-        a.nav-link {
+        button.nav-link {
           color: $primaryColor2;
         }
       }
-      a.nav-link {
+      button.nav-link {
         color: #fff;
         padding: 12px 8px;
         font-family: Montserrat, sans-serif;

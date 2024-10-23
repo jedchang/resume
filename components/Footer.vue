@@ -6,13 +6,13 @@
           <span class="special">Jed</span>Chang.
         </a>
         <p>
-          © Copyright 2024 | All Rights Reserved.
+          © 2024 All Rights Reserved. <span class="pipe"> | </span>
           <span>Design & Develop with by Jed Chang.</span>
         </p>
         <ul class="social-media">
           <li class="icon">
             <a
-              href="https://gitlab.com/jedchang"
+              href="https://github.com/jedchang"
               target="_blank"
               class="circle-btn"
             >
@@ -30,7 +30,7 @@
           </li>
           <li class="icon">
             <a
-              href="https://github.com/jedchang"
+              href="https://gitlab.com/jedchang"
               target="_blank"
               class="circle-btn"
             >

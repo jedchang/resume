@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <SectionTitle>
+          <SectionTitle :set-color="'isDark'">
             <template #tw> 工作經驗 & 教育背景 </template>
             <template #en> My Resume </template>
           </SectionTitle>

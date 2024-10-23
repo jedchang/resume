@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   app: {
     baseURL: process.env.NODE_ENV === 'production' ? '/resume/' : '/'
     // buildAssetsDir: '/public/'
@@ -15,12 +15,7 @@ export default defineNuxtConfig({
     }
   },
   // css: ['~/assets/scss/main.scss'],
-  modules: ['@nuxt/icon', '@element-plus/nuxt'],
-  icon: {
-    serverBundle: {
-      collections: ['uil', 'la']
-    }
-  },
+  modules: ['@nuxt/icon', '@element-plus/nuxt', '@pinia/nuxt'],
   vite: {
     css: {
       preprocessorOptions: {

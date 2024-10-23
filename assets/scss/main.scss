@@ -46,6 +46,15 @@ a {
   transition: $setTransition;
 }
 
+button {
+  border: none;
+  outline: 0;
+  background: transparent;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 ul {
   padding: 0;
   margin: 0;

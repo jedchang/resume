@@ -15,14 +15,25 @@
     "node": ">=20.18.0"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.5.5",
     "bootstrap": "^5.3.3",
     "nuxt": "^3.13.0",
+    "pinia": "^2.2.4",
     "typed.js": "^2.1.0",
-    "vue": "latest",
-    "vue-router": "latest"
+    "vue": "^3.5.0",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.10",
+    "@iconify-json/bi": "^1.2.1",
+    "@iconify-json/devicon": "^1.2.4",
+    "@iconify-json/fa-solid": "^1.2.0",
+    "@iconify-json/logos": "^1.2.3",
+    "@iconify-json/material-symbols": "^1.2.5",
+    "@iconify-json/mdi": "^1.2.1",
+    "@iconify-json/mynaui": "^1.2.7",
+    "@iconify-json/simple-icons": "^1.2.9",
+    "@iconify-json/skill-icons": "^1.2.0",
     "@nuxt/eslint-config": "^0.6.0",
     "@nuxt/icon": "^1.5.6",
     "element-plus": "^2.8.5",

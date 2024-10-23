@@ -24,8 +24,8 @@
                 </li>
               </ul>
               <img
-                class="ornament"
-                src="~/assets/images/ornament2.png"
+                class="ornament-arrow"
+                src="~/assets/images/ornament-arrow.svg"
                 alt="Ornament"
               />
             </div>
@@ -35,7 +35,7 @@
               <div class="intro-grid"></div>
               <figure>
                 <img
-                  src="~/assets/images/hero-profile.png"
+                  src="~/assets/images/hero-profile.jpg"
                   alt="Hero Profile"
                 />
               </figure>
