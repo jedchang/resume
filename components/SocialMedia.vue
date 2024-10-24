@@ -1,10 +1,9 @@
 <template>
   <div class="social-position">
-    <h3 class="follow-me">Follow Me</h3>
     <ul class="social-media">
       <li class="icon">
         <a
-          href="https://gitlab.com/jedchang"
+          href="https://github.com/jedchang"
           target="_blank"
           class="circle-btn"
         >
@@ -22,7 +21,7 @@
       </li>
       <li class="icon">
         <a
-          href="https://github.com/jedchang"
+          href="https://gitlab.com/jedchang"
           target="_blank"
           class="circle-btn"
         >

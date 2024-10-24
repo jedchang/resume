@@ -9,14 +9,32 @@
           </SectionTitle>
         </div>
         <div class="col-lg-4">
-          <div class="profile-img">
+          <div class="experience">
+            <div class="exp-number">
+              <span class="number">18 <span>+</span></span>
+            </div>
+            <h5 class="title">
+              Years
+              <span>Experience Working</span>
+            </h5>
+          </div>
+
+          <!-- <div class="experience">
+            <span class="number">18 <span>+</span></span>
+            <h5 class="title">
+              Years
+              <span>Experience Working</span>
+            </h5>
+          </div> -->
+
+          <!-- <div class="profile-img">
             <div class="img">
               <img
                 src="~/assets/images/about-profile.jpg"
                 alt="About Profile"
               />
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="col-lg-8 vertical-align">
           <div class="info">
@@ -59,6 +77,7 @@
               <h6 class="slogan">
                 <Icon name="bi:quote"></Icon>
                 「融合視覺設計與程式技術，締造卓越的互動體驗。」
+                <Icon name="bi:quote"></Icon>
               </h6>
               <!-- <h6 class="slogan">
                 <Icon name="bi:quote"></Icon>
@@ -68,7 +87,7 @@
                 <img src="~/assets/images/sign.png" alt="Sign" />
               </figure>
             </div>
-            <div class="features">
+            <!-- <div class="features">
               <div class="row">
                 <div class="col-lg-6">
                   <div class="feature-item">
@@ -99,8 +118,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="contacts">
+            </div> -->
+            <!-- <div class="contacts">
               <div class="row">
                 <div class="col-lg-6">
                   <div class="contact-item">
@@ -125,7 +144,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

@@ -29,19 +29,8 @@
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  // 監控滾動位置
-  const scrollY = ref(0)
-  const totalHeight = ref(0)
-
-  // 計算總高度
-  // const calculateHeight = () => {
-  //   // 包含視窗高度到總高度計算中
-  //   totalHeight.value = document.body.scrollHeight - window.innerHeight
-  // }
   // 更新滾動位置
   const handleScroll = () => {
-    // scrollY.value = window.scrollY
-
     // ProgressBar
     const bodyHeight = (document.body.scrollHeight - window.innerHeight) / 10 // 計算 body 的高度並減去視窗高度
     const scrollHeight = window.scrollY // 取得當前的滾動位置
@@ -50,9 +39,6 @@
     // 將結果應用到目標元素上
     const scrollbar = document.querySelector('.scrollbar')
     scrollbar.style.height = `${percentage}%`
-
-    console.log('scrollY:', scrollY.value)
-    console.log('scrollbar.style.height:', scrollbar.style.height)
   }
 
   onMounted(() => {
@@ -106,6 +92,7 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         padding: 3px;
+        text-shadow: 0 0 8px #000000;
         transform: rotate(-180deg);
       }
     }

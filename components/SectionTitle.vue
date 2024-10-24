@@ -56,7 +56,7 @@
           width: 40px;
           height: 40px;
           border-top: 1px solid #ffffff;
-          opacity: 0.15;
+          opacity: 0.3;
         }
         &::after {
           content: '';
@@ -66,7 +66,7 @@
           width: 40px;
           height: 40px;
           border-top: 1px solid #ffffff;
-          opacity: 0.15;
+          opacity: 0.3;
         }
       }
     }

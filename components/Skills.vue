@@ -33,11 +33,11 @@
     {
       icon1: 'devicon:vuejs',
       icon2: 'logos:nuxt-icon',
-      name: 'Vue.js / Nuxt.js',
+      name: 'Vue.js | Nuxt.js',
       content: [
         '熟悉 Composition API 用法',
         '熟悉 Options API 用法',
-        '熟悉 Vuex / Pinia 應用',
+        '熟悉 Vuex、Pinia 應用',
         '熟悉 Vue Router 應用',
         '使用 Element plus 表單驗證',
         'Nuxt2、Nuxt3 應用'
@@ -46,19 +46,19 @@
     {
       icon1: 'devicon:javascript',
       icon2: 'devicon:jquery',
-      name: 'JavaScript / jQuery',
+      name: 'JavaScript | jQuery',
       content: [
         '熟悉 JavaScript 基礎與 ES6 用法',
         '使用 jQuery、plugin 應用',
         '熟悉串接 Restful API',
-        '使用 AJAX / JSON 串接第三方 API',
+        '使用 AJAX、JSON 串接第三方 API',
         '瞭解 ESLint 強化程式碼品質'
       ]
     },
     {
       icon1: 'devicon:css3',
       icon2: 'vscode-icons:file-type-scss',
-      name: 'CSS / SCSS',
+      name: 'CSS | SCSS',
       content: [
         '熟悉 CSS 基礎與 SCSS 用法',
         '手刻 RWD 響應式網頁',
@@ -70,7 +70,7 @@
     {
       icon1: 'devicon:git',
       icon2: 'simple-icons:github',
-      name: 'Git / GitHub',
+      name: 'Git | GitHub',
       content: [
         '熟悉 Git 版本控制',
         '瞭解 Git Flow 工作流程',

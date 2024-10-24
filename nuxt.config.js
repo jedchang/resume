@@ -14,7 +14,7 @@ export default defineNuxtConfig({
       cert: 'localhost.pem'
     }
   },
-  // css: ['~/assets/scss/main.scss'],
+  css: ['~/assets/scss/main.scss'],
   modules: ['@nuxt/icon', '@element-plus/nuxt', '@pinia/nuxt'],
   vite: {
     css: {

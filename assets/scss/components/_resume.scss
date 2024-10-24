@@ -1,5 +1,13 @@
 section#resume {
-  background: $primaryBgColor2;
+  background: $primaryBgColor;
+  background-image: url("@/assets/images/texture-bg.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  // background: $primaryBgColor2;
+  // padding-inline-end: 5px;
+  // background-image: url("@/assets/images/grid-bg.png");
   .category {
     display: flex;
     justify-content: flex-start;

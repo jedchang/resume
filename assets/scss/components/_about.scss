@@ -1,163 +1,135 @@
 section#about {
-  // background: $primaryBgColor;
-  background-image: url("@/assets/images/texture-bg.jpg");
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  & > .container {
-    & > .row {
-      margin-top: 80px;
-      .vertical-align {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  background: $primaryBgColor2;
+  background-image: url("@/assets/images/texture-bg3.jpg");
+  background-repeat: repeat;
+  .vertical-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .experience {
+    max-width: 360px;
+    padding: 76px 30px 76px 47px;
+    text-align: right;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: none;
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .exp-number {
+      background-image: url("@/assets/images/exp-number-bg.svg");
+      color: transparent;
+      -webkit-text-stroke: 2px $primaryColor;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transform: scale3d(1, 1.2, 1);
+      background-position: 20px 0px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    span.number {
+      font-size: 194px;
+      font-weight: 700;
+      line-height: 0.8;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      -webkit-text-stroke: 2px $primaryColor;
+      -webkit-text-fill-color: transparent;
+      font-family: "Poppins", sans-serif;
+      span {
+        font-weight: 600;
+        font-size: 100px;
       }
-      .profile-img {
-        position: relative;
-        padding: 30px;
-        border: $borderColor;
-        border-radius: 50%;
-        .img {
-          border-radius: 50%;
-          width: 350px;
-          height: 350px;
-          overflow: hidden;
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-          }
-        }
-      }
-      .info {
-        margin: 0 20px;
+    }
+    h5.title {
+      font-size: 76px;
+      font-weight: 600;
+      line-height: 1.2;
+      position: relative;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span {
+        display: block;
+        font-size: 22px;
         text-align: left;
-        .code-wrapper {
-          margin: 40px 0;
-          padding: 15px;
-          background: rgba(0, 0, 0, 0.3);
-          backdrop-filter: blur(15px);
-          border-radius: 8px;
-          .code-row {
-            font-size: 18px;
-            margin: 5px;
-            font-family: serif;
-            font-family: "Roboto", sans-serif;
-          }
-          i {
-            color: #ff6366;
-            font-style: normal;
-          }
-          span {
-            font-size: 18px;
-            margin: 3px;
-            color: #a8a8a8;
-          }
-        }
-        h4 {
-          font-size: 26px;
-          font-weight: 00;
-          margin: 0 0 30px;
-          padding: 0 15px;
-          font-family: "Microsoft JhengHei", sans-serif;
-        }
-        p {
-          font-size: 16px;
-          font-family: "Microsoft JhengHei", sans-serif;
-          padding: 0 15px;
-          line-height: 1.8;
-        }
-        .slogan-wrapper {
-          margin: 40px 0;
-          padding: 20px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          background-color: #181c22;
-          h6.slogan {
-            font-size: 20px;
-            font-weight: 600;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            span.iconify {
-              width: 60px;
-              height: 60px;
-              color: rgba(255, 255, 255, 0.2);
-              margin-right: 5px;
-            }
-          }
-          figure {
-            margin: 0 10px 0 0;
-            text-align: right;
-            img {
-              width: 175px;
-              margin-top: -10px;
-              transform: rotate(-6deg);
-            }
-          }
-        }
       }
-
-      .features {
-        margin: 50px 0;
-        .feature-item {
-          margin-bottom: 15px;
+    }
+  }
+  .info {
+    margin: 0 20px;
+    text-align: left;
+    .code-wrapper {
+      margin: 40px 0;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(15px);
+      border-radius: 8px;
+      .code-row {
+        font-size: 18px;
+        margin: 5px;
+        font-family: serif;
+        font-family: "Roboto", sans-serif;
+      }
+      i {
+        color: #ff6366;
+        font-style: normal;
+      }
+      span {
+        font-size: 18px;
+        margin: 3px;
+        color: #a8a8a8;
+      }
+    }
+    h4 {
+      font-size: 26px;
+      font-weight: 600;
+      margin: 0 0 20px;
+      padding: 0 15px;
+      font-family: "Microsoft JhengHei", sans-serif;
+    }
+    p {
+      font-size: 16px;
+      font-family: "Microsoft JhengHei", sans-serif;
+      padding: 0 15px;
+      line-height: 1.8;
+    }
+    .slogan-wrapper {
+      margin: 40px 0 0;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: #181c22;
+      border-left-color: $primaryColor;
+      border-left-width: 7px;
+      h6.slogan {
+        font-size: 22px;
+        font-weight: 600;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        span.iconify {
+          width: 60px;
+          height: 60px;
+          color: rgba(255, 255, 255, 0.2);
+          margin-right: 5px;
           &:last-child {
-            margin-bottom: 0;
-          }
-          h6 {
-            font-size: 14px;
-            font-weight: 400;
-            text-transform: uppercase;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            span.iconify {
-              color: $primaryColor;
-              margin-right: 8px;
-            }
+            transform: rotate(180deg);
           }
         }
       }
-      .contacts {
-        margin-top: 20px;
-        position: relative;
-        border: $borderColor;
-        padding: 30px 40px;
-        border-radius: 10px;
-        .contact-item {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .icon {
-          width: 42px;
-          height: 42px;
-          background: $primaryColor;
-          color: $primaryTextColor;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          span.iconify {
-            width: 20px;
-            height: 20px;
-          }
-        }
-        .text {
-          margin-left: 12px;
-          span {
-            font-size: 13px;
-            display: inline-block;
-            margin-bottom: 7px;
-            opacity: 0.5;
-          }
-          h6 {
-            font-size: 16px;
-            margin: 0;
-          }
+      figure {
+        margin: 15px 5px 0 0;
+        text-align: right;
+        img {
+          width: 175px;
+          transform: rotate(-3deg);
         }
       }
     }

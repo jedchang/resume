@@ -1,5 +1,9 @@
 section#portfolio {
-  background: $primaryBgColor2;
+  background: $primaryBgColor;
+  background-image: url("@/assets/images/texture-bg.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 :deep(.el-tabs--card) {
@@ -24,7 +28,8 @@ section#portfolio {
       color: $primaryTextColor2;
       padding: 12px 45px;
       border: 1px solid $borderColor;
-      background-color: $primaryBgColor2;
+      // background-color: $primaryBgColor2;
+      background: rgba(0, 0, 0, 0.15);
       margin: 0 10px;
       transition: $setTransition;
       &:nth-child(2) {

@@ -45,45 +45,77 @@ section#home {
         color: #fff;
         text-transform: capitalize;
         margin-bottom: 30px;
-        font-size: 56px;
+        font-size: 66px;
         font-weight: 600;
         line-height: 1.2;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Microsoft JhengHei", sans-serif;
         text-align: left;
         margin-top: 0;
+        span.and {
+          -webkit-text-stroke: 2px #cecece;
+          -webkit-text-fill-color: transparent;
+          font-family: "Roboto", sans-serif;
+          font-weight: 600;
+          font-size: 62px;
+        }
+        span.stroke {
+          -webkit-text-stroke: 2px #fff;
+          -webkit-text-fill-color: transparent;
+          font-family: "Poppins", sans-serif;
+          font-weight: 700;
+          margin-right: 5px;
+        }
       }
-      ul.list-btn {
-        width: 500px;
-        margin-top: 10px;
+      .list-btn {
+        width: 550px;
+        margin-top: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        li.list-item {
-          display: inline-block;
-        }
-        a.btn {
-          padding: 16px 48px;
-          margin-top: -10px;
-          text-transform: capitalize;
-          font-weight: 600;
-          font-size: 14px;
-          font-family: "Montserrat", sans-serif;
+        .item {
           display: flex;
-          justify-content: center;
-          align-items: center;
-          color: $primaryColor;
-          border: 1px solid $primaryColor;
-          &.btn-primary {
-            color: $primaryTextColor;
-            background-color: $primaryColor;
-            border-color: $primaryColor;
-          }
-          span.iconify {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
+          &:last-child {
+            margin-left: 30px;
           }
         }
+        button.btn {
+          width: 300px;
+        }
+        // a.btn {
+        //   padding: 16px 48px;
+        //   margin-top: -10px;
+        //   text-transform: capitalize;
+        //   font-weight: 600;
+        //   font-size: 14px;
+        //   font-family: "Montserrat", sans-serif;
+        //   display: flex;
+        //   justify-content: center;
+        //   align-items: center;
+        //   color: $primaryColor;
+        //   border: 1px solid $primaryColor;
+        //   &.btn-primary {
+        //     color: $primaryTextColor;
+        //     background-color: $primaryColor;
+        //     border-color: $primaryColor;
+        //   }
+        //   span.iconify {
+        //     width: 24px;
+        //     height: 24px;
+        //     margin-right: 8px;
+        //   }
+        // }
+      }
+      img.ornament-drawn {
+        width: 105px;
+        height: auto;
+        max-width: 100%;
+        display: inline-block;
+        position: absolute;
+        bottom: -30px;
+        right: -90px;
+        opacity: 0.7;
+        z-index: 3;
+        animation: pulse 2s infinite;
       }
       img.ornament-arrow {
         width: 137px;
@@ -91,13 +123,47 @@ section#home {
         max-width: 100%;
         display: inline-block;
         position: absolute;
-        bottom: -70px;
-        right: 125px;
+        bottom: -80px;
+        left: 202px;
         animation: pulse 2s infinite;
       }
     }
     .intro-photo {
       position: relative;
+      .intro-circle {
+        border-radius: 50%;
+        background-color: #27262b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -35px;
+        left: 348px;
+        padding: 4px;
+        z-index: 3;
+        img {
+          width: 100px;
+          height: 100px;
+          animation: circle-around 15s linear infinite;
+        }
+        .icon {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: $primaryColor;
+          span.iconify {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
       .intro-grid {
         background-image: url("@/assets/images/dot-light.png");
         position: absolute;
@@ -128,7 +194,7 @@ section#home {
           background-repeat: no-repeat;
           width: 70px;
           height: 70px;
-          right: -15px;
+          left: 60px;
           top: 40px;
           z-index: 2;
           animation: zoom-in-out 2s ease-out infinite;
@@ -140,6 +206,7 @@ section#home {
           object-fit: cover;
           position: relative;
           height: 430px;
+          border-radius: 10px;
           z-index: 2;
         }
       }

@@ -32,3 +32,12 @@
     transform: scale(0.8);
   }
 }
+
+@keyframes circle-around {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
