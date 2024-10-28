@@ -50,10 +50,22 @@ section#contact {
       color: $primaryTextColor2;
     }
     p {
+      color: $primaryTextColor2;
       margin-left: auto;
       font-size: 16px;
       font-weight: 400;
       font-family: "Montserrat", sans-serif;
+    }
+    a {
+      color: $primaryTextColor2;
+      margin-left: auto;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Montserrat", sans-serif;
+      transition: $setTransition;
+      &:hover {
+        color: $primaryColor;
+      }
     }
   }
 
@@ -171,46 +183,4 @@ section#contact {
       font-size: 14px;
     }
   }
-
-  // .form-group {
-  //   position: relative;
-  //   margin-bottom: 30px;
-  //   label {
-  //     display: inline-block;
-  //     padding: 5px 10px;
-  //     // background: $primaryBgColor;
-  //     background-image: url("@/assets/images/texture-bg3.jpg");
-  //     position: absolute;
-  //     top: -12px;
-  //     left: 18px;
-  //     font-size: 12px;
-  //     text-transform: uppercase;
-  //     letter-spacing: 1px;
-  //   }
-  //   input {
-  //     width: 100%;
-  //     border: 1px solid $borderColor;
-  //     border-radius: 10px;
-  //     background: transparent;
-  //     color: #fff;
-  //     padding: 20px;
-  //     transition: $setTransition;
-  //     &:focus {
-  //       outline: none;
-  //     }
-  //   }
-  //   textarea {
-  //     min-height: 195px;
-  //     width: 100% !important;
-  //     border: 1px solid $borderColor;
-  //     border-radius: 10px;
-  //     background: transparent;
-  //     color: #fff;
-  //     padding: 20px;
-  //     transition: $setTransition;
-  //     &:focus {
-  //       outline: none;
-  //     }
-  //   }
-  // }
 }

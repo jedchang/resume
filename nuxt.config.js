@@ -17,6 +17,9 @@ export default defineNuxtConfig({
   css: ['~/assets/scss/main.scss', 'element-plus/dist/index.css'],
   modules: ['@nuxt/icon', '@pinia/nuxt', '@element-plus/nuxt'],
   vite: {
+    define: {
+      'process.env': process.env
+    },
     css: {
       preprocessorOptions: {
         scss: {

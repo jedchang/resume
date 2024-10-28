@@ -17,7 +17,7 @@
           <div class="item">
             <Icon name="bi:envelope"></Icon>
             <h6>Email</h6>
-            <p>march.24@gmail.com</p>
+            <a href="mailto:march.24@gmail.com">march.24@gmail.com</a>
           </div>
           <div class="item">
             <Icon name="bi:geo-alt"></Icon>
@@ -146,10 +146,12 @@
         }
         try {
           await emailjs.send(
-            'service_gc73jma',
-            'template_zgdcumc',
+            process.env.NUXT_EMAILJS_SERVICE_ID,
+            process.env.NUXT_EMAILJS_TEMPLATE_ID,
             newRuleForm,
-            'cyYml_AlDg0XYPHmn'
+            {
+              publicKey: process.env.NUXT_EMAILJS_PUBLIC_KEY
+            }
           )
           successMessage()
           formEl.resetFields()
