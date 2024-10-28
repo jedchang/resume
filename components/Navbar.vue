@@ -105,7 +105,7 @@
     activeSectionStore.setActiveSection(currentSection)
   }
 
-  import { useActiveSectionStore } from '~/stores/useActiveSection.js'
+  import { useActiveSectionStore } from '~/stores/activeSection.js'
   const activeSectionStore = useActiveSectionStore()
   // 使用 computed 函數來獲取 activeSection
   const activeSection = computed(() => activeSectionStore.activeSection)

@@ -10,7 +10,7 @@ section#contact {
     padding: 22px 22px;
     border-radius: 10px;
     background: $primaryBgColor;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -57,12 +57,19 @@ section#contact {
     }
   }
 
-  .form-group {
+  :deep(.el-form-item) {
     position: relative;
-    margin-bottom: 30px;
-    label {
-      display: inline-block;
+    margin-bottom: 48px;
+    &.last-item {
+      margin-bottom: 0;
+    }
+
+    .el-form-item__label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 5px 10px;
+      color: #fff;
       // background: $primaryBgColor;
       background-image: url("@/assets/images/texture-bg3.jpg");
       position: absolute;
@@ -71,31 +78,139 @@ section#contact {
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 1px;
-    }
-    input {
-      width: 100%;
-      border: 1px solid $borderColor;
-      border-radius: 10px;
-      background: transparent;
-      color: #fff;
-      padding: 20px;
-      transition: $setTransition;
-      &:focus {
-        outline: none;
+      height: max-content;
+      line-height: 1.6;
+      z-index: 1;
+      &::before {
+        font-size: 16px;
+        height: 20px;
       }
     }
-    textarea {
-      min-height: 195px;
-      width: 100% !important;
-      border: 1px solid $borderColor;
-      border-radius: 10px;
-      background: transparent;
-      color: #fff;
-      padding: 20px;
-      transition: $setTransition;
-      &:focus {
-        outline: none;
+    .el-form-item__content {
+      line-height: 1.6;
+      .el-input {
+        line-height: 1.6;
       }
+      .el-input__wrapper {
+        transform: none;
+        padding: 0;
+        border-radius: 10px;
+        background-color: transparent;
+        box-shadow: none;
+        .el-input__inner {
+          width: 100%;
+          height: fit-content;
+          line-height: 1.6;
+          border: 1px solid $borderColor;
+          border-radius: 10px;
+          background: transparent;
+          box-shadow: none;
+          color: #fff;
+          padding: 18px 20px;
+          font-size: 15px;
+          transition: $setTransition;
+          &:focus {
+            outline: none;
+            border-color: $primaryColor;
+          }
+        }
+      }
+      .el-textarea {
+        transform: none;
+        padding: 0;
+        border-radius: 10px;
+        background-color: transparent;
+        box-shadow: none;
+        .el-textarea__inner {
+          min-height: 195px !important;
+          width: 100% !important;
+          border: 1px solid $borderColor;
+          border-radius: 10px;
+          background: transparent;
+          color: #fff;
+          padding: 20px;
+          box-shadow: none;
+          font-size: 15px;
+          transition: $setTransition;
+          &:focus {
+            outline: none;
+            border-color: $primaryColor;
+          }
+        }
+      }
+      button.btn {
+        &.btn-submit {
+          width: 63%;
+          &.loading {
+            background-color: darken($primaryColor, 20%);
+            border: 1px solid darken($primaryColor, 20%);
+            pointer-events: none;
+            &:hover {
+              background-color: darken($primaryColor, 20%);
+              border: 1px solid darken($primaryColor, 20%);
+            }
+          }
+        }
+        &.btn-reset {
+          width: 33%;
+        }
+        &:last-child {
+          margin-left: 4%;
+        }
+        span.iconify {
+          width: 30px;
+          height: 30px;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .el-form-item__error {
+      padding-top: 8px;
+      padding-left: 8px;
+      font-size: 14px;
     }
   }
+
+  // .form-group {
+  //   position: relative;
+  //   margin-bottom: 30px;
+  //   label {
+  //     display: inline-block;
+  //     padding: 5px 10px;
+  //     // background: $primaryBgColor;
+  //     background-image: url("@/assets/images/texture-bg3.jpg");
+  //     position: absolute;
+  //     top: -12px;
+  //     left: 18px;
+  //     font-size: 12px;
+  //     text-transform: uppercase;
+  //     letter-spacing: 1px;
+  //   }
+  //   input {
+  //     width: 100%;
+  //     border: 1px solid $borderColor;
+  //     border-radius: 10px;
+  //     background: transparent;
+  //     color: #fff;
+  //     padding: 20px;
+  //     transition: $setTransition;
+  //     &:focus {
+  //       outline: none;
+  //     }
+  //   }
+  //   textarea {
+  //     min-height: 195px;
+  //     width: 100% !important;
+  //     border: 1px solid $borderColor;
+  //     border-radius: 10px;
+  //     background: transparent;
+  //     color: #fff;
+  //     padding: 20px;
+  //     transition: $setTransition;
+  //     &:focus {
+  //       outline: none;
+  //     }
+  //   }
+  // }
 }

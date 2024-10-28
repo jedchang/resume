@@ -1,4 +1,5 @@
 <template>
+  <Overlay></Overlay>
   <Navbar></Navbar>
   <Home></Home>
   <About></About>
@@ -6,6 +7,7 @@
   <Skills></Skills>
   <Portfolio></Portfolio>
   <Contact></Contact>
+  <!-- <ContactTest></ContactTest> -->
   <Footer></Footer>
   <ScrollTop></ScrollTop>
 </template>
@@ -33,4 +35,5 @@
   @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 </style>

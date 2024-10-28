@@ -13,8 +13,10 @@
               />
               <h4>Hello, i'm Jed Chang</h4>
               <h1>
-                前端工程師 <span class="and">&</span><br />
-                <span class="stroke">UI/UX</span>設計師經驗
+                <span>前端工程師</span>
+                <span class="and">&</span><br />
+                <span class="stroke en">UI</span>
+                <span>設計師經驗</span>
               </h1>
               <div class="list-btn">
                 <div class="item">
