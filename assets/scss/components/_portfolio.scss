@@ -8,6 +8,7 @@ section#portfolio {
 
 :deep(.el-tabs--card) {
   .el-tabs__content {
+    min-height: 300px;
     padding: 15px;
   }
   .el-tabs__header {
@@ -44,7 +45,7 @@ section#portfolio {
       }
       &.is-active {
         color: #fff;
-        border: 1cqb solid $primaryColor;
+        border: 1px solid $primaryColor;
         background-color: $primaryColor;
       }
       span.item-title {

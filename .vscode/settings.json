@@ -41,10 +41,13 @@
     "typescript"
   ],
   "cSpell.words": [
+    "Axios",
     "codepen",
     "devicon",
     "Devicons",
     "emailjs",
+    "GSAP",
+    "headerbtn",
     "iconify",
     "Lightbox",
     "lineicons",
@@ -60,6 +63,7 @@
     "Tung",
     "twotone",
     "unplugin",
+    "vuedraggable",
     "vuejs",
     "Vuex",
     "zgdcumc"

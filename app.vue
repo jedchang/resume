@@ -1,14 +1,15 @@
 <template>
   <Overlay></Overlay>
   <Navbar></Navbar>
-  <Home></Home>
-  <About></About>
-  <Resume></Resume>
-  <Skills></Skills>
-  <Portfolio></Portfolio>
-  <Contact></Contact>
-  <!-- <ContactTest></ContactTest> -->
-  <Footer></Footer>
+  <main>
+    <Home></Home>
+    <Portfolio></Portfolio>
+    <Skills></Skills>
+    <Resume></Resume>
+    <About></About>
+    <Contact></Contact>
+    <Footer></Footer>
+  </main>
   <ScrollTop></ScrollTop>
 </template>
 

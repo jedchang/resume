@@ -43,34 +43,38 @@ section#home {
       }
       h1 {
         color: #fff;
-        text-transform: capitalize;
         margin-bottom: 30px;
-        font-size: 72px;
-        font-weight: 600;
+        font-size: 58px;
         line-height: 1.2;
+        text-transform: capitalize;
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
         // font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-        font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+        // font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
         text-align: left;
         margin-top: 0;
+        span {
+          width: auto;
+          display: inline-block;
+        }
         span.and {
-          // -webkit-text-stroke: 1px #cecece;
-          // -webkit-text-fill-color: transparent;
-          font-family: "Roboto", sans-serif;
-          font-weight: 600;
+          -webkit-text-stroke: 2px #cecece;
+          -webkit-text-fill-color: transparent;
+          font-family: "Poppins", sans-serif;
+          font-weight: 800;
           font-size: 52px;
           margin: 0 10px;
-          opacity: 0.5;
         }
-        span.stroke {
+      }
+      h2 {
+        opacity: 0.6;
+        font-size: 32px;
+        font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+        span.and {
+          font-family: "Poppins", sans-serif;
+          font-weight: 700;
           -webkit-text-stroke: 1px #fff;
           -webkit-text-fill-color: transparent;
-          font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-          font-weight: 600;
-          margin-right: 5px;
-          &.en {
-            font-family: "Poppins", sans-serif;
-            font-weight: 800;
-          }
         }
       }
       .list-btn {

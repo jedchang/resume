@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/resume/' : '/'
+    baseURL: process.env.NODE_ENV === 'production' ? '/' : '/'
     // buildAssetsDir: '/public/'
   },
   devServer: {
@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     }
   },
   css: ['~/assets/scss/main.scss', 'element-plus/dist/index.css'],
-  modules: ['@nuxt/icon', '@pinia/nuxt', '@element-plus/nuxt'],
+  modules: ['@nuxt/icon', '@pinia/nuxt', '@element-plus/nuxt', 'nuxt-swiper'],
   vite: {
     define: {
       'process.env': process.env
@@ -35,13 +35,6 @@ export default defineNuxtConfig({
       }
     }
   },
-  // runtimeConfig: {
-  //   public: {
-  //     emailjsServiceId: process.env.NUXT_PUBLIC_EMAILJS_SERVICE_ID,
-  //     emailjsTemplateId: process.env.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-  //     emailjsPublicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY
-  //   }
-  // },
   routeRules: {
     'manifest-route-rule': {
       override: true

@@ -1,7 +1,13 @@
 section#contact {
-  background: $primaryBgColor2;
-  background-image: url("@/assets/images/texture-bg3.jpg");
-  background-repeat: repeat;
+  background: $primaryBgColor;
+  // background-image: url("@/assets/images/texture-bg.jpg");
+  // background-position: 50%;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+
+  // background: $primaryBgColor2;
+  // background-image: url("@/assets/images/texture-bg3.jpg");
+  // background-repeat: repeat;
   .item {
     position: relative;
     display: flex;
@@ -82,8 +88,8 @@ section#contact {
       align-items: center;
       padding: 5px 10px;
       color: #fff;
-      // background: $primaryBgColor;
-      background-image: url("@/assets/images/texture-bg3.jpg");
+      background: $primaryBgColor;
+      // background-image: url("@/assets/images/texture-bg3.jpg");
       position: absolute;
       top: -12px;
       left: 18px;

@@ -42,7 +42,7 @@
               <div class="code-row">
                 &lt;<i>code</i>&gt;
                 <span
-                  >I'm a Front-End Engineer & UI Designer located in
+                  >I'm a Front-End Developer & UI/UX Designer located in
                   Taipei.</span
                 >
                 &lt;/<i>code</i>&gt;
@@ -62,7 +62,8 @@
             </div>
             <h4>
               我是一名<span class="main-color">前端工程師</span> &
-              <span class="main-color">UI 設計師</span>，從事網頁開發相關工作。
+              <span class="main-color">UI/UX 設計師</span
+              >，從事網頁開發相關工作。
             </h4>
             <p>
               大家好，我是 Jed

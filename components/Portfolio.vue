@@ -9,42 +9,51 @@
           </SectionTitle>
         </div>
         <div class="col-12">
-          <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-            <el-tab-pane label="All" name="tab1">
+          <el-tabs v-model="activeName" type="card" @tab-click="handleCategory">
+            <el-tab-pane label="All" name="all">
               <template #label>
                 <span class="item-title"> All </span>
               </template>
-              <PortfolioCard></PortfolioCard>
+              <PortfolioCard
+                :portfolio-data="filteredPortfolio"
+              ></PortfolioCard>
               <LoadMore></LoadMore>
-              <!-- <Category :selected-works="selectedWeb"></Category> -->
             </el-tab-pane>
-            <el-tab-pane label="Web Develop" name="tab2">
+            <el-tab-pane label="Web Develop" name="web-develop">
               <template #label>
                 <span class="item-title"> Web Develop </span>
               </template>
-              Web Develop
-              <!-- <Category :selected-works="selectedWeb"></Category> -->
+              <PortfolioCard
+                :portfolio-data="filteredPortfolio"
+              ></PortfolioCard>
+              <LoadMore></LoadMore>
             </el-tab-pane>
-            <el-tab-pane label="UI Design" name="tab3">
+            <el-tab-pane label="UI Design" name="ui-design">
               <template #label>
                 <span class="item-title"> UI Design </span>
               </template>
-              UI Design
-              <!-- <Category :selected-works="selectedUi"></Category> -->
+              <PortfolioCard
+                :portfolio-data="filteredPortfolio"
+              ></PortfolioCard>
+              <LoadMore></LoadMore>
             </el-tab-pane>
-            <el-tab-pane label="Graphic Design" name="tab4">
+            <el-tab-pane label="Graphic Design" name="graphic-design">
               <template #label>
                 <span class="item-title"> Graphic Design </span>
               </template>
-              Graphic Design
-              <!-- <Category :selected-works="selectedUi"></Category> -->
+              <PortfolioCard
+                :portfolio-data="filteredPortfolio"
+              ></PortfolioCard>
+              <LoadMore></LoadMore>
             </el-tab-pane>
-            <el-tab-pane label="Others" name="tab5">
+            <el-tab-pane label="Others" name="others">
               <template #label>
                 <span class="item-title"> Others </span>
               </template>
-              Others
-              <!-- <Category :selected-works="selectedUi"></Category> -->
+              <PortfolioCard
+                :portfolio-data="filteredPortfolio"
+              ></PortfolioCard>
+              <LoadMore></LoadMore>
             </el-tab-pane>
           </el-tabs>
         </div>
@@ -54,9 +63,25 @@
 </template>
 
 <script setup>
-  const activeName = ref('tab1')
-  const handleClick = (tab, event) => {
-    console.log(tab, event)
+  import { portfolioData } from '@/utils/portfolioData.js'
+
+  const activeName = ref('all')
+  const filteredPortfolio = computed(() => {
+    if (activeName.value === 'all') {
+      return portfolioData
+    } else if (activeName.value === 'web-develop') {
+      return portfolioData.filter((item) => item.category === 'Web Develop')
+    } else if (activeName.value === 'ui-design') {
+      return portfolioData.filter((item) => item.category === 'UI Design')
+    } else if (activeName.value === 'graphic-design') {
+      return portfolioData.filter((item) => item.category === 'Graphic Design')
+    } else if (activeName.value === 'others') {
+      return portfolioData.filter((item) => item.category === 'Others')
+    }
+  })
+
+  const handleCategory = (tab) => {
+    activeName.value = tab.name
   }
 </script>
 

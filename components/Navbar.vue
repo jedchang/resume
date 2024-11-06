@@ -15,33 +15,6 @@
               Home
             </button>
           </li>
-          <li class="nav-item" :class="{ active: activeSection === 'about' }">
-            <button
-              type="button"
-              class="nav-link"
-              @click="scrollToSection('about')"
-            >
-              About
-            </button>
-          </li>
-          <li class="nav-item" :class="{ active: activeSection === 'resume' }">
-            <button
-              type="button"
-              class="nav-link"
-              @click="scrollToSection('resume')"
-            >
-              Resume
-            </button>
-          </li>
-          <li class="nav-item" :class="{ active: activeSection === 'skills' }">
-            <button
-              type="button"
-              class="nav-link"
-              @click="scrollToSection('skills')"
-            >
-              Skills
-            </button>
-          </li>
           <li
             class="nav-item"
             :class="{ active: activeSection === 'portfolio' }"
@@ -54,6 +27,34 @@
               Portfolio
             </button>
           </li>
+          <li class="nav-item" :class="{ active: activeSection === 'skills' }">
+            <button
+              type="button"
+              class="nav-link"
+              @click="scrollToSection('skills')"
+            >
+              Skills
+            </button>
+          </li>
+          <li class="nav-item" :class="{ active: activeSection === 'resume' }">
+            <button
+              type="button"
+              class="nav-link"
+              @click="scrollToSection('resume')"
+            >
+              Resume
+            </button>
+          </li>
+          <li class="nav-item" :class="{ active: activeSection === 'about' }">
+            <button
+              type="button"
+              class="nav-link"
+              @click="scrollToSection('about')"
+            >
+              About
+            </button>
+          </li>
+
           <li class="nav-item" :class="{ active: activeSection === 'contact' }">
             <button
               type="button"
