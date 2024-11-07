@@ -94,7 +94,8 @@
     {
       time: '2001 - 2003',
       title: 'Ling Tung University',
-      school: '嶺東科技大學'
+      school: '嶺東科技大學',
+      content: '視覺傳達設計系'
     },
     {
       time: '1999 - 2001',

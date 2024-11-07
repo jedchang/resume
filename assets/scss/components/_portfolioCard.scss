@@ -216,26 +216,23 @@
       }
     }
     .col-lg-7 {
-      .el-carousel {
-        button.el-carousel__arrow {
-          font-size: 26px;
-          color: $primaryColor2;
-          background-color: rgba(37, 41, 46, 0.3);
-          &:hover {
-            background-color: rgba(37, 41, 46, 1);
+      .swiper {
+        .swiper-pagination-bullet {
+          background: #fff;
+        }
+        .swiper-pagination-bullet-active {
+          background: $primaryColor;
+        }
+        .swiper-button-prev {
+          color: $primaryColor;
+          &::after {
+            font-size: 34px;
           }
         }
-        .el-carousel__item {
-          height: 420px;
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-        .el-carousel__indicators--outside {
-          button {
-            background-color: $primaryColor2;
+        .swiper-button-next {
+          color: $primaryColor;
+          &::after {
+            font-size: 34px;
           }
         }
       }

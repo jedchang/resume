@@ -27,7 +27,12 @@
       </div>
     </div>
     <!-- dialog -->
-    <el-dialog v-model="dialogVisible" width="60%" align-center>
+    <el-dialog
+      v-model="dialogVisible"
+      width="60%"
+      align-center
+      @close="handleDialogClose"
+    >
       <div class="container">
         <div class="row">
           <div class="col-lg-5">
@@ -52,21 +57,19 @@
             </div>
           </div>
           <div class="col-lg-7">
-            <el-carousel
-              v-if="currentItem.detailsImg.length > 1"
-              height="auto"
-              trigger="click"
-              arrow="always"
-              :autoplay="false"
-              indicator-position="outside"
+            <Swiper
+              v-if="currentItem.detailsImg.length > 1 && showSwiper"
+              v-bind="swiperOptions"
+              :initial-slide="0"
+              :pagination="{ clickable: true }"
             >
-              <el-carousel-item
+              <SwiperSlide
                 v-for="(img, index) in currentItem.detailsImg"
                 :key="index"
               >
                 <img :src="img" alt="Portfolio Details" />
-              </el-carousel-item>
-            </el-carousel>
+              </SwiperSlide>
+            </Swiper>
             <img v-else :src="currentItem.detailsImg" alt="Portfolio Details" />
           </div>
         </div>
@@ -76,8 +79,6 @@
 </template>
 
 <script setup>
-  // import { portfolioData } from '@/utils/portfolioData.js'
-
   const props = defineProps({
     selectedWorks: {
       type: Array,
@@ -99,75 +100,25 @@
     currentItem.value = item
   }
 
-  const filteredPortfolio = computed(() =>
-    portfolioData.filter((item) => item.category === selectedCategory.value)
-  )
+  // el-dialog 關閉後 Swiper 回到第一張
+  const showSwiper = ref(true)
+  const handleDialogClose = () => {
+    showSwiper.value = false
+    setTimeout(() => {
+      showSwiper.value = true // 重新顯示 Swiper，重置 initialSlide
+    }, 300)
+  }
 
-  // const runtimeConfig = useRuntimeConfig()
-  // const portfolioData = [
-  //   {
-  //     category: 'Web Develop',
-  //     title: 'Parallax 視差滾動網頁',
-  //     thumbImg: `${runtimeConfig.app.baseURL}images/portfolio/thumb/web/thumb-web1.jpg`,
-  //     detailsImg: `${runtimeConfig.app.baseURL}images/portfolio/details/web/details-web1.jpg`,
-  //     tag: [
-  //       'HTML5',
-  //       'SCSS',
-  //       'jQuery',
-  //       'RWD',
-  //       'GSAP',
-  //       'Parallax.js',
-  //       'Typed.js'
-  //     ],
-  //     url: 'https://jedchang.github.io/Parallax-Interactive-Website/'
-  //   },
-  //   {
-  //     category: 'Web Develop',
-  //     title: 'ECS 精英電腦官網',
-  //     thumbImg: `${runtimeConfig.app.baseURL}images/portfolio/thumb/web/thumb-web2.jpg`,
-  //     tag: [
-  //       'HTML5',
-  //       'SCSS',
-  //       'Nuxt.js',
-  //       'RWD',
-  //       'Bootstrap',
-  //       'RESTful API',
-  //       'Vuex',
-  //       'Element UI',
-  //       'PM2'
-  //     ],
-  //     url: 'https://www.ecs.com.tw/tw'
-  //   },
-  //   {
-  //     category: 'Web Develop',
-  //     title: 'Scrum 介紹互動遊戲',
-  //     thumbImg: `${runtimeConfig.app.baseURL}images/portfolio/thumb/web/thumb-web3.jpg`,
-  //     tag: ['HTML5', 'SCSS', 'Vue.js', 'Vuex', 'RWD', 'vuedraggable.js'],
-  //     url: 'https://jedchang.github.io/Scrum-Interactive-Game/'
-  //   },
-  //   {
-  //     category: 'Web Develop',
-  //     title: 'SE40AN 筆記型電腦',
-  //     thumbImg: `${runtimeConfig.app.baseURL}images/portfolio/thumb/web/thumb-web4.jpg`,
-  //     tag: ['HTML5', 'SCSS', 'Vue.js', 'Vuex', 'RWD', 'vuedraggable.js'],
-  //     url: '123'
-  //   },
-  //   {
-  //     category: 'Web Develop',
-  //     title: '技術支援表單頁面',
-  //     thumbImg: `${runtimeConfig.app.baseURL}images/portfolio/thumb/web/thumb-web5.jpg`,
-  //     tag: [
-  //       'HTML5',
-  //       'SCSS',
-  //       'jQuery',
-  //       'RWD',
-  //       'GSAP',
-  //       'Parallax.js',
-  //       'Typed.js'
-  //     ],
-  //     url: '123'
-  //   }
-  // ]
+  const swiperOptions = {
+    modules: [SwiperAutoplay, SwiperPagination],
+    loop: true,
+    speed: 500,
+    autoplay: {
+      delay: 2500
+    },
+    slidesPerView: 1,
+    grabCursor: true
+  }
 </script>
 
 <style lang="scss" scoped>
