@@ -28,6 +28,9 @@ body {
 
   * {
     box-sizing: border-box;
+    user-select: none; // 禁止選取
+    -webkit-user-select: none;
+    -moz-user-select: none;
   }
 }
 

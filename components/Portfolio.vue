@@ -8,7 +8,7 @@
             <template #en> MY Portfolio </template>
           </SectionTitle>
         </div>
-        <div class="col-12">
+        <div class="col-lg-12">
           <el-tabs v-model="activeName" type="card" @tab-click="handleCategory">
             <el-tab-pane label="All" name="all">
               <template #label>
@@ -81,12 +81,13 @@
   })
 
   const handleCategory = (tab) => {
-    activeName.value = tab.name
+    activeName.value = tab.props.name
   }
 </script>
 
 <style lang="scss" scoped>
   @import '../assets/scss/components/_portfolio.scss';
+
   :deep(.section-title) {
     h3.tw {
       span {

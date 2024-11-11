@@ -106,7 +106,7 @@
     showSwiper.value = false
     setTimeout(() => {
       showSwiper.value = true // 重新顯示 Swiper，重置 initialSlide
-    }, 300)
+    }, 800)
   }
 
   const swiperOptions = {

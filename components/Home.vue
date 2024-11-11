@@ -4,7 +4,7 @@
     <div class="intro-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8">
+          <div class="col-8">
             <div class="intro-heading">
               <img
                 class="ornament-drawn"
@@ -43,7 +43,7 @@
               />
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-4">
             <div class="intro-photo">
               <div class="intro-circle">
                 <img src="~/assets/images/icon-rotate.svg" alt="Icon Rotate" />

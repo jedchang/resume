@@ -44,6 +44,8 @@ section#portfolio {
         border: 1px solid $primaryColor;
       }
       &.is-active {
+        cursor: default;
+        pointer-events: none;
         color: #fff;
         border: 1px solid $primaryColor;
         background-color: $primaryColor;
