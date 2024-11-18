@@ -3,14 +3,19 @@
     <div
       v-for="portfolio in portfolioData"
       :key="portfolio.name"
-      class="col-lg-3"
+      class="col-12 col-md-6 col-lg-4 col-xl-3"
     >
       <div class="card-item">
         <img :src="portfolio.thumbImg" :alt="portfolio.category" />
         <div class="overlay"></div>
         <div class="caption">
           <div class="container">
-            <a :href="portfolio.url" class="link" target="_blank">
+            <a
+              :href="portfolio.url"
+              class="link"
+              target="_blank"
+              :class="{ disabled: portfolio.url === null }"
+            >
               <Icon name="fa6-solid:link"></Icon>
             </a>
             <a
@@ -29,13 +34,14 @@
     <!-- dialog -->
     <el-dialog
       v-model="dialogVisible"
-      width="60%"
+      :width="dialogWidth"
       align-center
+      :lock-scroll="false"
       @close="handleDialogClose"
     >
       <div class="container">
         <div class="row">
-          <div class="col-lg-5">
+          <div class="col-12 col-md-12 col-lg-5 col-xl-5">
             <div class="info">
               <span class="category">{{ currentItem.category }}</span>
               <h3>{{ currentItem.title }}</h3>
@@ -56,7 +62,7 @@
               </a>
             </div>
           </div>
-          <div class="col-lg-7">
+          <div class="col-12 col-md-12 col-lg-7 col-xl-7">
             <Swiper
               v-if="currentItem.detailsImg.length > 1 && showSwiper"
               v-bind="swiperOptions"
@@ -99,6 +105,28 @@
     dialogVisible.value = true
     currentItem.value = item
   }
+
+  const dialogWidth = ref('60%')
+  const watchWidth = () => {
+    if (window.innerWidth > 1200) {
+      dialogWidth.value = '1140px'
+    } else if (window.innerWidth > 992 && window.innerWidth < 1199) {
+      dialogWidth.value = '960px'
+    } else if (window.innerWidth > 768 && window.innerWidth < 991) {
+      dialogWidth.value = '720px'
+    } else if (window.innerWidth > 576 && window.innerWidth < 767) {
+      dialogWidth.value = '540px'
+    } else {
+      dialogWidth.value = '92%'
+    }
+  }
+  onMounted(() => {
+    watchWidth()
+    window.addEventListener('resize', watchWidth)
+  })
+  onBeforeUnmount(() => {
+    window.removeEventListener('resize', watchWidth)
+  })
 
   // el-dialog 關閉後 Swiper 回到第一張
   const showSwiper = ref(true)

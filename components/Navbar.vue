@@ -54,7 +54,6 @@
               About
             </button>
           </li>
-
           <li class="nav-item" :class="{ active: activeSection === 'contact' }">
             <button
               type="button"
@@ -71,7 +70,6 @@
 </template>
 
 <script setup>
-  // const activeSection = ref('home')
   const handleScroll = () => {
     const navbar = document.querySelector('.navbar')
     if (window.scrollY > 95) {
@@ -79,13 +77,12 @@
     } else {
       navbar.classList.remove('sticky')
     }
-
     const sections = [
       'home',
-      'about',
-      'resume',
-      'skills',
       'portfolio',
+      'skills',
+      'resume',
+      'about',
       'contact'
     ]
     let currentSection = 'home'

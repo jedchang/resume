@@ -4,20 +4,25 @@
     <div class="intro-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-8">
+          <div class="col-12 intro-main">
+            <img
+              class="ornament-drawn"
+              src="~/assets/images/ornament-drawn.svg"
+              alt="Ornament"
+            />
             <div class="intro-heading">
-              <img
-                class="ornament-drawn"
-                src="~/assets/images/ornament-drawn.svg"
-                alt="Ornament"
-              />
-              <h4>Hello, i'm Jed Chang</h4>
+              <ul>
+                <li>Front-End Developer</li>
+                <li>UI/UX Designer</li>
+              </ul>
               <h1>
-                <span>Front-End Developer</span>
-                <br /><span class="and">&</span>
-                <span>UI/UX designer</span>
+                Hello, I'm
+                <span class="name">Jed Chang<span class="dot">.</span></span>
               </h1>
-              <h2>前端工程師 <span class="and">&</span> UI/UX 設計師</h2>
+              <h2>
+                我是一名前端工程師 <span class="and">&</span> UI/UX
+                設計師，專注於網頁開發與設計，致力於將視覺美感與互動體驗融入每一個細節。擅長將設計理念轉化為高效、流暢的前端頁面，提供優質的使用者體驗與視覺呈現。
+              </h2>
               <div class="list-btn">
                 <div class="item">
                   <button type="button" class="btn">
@@ -26,15 +31,18 @@
                   </button>
                 </div>
                 <div class="item">
-                  <SocialMedia></SocialMedia>
-                </div>
-
-                <!-- <li class="list-item">
-                  <button type="button" class="btn btn-outline">
+                  <button
+                    type="button"
+                    class="btn btn-outline"
+                    @click="scrollToSection('contact')"
+                  >
                     <Icon name="mdi:email-outline"></Icon>
                     Email Me
                   </button>
-                </li> -->
+                </div>
+                <div class="item">
+                  <SocialMedia></SocialMedia>
+                </div>
               </div>
               <img
                 class="ornament-arrow"
@@ -43,7 +51,7 @@
               />
             </div>
           </div>
-          <div class="col-4">
+          <!-- <div class="col-4">
             <div class="intro-photo">
               <div class="intro-circle">
                 <img src="~/assets/images/icon-rotate.svg" alt="Icon Rotate" />
@@ -59,12 +67,34 @@
                 />
               </figure>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+  const scrollToSection = (sectionId) => {
+    const section = document.querySelector(`#${sectionId}`)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+      activeSectionStore.setActiveSection(sectionId)
+    }
+  }
+
+  onMounted(() => {
+    const setVh = () => {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    }
+    // 初始化時設定
+    setVh()
+
+    // 當視窗調整大小時重新設定
+    window.addEventListener('resize', setVh)
+  })
+</script>
 
 <style lang="scss" scoped>
   @import '../assets/scss/components/_home.scss';

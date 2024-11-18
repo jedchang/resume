@@ -2,134 +2,529 @@ section#about {
   background: $primaryBgColor2;
   background-image: url("@/assets/images/texture-bg3.jpg");
   background-repeat: repeat;
-  .vertical-align {
+  padding-bottom: calc(150px + 30px);
+  @include medium {
+    padding: 120px 0;
+  }
+  @include small {
+    padding: 120px 0;
+  }
+  @include extraSmall {
+    padding: 80px 0;
+  }
+}
+
+.intro-photo {
+  position: relative;
+  .intro-grid {
+    background-image: url("@/assets/images/dot-light.png");
+    position: absolute;
+    opacity: 1;
+    top: 10%;
+    left: 25px;
+    width: 220px;
+    height: 373px;
+    @include extraLarge {
+      left: 12px;
+      width: 220px;
+      height: 373px;
+    }
+    @include large {
+      left: -10px;
+      height: 322px;
+    }
+    @include medium {
+      display: none;
+    }
+    @include small {
+      display: none;
+    }
+    @include extraSmall {
+      display: none;
+    }
+  }
+  figure {
+    margin: 0 52px 0;
+    @include extraLarge {
+      margin: 0 32px 0;
+    }
+    @include large {
+      margin: 0 10px 0;
+    }
+    @include medium {
+      display: inline-block;
+      margin: 0 0 50px;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    @include small {
+      display: inline-block;
+      margin: 0 0 45px;
+      width: 280px;
+      height: 280px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    @include extraSmall {
+      display: inline-block;
+      margin: 25px 0 45px;
+      width: 90%;
+      height: auto;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    &::before {
+      display: none;
+      content: "";
+      position: absolute;
+      background-image: url("@/assets/images/ornament-circle.svg");
+      background-repeat: no-repeat;
+      width: 230px;
+      height: 230px;
+      bottom: -74px;
+      right: -4%;
+      z-index: 1;
+      @include extraLarge {
+        right: -11%;
+      }
+      @include large {
+        right: 0%;
+      }
+      @include medium {
+        display: inline-block;
+        right: 17%;
+        bottom: 50%;
+      }
+      @include small {
+        display: inline-block;
+        right: 8%;
+        bottom: 50%;
+        width: 210px;
+        height: 210px;
+      }
+      @include extraSmall {
+        display: inline-block;
+        right: -3%;
+        bottom: 59%;
+        width: 180px;
+        height: 180px;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("@/assets/images/ornament-star.svg");
+      background-repeat: no-repeat;
+      width: 70px;
+      height: 70px;
+      top: 40px;
+      left: 20%;
+      z-index: 2;
+      animation: zoom-in-out 2s ease-out infinite;
+      @include extraLarge {
+        top: 35px;
+        left: 20%;
+      }
+      @include large {
+        top: 35px;
+        left: 13%;
+      }
+      @include medium {
+        top: 27px;
+        left: 33%;
+      }
+      @include small {
+        top: 27px;
+        left: 27%;
+      }
+      @include extraSmall {
+        top: 49px;
+        left: 23%;
+      }
+    }
+    img {
+      display: block;
+      object-fit: cover;
+      position: relative;
+      border-radius: 15px;
+      z-index: 2;
+      left: 50%;
+      transform: translateX(-45%);
+      height: 450px;
+      @include extraLarge {
+        transform: translateX(-42%);
+        height: 440px;
+      }
+      @include large {
+        transform: translateX(-47%);
+        height: 375px;
+      }
+      @include medium {
+        transform: translateX(0%);
+        height: fit-content;
+        width: 100%;
+        left: 0;
+      }
+      @include small {
+        transform: translateX(0%);
+        height: fit-content;
+        width: 100%;
+        left: 0;
+      }
+      @include extraSmall {
+        transform: translateX(15%);
+        height: fit-content;
+        width: 80%;
+        left: 0;
+      }
+    }
+  }
+  .intro-circle {
+    position: absolute;
+    bottom: -55px;
+    left: 9px;
+    width: 120px;
+    height: 120px;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #242a32;
+    // background-color: rgba(14, 14, 14, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
+    @include extraLarge {
+      width: 120px;
+      height: 120px;
+      bottom: -53px;
+      left: -5px;
+    }
+    @include large {
+      width: 110px;
+      height: 110px;
+      bottom: -44px;
+      left: -15px;
+    }
+    @include medium {
+      width: 120px;
+      height: 120px;
+      bottom: 22px;
+      left: 136px;
+    }
+    @include small {
+      width: 105px;
+      height: 105px;
+      bottom: 16px;
+      left: 64px;
+    }
+    @include extraSmall {
+      width: 105px;
+      height: 105px;
+      bottom: 16px;
+      left: 7px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      animation: circle-around 15s linear infinite;
+    }
+    .icon {
+      width: 40%;
+      height: 40%;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $primaryColor;
+      span.iconify {
+        width: 40%;
+        height: 40%;
+      }
+    }
   }
-  .experience {
-    max-width: 360px;
-    padding: 76px 30px 76px 47px;
-    text-align: right;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: none;
-    margin-top: 45px;
+}
+.vertical-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.experience {
+  max-width: 360px;
+  padding: 76px 30px 76px 47px;
+  text-align: right;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: none;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .exp-number {
+    background-image: url("@/assets/images/exp-number-bg.svg");
+    color: transparent;
+    -webkit-text-stroke: 2px $primaryColor;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transform: scale3d(1, 1.2, 1);
+    background-position: 20px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  span.number {
+    font-size: 194px;
+    font-weight: 700;
+    line-height: 0.8;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    -webkit-text-stroke: 2px $primaryColor;
+    -webkit-text-fill-color: transparent;
+    font-family: "Poppins", sans-serif;
+    span {
+      font-weight: 600;
+      font-size: 100px;
+    }
+  }
+  h5.title {
+    font-size: 76px;
+    font-weight: 600;
+    line-height: 1.2;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .exp-number {
-      background-image: url("@/assets/images/exp-number-bg.svg");
-      color: transparent;
-      -webkit-text-stroke: 2px $primaryColor;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      transform: scale3d(1, 1.2, 1);
-      background-position: 20px 0px;
-      background-repeat: no-repeat;
-      background-size: cover;
+    span {
+      display: block;
+      font-size: 22px;
+      text-align: left;
     }
-    span.number {
-      font-size: 194px;
-      font-weight: 700;
-      line-height: 0.8;
-      margin-bottom: 30px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      -webkit-text-stroke: 2px $primaryColor;
-      -webkit-text-fill-color: transparent;
-      font-family: "Poppins", sans-serif;
-      span {
-        font-weight: 600;
-        font-size: 100px;
+  }
+}
+.info {
+  margin: 0 20px;
+  text-align: left;
+  @include large {
+    margin: 0 20px 0 0;
+  }
+  @include medium {
+    margin: 0;
+  }
+  @include small {
+    margin: 0;
+  }
+  @include extraSmall {
+    margin: 0;
+  }
+  .code-wrapper {
+    margin: 0 0 40px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+    @include extraLarge {
+      margin: 0 0 36px;
+    }
+    @include large {
+      margin: 0 0 30px;
+    }
+    @include medium {
+      margin: 0 0 30px;
+    }
+    @include small {
+      margin: 0 0 30px;
+    }
+    @include extraSmall {
+      margin: 0 0 20px;
+      padding: 8px 10px;
+    }
+    .code-row {
+      font-size: 18px;
+      margin: 5px;
+      font-family: serif;
+      font-family: "Roboto", sans-serif;
+      @include small {
+        font-size: 16px;
+        margin: 5px 0;
+      }
+      @include extraSmall {
+        font-size: 3.6vmin;
+        margin: 5px 0;
       }
     }
-    h5.title {
-      font-size: 76px;
-      font-weight: 600;
-      line-height: 1.2;
-      position: relative;
-      font-family: "Montserrat", sans-serif;
-      text-transform: uppercase;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      span {
-        display: block;
-        font-size: 22px;
-        text-align: left;
+    i {
+      color: #ff6366;
+      font-style: normal;
+    }
+    span {
+      font-size: 18px;
+      margin: 3px;
+      color: #a8a8a8;
+      @include small {
+        font-size: 16px;
+      }
+      @include extraSmall {
+        font-size: 3.6vmin;
+        margin: 0;
       }
     }
   }
-  .info {
-    margin: 0 20px;
-    text-align: left;
-    .code-wrapper {
-      margin: 40px 0;
+  h4 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    padding: 0 15px;
+    font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    @include large {
+      font-size: 18px;
+      padding: 0 12px;
+    }
+    @include medium {
+      padding: 0 5px;
+    }
+    @include small {
+      font-size: 18px;
+      padding: 0;
+    }
+    @include extraSmall {
+      font-size: 18px;
+      padding: 0;
+    }
+  }
+  p {
+    font-size: 15px;
+    font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    color: lighten($primaryTextColor2, 15%);
+    padding: 0 0 0 15px;
+    line-height: 1.8;
+    @include large {
+      padding: 0 0 0 12px;
+    }
+    @include medium {
+      padding: 0 0 0 5px;
+    }
+    @include small {
+      padding: 0;
+    }
+    @include extraSmall {
+      padding: 0;
+    }
+  }
+  .slogan-wrapper {
+    padding: 20px;
+    margin: 40px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #181c22;
+    border-left-color: $primaryColor;
+    border-left-width: 7px;
+    @include extraLarge {
+      margin: 36px 0 0;
+    }
+    @include large {
+      margin: 30px 0 0;
+      padding: 10px;
+    }
+    @include medium {
+      margin: 30px 0 0;
+      padding: 10px;
+    }
+    @include small {
+      padding: 10px;
+      margin: 30px 0 0;
+    }
+    @include extraSmall {
       padding: 15px;
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(15px);
-      border-radius: 8px;
-      .code-row {
-        font-size: 18px;
-        margin: 5px;
-        font-family: serif;
-        font-family: "Roboto", sans-serif;
-      }
-      i {
-        color: #ff6366;
-        font-style: normal;
-      }
-      span {
-        font-size: 18px;
-        margin: 3px;
-        color: #a8a8a8;
-      }
+      margin: 20px 0 0;
     }
-    h4 {
-      font-size: 26px;
+    h6.slogan {
+      font-size: 22px;
+      line-height: 1.6;
       font-weight: 600;
-      margin: 0 0 20px;
-      padding: 0 15px;
-      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-    }
-    p {
-      font-size: 16px;
-      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-      padding: 0 15px;
-      line-height: 1.8;
-    }
-    .slogan-wrapper {
-      margin: 40px 0 0;
-      padding: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background-color: #181c22;
-      border-left-color: $primaryColor;
-      border-left-width: 7px;
-      h6.slogan {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      @include large {
+        font-size: 20px;
+      }
+      @include medium {
         font-size: 22px;
-        font-weight: 600;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        span.iconify {
-          width: 60px;
-          height: 60px;
-          color: rgba(255, 255, 255, 0.2);
-          margin-right: 5px;
-          &:last-child {
-            transform: rotate(180deg);
-          }
+      }
+      @include small {
+        font-size: 17px;
+        justify-content: space-between;
+      }
+      @include extraSmall {
+        font-size: 18px;
+        justify-content: space-between;
+      }
+      span.iconify {
+        width: 60px;
+        height: 60px;
+        color: rgba(255, 255, 255, 0.2);
+        margin-right: 7px;
+        @include large {
+          width: 42px;
+          height: 42px;
+        }
+        @include medium {
+          width: 42px;
+          height: 42px;
+        }
+        @include small {
+          width: 42px;
+          height: 42px;
+        }
+        @include extraSmall {
+          display: none;
+        }
+        &:last-child {
+          transform: rotate(180deg);
         }
       }
-      figure {
-        margin: 15px 5px 0 0;
-        text-align: right;
-        img {
-          width: 175px;
-          transform: rotate(-3deg);
+    }
+    figure {
+      margin: 15px 5px 0 0;
+      text-align: right;
+      @include extraLarge {
+        margin: 10px 5px 0 0;
+      }
+      @include large {
+        margin: 5px 5px 0 0;
+      }
+      @include medium {
+        margin: 5px 5px 0 0;
+      }
+      @include small {
+        margin: 15px 15px 0 0;
+      }
+      @include extraSmall {
+        margin: 15px 15px 0 0;
+      }
+      img {
+        width: 175px;
+        transform: rotate(-3deg);
+        @include large {
+          width: 145px;
+        }
+        @include medium {
+          width: 145px;
+        }
+        @include small {
+          width: 155px;
+        }
+        @include extraSmall {
+          width: 155px;
         }
       }
     }

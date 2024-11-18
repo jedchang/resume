@@ -1,6 +1,7 @@
 <template>
   <Overlay></Overlay>
   <Navbar></Navbar>
+  <MobileNavbar></MobileNavbar>
   <main>
     <Home></Home>
     <Portfolio></Portfolio>

@@ -5,12 +5,6 @@
     </button>
     <span class="scrollbar"></span>
   </div>
-  <!-- <div id="scroll-top" :class="{ show: showScrollTop }">
-    <button type="button" class="btn" @click="scrollToTop">
-      <span>Scroll Top</span>
-    </button>
-    <span class="scrollbar"></span>
-  </div> -->
 </template>
 
 <script setup>
@@ -34,11 +28,20 @@
     // ProgressBar
     const bodyHeight = (document.body.scrollHeight - window.innerHeight) / 10 // 計算 body 的高度並減去視窗高度
     const scrollHeight = window.scrollY // 取得當前的滾動位置
+    console.log('scrollHeight:', scrollHeight)
     const percentage = ((scrollHeight / bodyHeight) * 100) / 10 // 計算卷軸進度百分比
 
     // 將結果應用到目標元素上
     const scrollbar = document.querySelector('.scrollbar')
     scrollbar.style.height = `${percentage}%`
+
+    if (scrollHeight >= 380) {
+      const scrollTop = document.querySelector('#scroll-top')
+      scrollTop.classList.add('show')
+    } else {
+      const scrollTop = document.querySelector('#scroll-top')
+      scrollTop.classList.remove('show')
+    }
   }
 
   onMounted(() => {
@@ -53,20 +56,24 @@
 
 <style lang="scss" scoped>
   #scroll-top {
-    // opacity: 0;
-    // visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
     position: fixed;
     width: 2px;
     height: 100px;
     top: 53%;
-    left: 30px;
+    right: -30px;
     border-radius: 6px;
     background-color: rgba(255, 255, 255, 0.25);
     transition: $setTransition;
     z-index: 999;
+    @include extraSmall {
+      display: none;
+    }
     &.show {
       opacity: 1;
       visibility: visible;
+      right: 35px;
     }
     button.btn {
       color: $primaryTextColor2;

@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <MobileScrollTop></MobileScrollTop>
     <div class="container">
       <div class="info">
         <a href="#" class="navbar-brand">

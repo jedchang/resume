@@ -2,13 +2,13 @@
   <section id="portfolio">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-12">
           <SectionTitle>
             <template #tw> 作品集 </template>
             <template #en> MY Portfolio </template>
           </SectionTitle>
         </div>
-        <div class="col-lg-12">
+        <div class="col-12">
           <el-tabs v-model="activeName" type="card" @tab-click="handleCategory">
             <el-tab-pane label="All" name="all">
               <template #label>
@@ -46,7 +46,7 @@
               ></PortfolioCard>
               <LoadMore></LoadMore>
             </el-tab-pane>
-            <el-tab-pane label="Others" name="others">
+            <!-- <el-tab-pane label="Others" name="others">
               <template #label>
                 <span class="item-title"> Others </span>
               </template>
@@ -54,7 +54,7 @@
                 :portfolio-data="filteredPortfolio"
               ></PortfolioCard>
               <LoadMore></LoadMore>
-            </el-tab-pane>
+            </el-tab-pane> -->
           </el-tabs>
         </div>
       </div>
@@ -93,9 +93,17 @@
       span {
         &::before {
           right: 80px;
+          @include extraSmall {
+            right: 115%;
+            top: 50%;
+          }
         }
         &::after {
           left: 80px;
+          @include extraSmall {
+            left: 105%;
+            top: 50%;
+          }
         }
       }
     }

@@ -12,12 +12,47 @@
   }
 }
 
+@keyframes pulse {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes pulse-reversal {
+  0% {
+    transform: scaleX(-1) translate(0);
+  }
+  50% {
+    transform: scaleX(-1) translateY(10px);
+  }
+  100% {
+    transform: scaleX(-1) translate(0);
+  }
+}
+
 @keyframes move-bar {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(60px);
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
 

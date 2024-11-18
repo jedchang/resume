@@ -3,7 +3,6 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-
   .card-item {
     position: relative;
     display: flex;
@@ -11,9 +10,31 @@
     align-items: center;
     margin: 8px 8px 12px;
     overflow: hidden;
-    // border: 1px solid darken($borderColor, 10%)a.btn
     animation: scale-zoom-in 0.3s;
     transition: $setTransition;
+    @include small {
+      margin: 8px 0 12px;
+    }
+    @include extraSmall {
+      margin: 8px 0 12px;
+      &:active {
+        .overlay {
+          opacity: 1;
+        }
+        .caption .container > a {
+          transform: scale(1);
+          opacity: 1;
+        }
+        .caption > h4.title {
+          letter-spacing: 0;
+          opacity: 1;
+        }
+        .caption > p.category {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
     &:hover {
       .overlay {
         opacity: 1;
@@ -65,6 +86,17 @@
         letter-spacing: -8px;
         transition: $setTransition;
         opacity: 0;
+        @include medium {
+          font-size: 18px;
+        }
+        @include small {
+          font-size: 24px;
+          margin-bottom: 2px;
+        }
+        @include extraSmall {
+          font-size: 6.3vmin;
+          margin-bottom: 2px;
+        }
       }
       p.category {
         display: inline-block;
@@ -76,25 +108,42 @@
         transform: translateY(70px);
         transition: $setTransition;
         opacity: 0;
+        @include small {
+          font-size: 18px;
+        }
+        @include extraSmall {
+          font-size: 5vmin;
+        }
       }
       .container {
         display: flex;
         justify-content: center;
         align-items: center;
-        // width: 155px;
         a {
           color: #0d1218;
           background-color: rgba(255, 255, 255, 0.8);
           height: 45px;
           width: 45px;
-          // line-height: 45px;
-          text-align: center;
           margin: 4px;
+          text-align: center;
           border-radius: 100%;
+          will-change: transform; // 以避免在元素發生改變時出現卡頓或者閃爍等的問題。
           transition: $setTransition;
           transform: scale(0);
           opacity: 0;
           position: relative;
+          @include medium {
+            width: 55px;
+            height: 55px;
+          }
+          @include small {
+            width: 55px;
+            height: 55px;
+          }
+          @include extraSmall {
+            width: 55px;
+            height: 55px;
+          }
           &:hover {
             color: #fff;
             background: $primaryColor;
@@ -105,6 +154,15 @@
           &:last-child {
             margin-left: 6px;
           }
+          &.disabled {
+            pointer-events: none;
+            cursor: pointer;
+            background: #626262;
+            opacity: 0.5;
+            span.iconify {
+              opacity: 0.8;
+            }
+          }
           span.iconify {
             position: absolute;
             top: 49%;
@@ -112,14 +170,36 @@
             transform: translate(-50%, -50%);
             width: 16px;
             height: 16px;
-            // vertical-align: sub;
+            @include medium {
+              width: 20px;
+              height: 20px;
+            }
+            @include small {
+              width: 20px;
+              height: 20px;
+            }
+            @include extraSmall {
+              width: 20px;
+              height: 20px;
+            }
             &.i-fa6-solid\:link {
               top: 49%;
               left: 49%;
               transform: translate(-50%, -50%) rotate(90deg);
               width: 18px;
               height: 18px;
-              // transform: rotate(90deg);
+              @include medium {
+                width: 22px;
+                height: 22px;
+              }
+              @include small {
+                width: 22px;
+                height: 22px;
+              }
+              @include extraSmall {
+                width: 22px;
+                height: 22px;
+              }
             }
           }
         }
@@ -131,8 +211,70 @@
     text-align: left;
     padding: 30px 30px 45px 20px;
     background: #25292e;
+    @include medium {
+      padding: 20px 15px 20px 15px;
+      margin: 25px auto;
+      overflow-y: scroll;
+    }
+    @include small {
+      padding: 20px 15px 20px 15px;
+      margin: 3% auto;
+      overflow-y: scroll;
+    }
+    @include extraSmall {
+      padding: 20px 15px 20px 15px;
+      margin: 3% auto;
+      overflow-y: scroll;
+    }
+    .el-dialog__header {
+      @include medium {
+        position: fixed;
+        width: 48px;
+        top: 45px;
+        right: 54px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important;
+        background: #383c3f;
+      }
+      @include small {
+        position: fixed;
+        width: 48px;
+        top: 45px;
+        right: 54px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important;
+        background: #383c3f;
+      }
+      @include extraSmall {
+        position: fixed;
+        width: 48px;
+        top: 45px;
+        right: 54px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important;
+        background: #383c3f;
+      }
+    }
     .el-dialog__headerbtn {
       top: 5px;
+      @include medium {
+        top: 0;
+      }
+      @include small {
+        top: 0;
+      }
+      @include extraSmall {
+        top: 0;
+      }
       &:hover {
         .el-dialog__close {
           color: $primaryColor;
@@ -144,12 +286,30 @@
     }
     .info {
       font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      @include medium {
+        margin-bottom: 30px;
+      }
+      @include small {
+        margin-bottom: 30px;
+      }
+      @include extraSmall {
+        margin-bottom: 30px;
+      }
       h3 {
         font-size: 26px;
         font-weight: 600;
         color: #fff;
         padding: 5px 0 15px;
         border-bottom: 1px solid #5a5a5a;
+        @include medium {
+          font-size: 24px;
+        }
+        @include small {
+          font-size: 24px;
+        }
+        @include extraSmall {
+          font-size: 24px;
+        }
       }
       p {
         font-size: 14px;
@@ -157,6 +317,15 @@
         color: #fff;
         opacity: 0.8;
         padding: 10px 0 30px;
+        @include medium {
+          padding: 10px 0 20px;
+        }
+        @include small {
+          padding: 10px 0 20px;
+        }
+        @include extraSmall {
+          padding: 10px 0 20px;
+        }
       }
       span.category {
         color: $primaryTextColor2;
@@ -168,14 +337,39 @@
         text-transform: uppercase;
         margin-top: 10px;
         padding: 0;
+        @include medium {
+          margin-top: 0;
+        }
+        @include small {
+          margin-top: 0;
+        }
+        @include extraSmall {
+          margin-top: 0;
+        }
       }
       ul {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
-        margin-top: 30px;
-        margin-bottom: 50px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        @include large {
+          margin-top: 10px;
+          margin-bottom: 30px;
+        }
+        @include medium {
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+        @include small {
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+        @include extraSmall {
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
         li {
           border-radius: 4px;
           margin-right: 10px;
@@ -203,6 +397,16 @@
         padding: 15px 25px;
         height: 45px;
         line-height: 45px;
+        @include small {
+          width: 100%;
+          height: 55px;
+          line-height: 55px;
+        }
+        @include extraSmall {
+          width: 100%;
+          height: 55px;
+          line-height: 55px;
+        }
         &.disabled {
           pointer-events: none;
           opacity: 0.3;
@@ -234,6 +438,9 @@
           &::after {
             font-size: 34px;
           }
+        }
+        .swiper-pagination {
+          bottom: 0;
         }
       }
     }

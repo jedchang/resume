@@ -28,13 +28,12 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: 80px;
-    // &.align-left {
-    //   justify-content: flex-start;
-    //   align-items: flex-start;
-    //   h3.tw {
-    //     margin-left: 60px;
-    //   }
-    // }
+    @include small {
+      margin-bottom: 60px;
+    }
+    @include extraSmall {
+      margin-bottom: 40px;
+    }
     h3.tw {
       font-family: 微軟正黑體, Oswald, sans-serif;
       font-size: 15px;
@@ -45,6 +44,10 @@
       letter-spacing: 0.05em;
       color: #ffffff;
       margin: 0px;
+      @include extraSmall {
+        font-size: 4vmin;
+        margin-bottom: 5px;
+      }
       span {
         letter-spacing: 6px;
         position: relative;
@@ -78,15 +81,16 @@
       font-size: 62px;
       text-align: center;
       text-transform: uppercase;
-      // letter-spacing: -0.04em;
       color: #fff;
       margin: 0;
-      // width: 100%;
       line-height: 100%;
       z-index: 1;
       background-clip: text;
       -webkit-text-fill-color: transparent;
       background-image: linear-gradient(180deg, #fdd196, #b18b59 50%, #37250e);
+      @include extraSmall {
+        font-size: 14vmin;
+      }
     }
     &.dark {
       .bar {

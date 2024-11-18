@@ -1,13 +1,14 @@
 section#contact {
   background: $primaryBgColor;
-  // background-image: url("@/assets/images/texture-bg.jpg");
-  // background-position: 50%;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-
-  // background: $primaryBgColor2;
-  // background-image: url("@/assets/images/texture-bg3.jpg");
-  // background-repeat: repeat;
+  @include medium {
+    padding: 120px 0;
+  }
+  @include small {
+    padding: 120px 0;
+  }
+  @include extraSmall {
+    padding: 80px 0;
+  }
   .item {
     position: relative;
     display: flex;
@@ -17,8 +18,32 @@ section#contact {
     border-radius: 10px;
     background: $primaryBgColor;
     margin-bottom: 30px;
+    @include large {
+      padding: 28px 15px;
+      margin-bottom: 22px;
+    }
+    @include medium {
+      padding: 15px 22px;
+      margin-bottom: 12px;
+    }
+    @include small {
+      margin-bottom: 12px;
+    }
+    @include extraSmall {
+      padding: 12px 12px;
+      margin-bottom: 12px;
+    }
     &:last-child {
       margin-bottom: 0;
+      @include medium {
+        margin-bottom: 50px;
+      }
+      @include small {
+        margin-bottom: 50px;
+      }
+      @include extraSmall {
+        margin-bottom: 50px;
+      }
     }
     &::before {
       content: "";
@@ -34,52 +59,93 @@ section#contact {
         rgba(255, 255, 255, 0.24),
         rgba(177, 139, 89, 0.45)
       );
-      // background: linear-gradient(
-      //   140deg,
-      //   rgba(255, 255, 255, 0.24),
-      //   rgba(255, 255, 255, 0.04)
-      // );
       opacity: 0.3;
       pointer-events: none;
     }
-    span.iconify {
-      width: 36px;
-      height: 36px;
-      margin-right: 8px;
-      color: $primaryColor;
-    }
-    h6 {
-      font-size: 16px;
-      font-weight: 500;
-      font-family: "Montserrat", sans-serif;
-      margin-left: 16px;
-      color: $primaryTextColor2;
+    .icon {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      span.iconify {
+        width: 36px;
+        height: 36px;
+        color: $primaryColor;
+        @include large {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      h6 {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Montserrat", sans-serif;
+        margin-left: 16px;
+        color: $primaryTextColor2;
+        @include large {
+          font-size: 13px;
+          margin-left: 8px;
+        }
+        @include extraSmall {
+          display: none;
+        }
+      }
     }
     p {
       color: $primaryTextColor2;
-      margin-left: auto;
       font-size: 16px;
       font-weight: 400;
       font-family: "Montserrat", sans-serif;
+      @include large {
+        font-size: 14px;
+      }
+      @include extraSmall {
+        font-size: 14px;
+      }
     }
     a {
       color: $primaryTextColor2;
-      margin-left: auto;
       font-size: 16px;
       font-weight: 400;
       font-family: "Montserrat", sans-serif;
       transition: $setTransition;
+      @include large {
+        font-size: 14px;
+      }
+      @include extraSmall {
+        font-size: 14px;
+      }
       &:hover {
         color: $primaryColor;
       }
     }
   }
 
-  :deep(.el-form-item) {
-    position: relative;
-    margin-bottom: 48px;
-    &.last-item {
-      margin-bottom: 0;
+  :deep(form.el-form) {
+    padding-right: 10px;
+    @include medium {
+      padding-right: 0;
+    }
+    @include small {
+      padding-right: 0;
+    }
+    @include extraSmall {
+      padding-right: 0;
+    }
+    .el-form-item {
+      position: relative;
+      margin-bottom: 48px;
+      @include medium {
+        margin-bottom: 40px;
+      }
+      @include small {
+        margin-bottom: 38px;
+      }
+      @include extraSmall {
+        margin-bottom: 38px;
+      }
+      &.last-item {
+        margin-bottom: 0;
+      }
     }
 
     .el-form-item__label {
@@ -99,12 +165,21 @@ section#contact {
       height: max-content;
       line-height: 1.6;
       z-index: 1;
+      @include small {
+        font-size: 13px;
+        top: -13px;
+      }
+      @include extraSmall {
+        font-size: 13px;
+        top: -13px;
+      }
       &::before {
         font-size: 16px;
         height: 20px;
       }
     }
     .el-form-item__content {
+      justify-content: space-between;
       line-height: 1.6;
       .el-input {
         line-height: 1.6;
@@ -159,6 +234,18 @@ section#contact {
       button.btn {
         &.btn-submit {
           width: 63%;
+          @include large {
+            width: 62%;
+          }
+          @include medium {
+            width: 63%;
+          }
+          @include small {
+            width: 60%;
+          }
+          @include extraSmall {
+            width: 100%;
+          }
           &.loading {
             background-color: darken($primaryColor, 20%);
             border: 1px solid darken($primaryColor, 20%);
@@ -170,11 +257,33 @@ section#contact {
           }
         }
         &.btn-reset {
-          width: 33%;
+          width: 35%;
+          @include large {
+            width: 34%;
+          }
+          @include medium {
+            width: 35%;
+          }
+          @include small {
+            width: 37%;
+          }
+          @include extraSmall {
+            width: 100%;
+            margin-top: 15px;
+          }
         }
-        &:last-child {
-          margin-left: 4%;
+        + .el-button {
+          margin-left: 0;
         }
+        // &:last-child {
+        //   margin-left: 4%;
+        //   @include small {
+        //     margin-left: 2%;
+        //   }
+        //   @include extraSmall {
+        //     margin-left: 2%;
+        //   }
+        // }
         span.iconify {
           width: 30px;
           height: 30px;

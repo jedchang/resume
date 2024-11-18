@@ -2,13 +2,13 @@
   <section id="resume">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-12">
           <SectionTitle :set-color="'isDark'">
             <template #tw> 工作經驗 & 教育背景 </template>
             <template #en> My Resume </template>
           </SectionTitle>
         </div>
-        <div class="col-lg-12">
+        <div class="col-12">
           <el-tabs v-model="activeName" type="card" @tab-click="handleTabs">
             <el-tab-pane label="Experience" name="experience">
               <template #label>
@@ -32,16 +32,20 @@
                       <span class="ripple"></span>
                       {{ experience.date }}
                     </h6>
-                    <h5 class="title">{{ experience.title }}</h5>
-                    <h4 class="company">{{ experience.company }}</h4>
-                    <ul>
-                      <li
-                        v-for="(c_item, c_index) in experience.content"
-                        :key="c_index"
-                      >
-                        {{ c_item }}
-                      </li>
-                    </ul>
+                    <div class="content">
+                      <h5 class="title">{{ experience.title }}</h5>
+                      <h4 class="company">{{ experience.company }}</h4>
+                      <span class="number">{{ experience.number }}</span>
+                      <hr />
+                      <ul>
+                        <li
+                          v-for="(c_item, c_index) in experience.content"
+                          :key="c_index"
+                        >
+                          {{ c_item }}
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </SwiperSlide>
               </Swiper>
@@ -102,8 +106,10 @@
                         <span class="title">
                           {{ t_item.title }}
                         </span>
-                        <Icon name="fa6-solid:trophy"></Icon>
-                        <span class="ranking">{{ t_item.ranking }}</span>
+                        <div class="awards">
+                          <Icon name="fa6-solid:trophy"></Icon>
+                          <span class="ranking">{{ t_item.ranking }}</span>
+                        </div>
                       </li>
                     </ul>
                   </div>
@@ -120,54 +126,58 @@
 <script setup>
   const experienceData = [
     {
+      number: '04',
       date: '2013/10 - 2024/10',
       title: 'Senior Front-End Engineer',
       company: '精英電腦股份有限公司',
       content: [
-        '負責官方網站內容開發及日常維護，確保網站功能與內容的穩定運行。',
+        '負責官方網站開發及日常維護，確保網站功能與網站內容能穩定運行。',
         '專案活動網站的開發、建置與維護，同時參與 UI/UX 設計，提升使用者體驗。',
-        '內部系統的開發建置，並協助 APP 介面設計，提供 UI/UX 設計支持。',
-        '主導內部 Gitea 平台的多人協作開發流程，提升團隊協作效率。',
+        '內部系統開發建置，協助 APP 介面設計，提供 UI/UX 設計支持。',
+        '主導內部 Gitea 平台的多人協作開發流程，提升團隊協作開發效率。',
         '使用 PM2 部署應用程式至 AWS S3，提升服務穩定性。',
-        '製作廣告與文宣 Banner，確保視覺傳達的一致性與專業性。',
-        '熟練使用 Figma、Adobe XD 等設計工具，進行高效 UI/UX 設計。'
+        '活動廣告文宣與網頁 Banner 製作，確保視覺傳達的一致性與專業性。',
+        '使用 Figma、Adobe XD 等設計工具，進行高效 UI/UX 設計及 Prototype 動態互動效果。'
       ]
     },
     {
+      number: '03',
       date: '2007/12 - 2013/04',
       title: 'Senior Web Designer',
       company: '華智通信股份有限公司',
       content: [
-        '負責官方網站的內容開發與維護，確保功能更新與內容的一致性。',
-        '活動網站及產品網頁的開發與建置，以符合行銷與用戶需求。',
-        '系統介面的 UI/UX 設計，提升使用者操作體驗與介面美感。',
-        '平面設計製作，包括產品包裝、DM、海報及名片等印刷品設計',
-        '廣告與網頁 Banner 製作，強化視覺吸引力並支持行銷需求。',
+        '負責官方網站開發及日常維護，確保網站功能與網站內容能穩定運行。',
+        '活動網站及產品網頁的開發與建置，以符合行銷活動與用戶體驗需求。',
+        '系統介面 UI/UX 設計製作，提升使用者操作體驗與介面視覺美感。',
+        '平面設計製作，包括產品包裝、DM、海報及名片等印刷品設計。',
+        '活動廣告文宣與網頁 Banner 製作，強化視覺吸引力並支持行銷需求。',
         '活動主視覺設計與大型輸出物設計，展現品牌形象與活動主題。',
         '影音動畫及多媒體製作，增強互動性與品牌傳播效果。'
       ]
     },
     {
+      number: '02',
       date: '2005/05 - 2007/12',
       title: 'Web Designer',
       company: '安納賽思股份有限公司',
       content: [
-        '官方網站內容開發與日常維護，確保網站穩定運行並支持行銷活動。',
+        '負責官方網站開發及日常維護，確保網站功能與網站內容能穩定運行，並支持行銷活動。',
         '產品網頁建置與設計，從視覺設計到功能實現，提升用戶體驗。',
         '系統 GUI 介面設計，確保操作界面的美觀性和易用性。',
         '廣告與網頁 Banner 製作，提升品牌視覺吸引力。',
         '產品拍攝與修圖，確保產品影像的質量與一致性。',
-        '平面設計，包括產品包裝、DM 及 CIS 視覺識別系統，強化品牌形象。',
+        '平面設計、產品包裝、DM、CIS 視覺識別系統，強化品牌形象。',
         '活動相關大型輸出物設計，支援活動需求並突顯品牌視覺主題。'
       ]
     },
     {
+      number: '01',
       date: '2000/07 - 2001/06',
       title: 'Designer',
       company: '羚傑企業有限公司',
       content: [
         '平面文宣設計，為品牌和產品提供高效的視覺傳達方案。',
-        'DM、海報及廣告設計，提升宣傳材料的吸引力與資訊傳達效果。',
+        'DM、海報及廣告設計，提升產品宣傳吸引力與資訊傳達效果。',
         '印刷製作管理，確保成品品質符合設計與品牌標準。',
         '影音多媒體製作，增強互動性並提升品牌的數位影響力。'
       ]
@@ -194,6 +204,23 @@
     }
   ]
   const awardsData = [
+    {
+      date: '2022',
+      tournament: [
+        {
+          title: 'The F2E 4th 競賽第一週主題',
+          ranking: '企業獎'
+        },
+        {
+          title: 'The F2E 4th 競賽第二週主題',
+          ranking: '佳作'
+        },
+        {
+          title: 'The F2E 4th 競賽第三週主題',
+          ranking: '佳作'
+        }
+      ]
+    },
     {
       date: '2005',
       tournament: [
@@ -379,19 +406,55 @@
     // autoplay: {
     //   delay: 2500
     // },
-    slidesPerView: 2,
+    breakpoints: {
+      576: {
+        slidesPerView: 1
+      },
+      768: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 2
+      },
+      1200: {
+        slidesPerView: 3
+      }
+    },
     grabCursor: true
   }
   const educationOptions = {
     modules: [SwiperAutoplay, SwiperPagination],
     speed: 500,
-    slidesPerView: 3,
+    breakpoints: {
+      576: {
+        slidesPerView: 1
+      },
+      768: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 3
+      }
+    },
     grabCursor: true
   }
   const awardsOptions = {
     modules: [SwiperAutoplay, SwiperPagination],
     speed: 500,
-    slidesPerView: 3,
+    breakpoints: {
+      576: {
+        slidesPerView: 1
+      },
+      768: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 2
+      },
+      1200: {
+        slidesPerView: 3
+      }
+    },
     grabCursor: true
   }
 </script>
@@ -404,9 +467,17 @@
       span {
         &::before {
           right: 220px;
+          @include extraSmall {
+            right: 105%;
+            top: 50%;
+          }
         }
         &::after {
           left: 220px;
+          @include extraSmall {
+            left: 102%;
+            top: 50%;
+          }
         }
       }
     }

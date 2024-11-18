@@ -2,25 +2,31 @@
   <section id="skills">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-12">
           <SectionTitle>
             <template #tw> 主要技能 </template>
             <template #en> Main Skills </template>
           </SectionTitle>
         </div>
-        <div v-for="item in skillsData" :key="item.name" class="col-lg-4">
+        <div
+          v-for="item in skillsData"
+          :key="item.name"
+          class="col-12 col-md-6 col-lg-6 col-xl-4 skill-main"
+        >
           <div class="skill-item">
             <div class="skill-icon">
               <Icon v-if="item.icon1" :name="item.icon1"></Icon>
               <Icon v-if="item.icon2" :name="item.icon2"></Icon>
             </div>
-            <h4 class="skill-name">{{ item.name }}</h4>
-            <ul>
-              <li v-for="list in item.content" :key="list">
-                <Icon name="bi:check"></Icon>
-                {{ list }}
-              </li>
-            </ul>
+            <div class="skill-content">
+              <h4 class="skill-name">{{ item.name }}</h4>
+              <ul>
+                <li v-for="list in item.content" :key="list">
+                  <Icon name="bi:check"></Icon>
+                  {{ list }}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -105,9 +111,17 @@
       span {
         &::before {
           right: 100px;
+          @include extraSmall {
+            right: 115%;
+            top: 50%;
+          }
         }
         &::after {
           left: 100px;
+          @include extraSmall {
+            left: 105%;
+            top: 50%;
+          }
         }
       }
     }

@@ -25,6 +25,9 @@ body {
   text-align: center;
   color: #fff;
   background-color: $primaryBgColor;
+  &.no-scroll {
+    overflow: hidden;
+  }
 
   * {
     box-sizing: border-box;
@@ -91,10 +94,6 @@ section {
 }
 
 // scrollbar
-span.main-color {
-  color: $primaryColor;
-}
-
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -102,8 +101,11 @@ span.main-color {
   display: none;
 }
 ::-webkit-scrollbar-thumb {
-  background: $primaryColor;
+  background: $borderColor;
   background-clip: content-box;
+  &:hover {
+    background: lighten($borderColor, 10%);
+  }
 }
 ::-webkit-scrollbar-track {
   background-color: #0f141c;

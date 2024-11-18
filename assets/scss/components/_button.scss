@@ -30,6 +30,17 @@ a.btn {
       transform: skewX(-33deg) scaleX(0);
     }
   }
+  @include extraSmall {
+    &:active {
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
+      background: transparent;
+      &::before {
+        opacity: 1;
+        transform: skewX(-33deg) scaleX(0);
+      }
+    }
+  }
   &:focus,
   &:focus-visible {
     outline: none;
@@ -60,6 +71,18 @@ a.btn {
         background: lighten($primaryColor, 15%);
         opacity: 1;
         transform: skewX(-33deg) scaleX(1.2);
+      }
+    }
+    @include extraSmall {
+      &:active {
+        color: #ffffff;
+        background: transparent;
+        border: 1px solid lighten($primaryColor, 15%);
+        &::before {
+          background: lighten($primaryColor, 15%);
+          opacity: 1;
+          transform: skewX(-33deg) scaleX(1.2);
+        }
       }
     }
     &::before {

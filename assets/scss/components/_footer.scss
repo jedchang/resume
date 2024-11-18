@@ -7,6 +7,16 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
+    @include medium {
+      flex-direction: column;
+    }
+    @include small {
+      flex-direction: column;
+    }
+    @include extraSmall {
+      flex-direction: column;
+      padding: 15px 0;
+    }
   }
   a.navbar-brand {
     width: 150px;
@@ -18,6 +28,24 @@ footer {
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
     color: $primaryTextColor2;
+    @include medium {
+      order: 1;
+      margin-bottom: 10px;
+      font-size: 22px;
+      line-height: 1.6;
+    }
+    @include small {
+      order: 1;
+      margin-bottom: 10px;
+      font-size: 22px;
+      line-height: 1.6;
+    }
+    @include extraSmall {
+      order: 2;
+      margin-bottom: 10px;
+      font-size: 22px;
+      line-height: 1.6;
+    }
     span.special {
       color: $primaryColor;
     }
@@ -27,15 +55,30 @@ footer {
     font-weight: 500;
     color: $primaryTextColor2;
     font-family: "Montserrat", sans-serif;
+    @include medium {
+      order: 3;
+    }
+    @include small {
+      order: 3;
+    }
+    @include extraSmall {
+      order: 3;
+    }
     span {
       color: lighten($primaryTextColor2, 20%);
       transition: $setTransition;
+      @include extraSmall {
+        display: block;
+      }
       &:hover {
         color: $primaryColor;
       }
       &.pipe {
         color: $primaryTextColor2;
         margin: 0 6px 0 4px;
+        @include extraSmall {
+          display: none;
+        }
       }
     }
   }
@@ -50,11 +93,40 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include medium {
+      order: 2;
+      justify-content: center;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    @include small {
+      order: 2;
+      justify-content: center;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    @include extraSmall {
+      order: 1;
+      justify-content: center;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    li {
+      @include medium {
+        margin: 10px 10px;
+      }
+      @include small {
+        margin: 10px 10px;
+      }
+      @include extraSmall {
+        margin: 10px 10px;
+      }
+    }
     a {
       padding: 3px;
       width: 32px;
       height: 32px;
-      border: 1px solid #1d2738;
+      border: 1px solid darken($borderColor, 5%);
       border-radius: 6px;
       color: $primaryTextColor2;
       background: transparent;
@@ -62,6 +134,18 @@ footer {
       justify-content: center;
       align-items: center;
       transition: $setTransition;
+      @include medium {
+        width: 52px;
+        height: 52px;
+      }
+      @include small {
+        width: 52px;
+        height: 52px;
+      }
+      @include extraSmall {
+        width: 52px;
+        height: 52px;
+      }
       &:hover {
         color: #fff;
         background: $primaryColor;

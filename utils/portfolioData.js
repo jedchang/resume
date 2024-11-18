@@ -3,7 +3,7 @@ export const portfolioData = [
     category: 'Web Develop',
     title: 'Parallax 視差滾動網頁',
     description:
-      '透過 CSS、JavaScript 實作視差滾動互動式網站，透過滑鼠滾動讓多層背景以不同的速度移動，形成立體的運動效果，帶來特別的視覺體驗。採用 jQuery、GSAP、Parallax.js、Typed.js 等套件開發，首頁動畫共 2 種，每次進入前隨機出現 (Super Engineer、Super Designer)',
+      '透過 JavaScript、 CSS animation 實作視差滾動互動式網站，透過滑鼠滾動讓多層背景以不同的速度移動，形成立體的運動效果，帶來特別的視覺體驗。搭配 jQuery、GSAP、Parallax.js、Typed.js 等套件開發，首頁動畫共 2 種，每次進入前隨機出現 (Super Engineer、Super Designer)。',
     thumbImg: 'images/portfolio/thumb/web/thumb-web1.jpg',
     detailsImg: [
       'images/portfolio/details/web/details-web1_1.jpg',

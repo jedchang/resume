@@ -2,49 +2,36 @@
   <section id="about">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-12">
           <SectionTitle>
             <template #tw> 關於我 </template>
             <template #en> About Me </template>
           </SectionTitle>
         </div>
-        <div class="col-lg-4">
-          <div class="experience">
-            <div class="exp-number">
-              <span class="number">18 <span>+</span></span>
+        <div class="col-12 col-lg-4 col-xl-4">
+          <div class="intro-photo">
+            <div class="intro-grid"></div>
+            <figure>
+              <img src="~/assets/images/hero-profile.jpg" alt="Hero Profile" />
+            </figure>
+            <div class="intro-circle">
+              <img src="~/assets/images/icon-rotate.svg" alt="Icon Rotate" />
+              <div class="icon">
+                <Icon name="icon-park-solid:good-one"></Icon>
+              </div>
             </div>
-            <h5 class="title">
-              Years
-              <span>Experience Working</span>
-            </h5>
           </div>
-
-          <!-- <div class="experience">
-            <span class="number">18 <span>+</span></span>
-            <h5 class="title">
-              Years
-              <span>Experience Working</span>
-            </h5>
-          </div> -->
-
-          <!-- <div class="profile-img">
-            <div class="img">
-              <img
-                src="~/assets/images/about-profile.jpg"
-                alt="About Profile"
-              />
-            </div>
-          </div> -->
         </div>
-        <div class="col-lg-8 vertical-align">
+        <div class="col-12 col-lg-8 col-xl-8 vertical-align">
           <div class="info">
             <div class="code-wrapper">
               <div class="code-row">
                 &lt;<i>code</i>&gt;
-                <span
+                <span>Front-End Developer & UI/UX Designer.</span>
+                <!-- <span
                   >I'm a Front-End Developer & UI/UX Designer located in
                   Taipei.</span
-                >
+                > -->
                 &lt;/<i>code</i>&gt;
               </div>
               <div class="code-row">
@@ -67,84 +54,18 @@
             </h4>
             <p>
               大家好，我是 Jed
-              Chang，擁有多年網站開發與設計的實務經驗，能夠從需求探討、架構規劃、草稿設計到程式開發，獨立完成網站開發的整體流程。並且不斷提升前端開發相關技能，以程式邏輯解決設計中的問題，並結合用戶需求，創造出優質的使用體驗。
+              Chang，擁有多年網站開發與設計的實務經驗，能夠從需求探討、架構規劃、草稿設計到程式開發，獨立完成網站開發的整體流程。並且不斷提升前端開發相關技能，以程式邏輯解決設計中的問題，並結合用戶需求後創造出優質的使用體驗。
             </p>
             <div class="slogan-wrapper">
-              <!-- <h6 class="slogan">
-                <Icon name="bi:quote"></Icon>
-                「將視覺與程式技術融合，成就每一個互動細節。」
-              </h6> -->
               <h6 class="slogan">
                 <Icon name="bi:quote"></Icon>
-                「融合視覺設計與程式技術，締造卓越的互動體驗。」
+                融合視覺設計與程式技術，締造卓越的互動體驗。
                 <Icon name="bi:quote"></Icon>
               </h6>
-              <!-- <h6 class="slogan">
-                <Icon name="bi:quote"></Icon>
-                通過精心設計的視覺呈現與精湛的程式技術完美融合，打造出既美觀又功能強大的用戶體驗。
-              </h6> -->
               <figure>
                 <img src="~/assets/images/sign.png" alt="Sign" />
               </figure>
             </div>
-            <!-- <div class="features">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <h6>
-                      <Icon name="fa-solid:check"></Icon>
-                      Web Development
-                    </h6>
-                  </div>
-                  <div class="feature-item">
-                    <h6>
-                      <Icon name="fa-solid:check"></Icon>
-                      UI/UX Design
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <h6>
-                      <Icon name="fa-solid:check"></Icon>
-                      SEO / Marketing
-                    </h6>
-                  </div>
-                  <div class="feature-item">
-                    <h6>
-                      <Icon name="fa-solid:check"></Icon>
-                      Graphic Design
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="contacts">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="contact-item">
-                    <div class="icon">
-                      <Icon name="fa-solid:envelope"></Icon>
-                    </div>
-                    <div class="text">
-                      <span>Email US</span>
-                      <h6>March.24@gmail.com</h6>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="contact-item">
-                    <div class="icon">
-                      <Icon name="fa-solid:mobile-alt"></Icon>
-                    </div>
-                    <div class="text">
-                      <span>Call US</span>
-                      <h6>0922-641-110</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>
@@ -181,4 +102,27 @@
 
 <style lang="scss" scoped>
   @import '../assets/scss/components/_about.scss';
+  :deep(.section-title) {
+    h3.tw {
+      span {
+        &::before {
+          right: 100px;
+          @include extraSmall {
+            right: 115%;
+            top: 50%;
+          }
+        }
+        &::after {
+          left: 100px;
+          @include extraSmall {
+            left: 105%;
+            top: 50%;
+          }
+        }
+      }
+    }
+    h2.en {
+      background-image: linear-gradient(180deg, #fdd196, #b18b59 50%, #242529);
+    }
+  }
 </style>

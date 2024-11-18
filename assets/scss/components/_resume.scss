@@ -4,25 +4,60 @@ section#resume {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  @include medium {
+    padding: 120px 0;
+  }
+  @include small {
+    padding: 120px 0;
+  }
+  @include extraSmall {
+    padding: 80px 0;
+  }
 }
 
 :deep(.el-tabs--card) {
   .el-tabs__content {
     min-height: 300px;
-    padding: 15px;
+    padding: 15px 15px 0;
+    @include medium {
+      padding: 15px 0 0;
+    }
+    @include small {
+      padding: 15px 0 0;
+    }
+    @include extraSmall {
+      padding: 15px 0 0;
+      margin-top: 150px;
+    }
   }
   .el-tabs__header {
     border-bottom: none;
     margin-bottom: 30px;
+    .el-tabs__nav-wrap {
+      overflow: visible;
+    }
     .el-tabs__nav-scroll {
       overflow: hidden;
-      border-radius: 35px;
       background-color: rgba(44, 52, 66, 0.4);
       backdrop-filter: saturate(50%) blur(4px);
       border: 0;
       padding: 8px 2px;
+      border-radius: 35px;
       position: relative;
       display: inline-block;
+      box-shadow: 0px 0px 12px 2px rgba(24, 29, 38, 0.4);
+      @include small {
+        width: 98%;
+        padding: 8px 8px;
+        border-radius: 45px;
+      }
+      @include extraSmall {
+        width: 100%;
+        padding: 8px 8px;
+        border-radius: 28px;
+        margin-top: 190px;
+      }
     }
     .el-tabs__nav {
       float: none;
@@ -32,6 +67,18 @@ section#resume {
       align-items: center;
       border-radius: 0;
       border: none;
+      @include medium {
+        height: 59px;
+      }
+      @include small {
+        height: 75px;
+        justify-content: space-between;
+      }
+      @include extraSmall {
+        height: auto;
+        justify-content: space-between;
+        flex-direction: column;
+      }
     }
     .el-tabs__item {
       height: 46px;
@@ -42,11 +89,42 @@ section#resume {
       border-bottom: none;
       margin: 0 10px;
       transition: $setTransition;
+      @include medium {
+        height: 55px;
+        border-radius: 30px;
+      }
+      @include small {
+        height: 75px;
+        border-radius: 40px;
+        padding: 15px 35px;
+        margin: 0 2px;
+      }
+      @include extraSmall {
+        width: 100%;
+        height: 55px;
+        border-radius: 40px;
+        padding: 15px 35px;
+        margin: 0 0 15px;
+        background-color: $primaryBgColor2;
+      }
       &:nth-child(2) {
         padding-left: 45px;
+        @include small {
+          padding-left: 35px;
+        }
+        @include extraSmall {
+          padding-left: 35px;
+        }
       }
       &:last-child {
         padding-right: 45px;
+        @include small {
+          padding-right: 35px;
+        }
+        @include extraSmall {
+          padding-right: 35px;
+          margin-bottom: 0;
+        }
       }
       &:hover {
         color: $primaryColor;
@@ -59,24 +137,67 @@ section#resume {
         border-bottom: none;
       }
       span.item-title {
-        font-size: 14px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 600;
         text-transform: uppercase;
         font-family: "Montserrat", sans-serif;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        @include small {
+          font-size: 15px;
+          flex-direction: column;
+        }
+        @include extraSmall {
+          font-size: 4.7vmin;
+        }
         span.iconify {
           width: 16px;
           height: 16px;
           margin-right: 8px;
+          @include small {
+            width: 22px;
+            height: 22px;
+            margin-right: 0;
+            margin-bottom: 5px;
+          }
+          @include extraSmall {
+            width: 22px;
+            height: 22px;
+            margin-right: 8px;
+            margin-bottom: 0;
+          }
           &.i-fa6-solid\:graduation-cap {
             width: 20px;
             height: 20px;
+            @include small {
+              width: 26px;
+              height: 26px;
+              margin-right: 0;
+              margin-bottom: 5px;
+            }
+            @include extraSmall {
+              width: 26px;
+              height: 26px;
+              margin-right: 8px;
+              margin-bottom: 0;
+            }
           }
           &.i-fa6-solid\:trophy {
-            width: 17px;
-            height: 17px;
+            width: 18px;
+            height: 18px;
+            @include small {
+              width: 24px;
+              height: 24px;
+              margin-right: 0;
+              margin-bottom: 5px;
+            }
+            @include extraSmall {
+              width: 24px;
+              height: 24px;
+              margin-right: 8px;
+              margin-bottom: 0;
+            }
           }
         }
       }
@@ -90,6 +211,9 @@ section#resume {
 :deep(.swiper-wrapper) {
   padding-top: 25px;
   padding-bottom: 50px;
+  @include extraSmall {
+    padding-top: 20px;
+  }
   .item {
     text-align: center;
     padding: 25px 20px 35px;
@@ -97,9 +221,60 @@ section#resume {
     margin: 0 10px;
     background: #2c34424d;
     backdrop-filter: saturate(50%) blur(4px);
+    will-change: transform; // 以避免在元素發生改變時出現卡頓或者閃爍等的問題。
     animation: scale-zoom-in 0.3s;
-    transition: $setTransition;
-    height: 410px;
+    height: fit-content;
+    min-height: 589px;
+    @include large {
+      padding: 25px 15px 35px;
+      margin: 0 7px;
+      min-height: 572px;
+    }
+    @include medium {
+      padding: 35px 20px 45px;
+      margin: 0 6px;
+      min-height: 636px;
+    }
+    @include small {
+      padding: 35px 30px 45px;
+      margin: 0 5px;
+      min-height: 530px;
+    }
+    @include extraSmall {
+      padding: 25px 10px 30px;
+      margin: 0 0;
+      min-height: 616px;
+      &:active {
+        .content {
+          hr {
+            width: 50%;
+            margin: 0 auto;
+          }
+          ul > li {
+            color: #fff;
+            &::before {
+              background-color: $primaryColor2;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      .content {
+        hr {
+          width: 140px;
+          @include extraSmall {
+            width: 50%;
+          }
+        }
+        ul > li {
+          color: #fff;
+          &::before {
+            background-color: $primaryColor2;
+          }
+        }
+      }
+    }
   }
   h6.date {
     position: relative;
@@ -108,6 +283,15 @@ section#resume {
     font-weight: 600;
     color: $primaryColor;
     font-family: "Montserrat", sans-serif;
+    @include medium {
+      font-size: 18px;
+    }
+    @include small {
+      font-size: 18px;
+    }
+    @include extraSmall {
+      font-size: 5.7vmin;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -160,54 +344,150 @@ section#resume {
       }
     }
   }
-  h5.title {
-    font-size: 22px;
-    font-weight: 500;
-    color: #fff;
-    font-family: "Roboto", "Montserrat", sans-serif;
-  }
-  h4.company {
-    font-size: 16px;
-    margin-top: 5px;
-    color: #fff;
-    // color: darken(#fff, 20%);
-    display: inline-block;
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     position: relative;
-    &::before {
-      content: "【";
-      position: absolute;
-      top: 0;
-      left: -20px;
+    padding: 0;
+    @include extraSmall {
+      align-items: center;
     }
-    &::after {
-      content: "】";
-      position: absolute;
-      top: 0;
-      right: -20px;
+    h5.title {
+      font-size: 22px;
+      font-weight: 500;
+      color: #fff;
+      font-family: "Roboto", "Montserrat", sans-serif;
+      @include large {
+        font-size: 24px;
+      }
+      @include medium {
+        font-size: 22px;
+      }
+      @include small {
+        font-size: 26px;
+      }
+      @include extraSmall {
+        font-size: 5vmin;
+      }
     }
-  }
-  ul {
-    margin-top: 20px;
-    padding: 10px 0 0 45px;
-    li {
-      font-size: 14px;
-      font-weight: 300;
-      color: lighten($primaryTextColor2, 20%);
-      margin-bottom: 5px;
-      padding-left: 15px;
+    h4.company {
+      font-size: 16px;
+      margin-top: 5px;
+      color: #fff;
+      display: inline-block;
+      margin-left: 12px;
+      margin-bottom: 20px;
       position: relative;
-      &:last-child {
-        margin-bottom: 0;
+      @include large {
+        font-size: 18px;
+      }
+      @include medium {
+        font-size: 18px;
+      }
+      @include small {
+        font-size: 20px;
+      }
+      @include extraSmall {
+        font-size: 5vmin;
+        margin-left: 0;
       }
       &::before {
-        content: "";
+        content: "【";
         position: absolute;
-        top: 10px;
-        left: 0;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background-color: darken($primaryTextColor2, 20%);
+        top: 0;
+        left: -20px;
+        @include extraSmall {
+          left: -12%;
+        }
+      }
+      &::after {
+        content: "】";
+        position: absolute;
+        top: 0;
+        right: -20px;
+        @include extraSmall {
+          right: -12%;
+        }
+      }
+    }
+    span.number {
+      position: absolute;
+      top: 18px;
+      right: 0px;
+      font-size: 72px;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      opacity: 0.05;
+      z-index: -1;
+      @include medium {
+        top: 33px;
+        right: -8px;
+        font-size: 64px;
+      }
+      @include small {
+        top: 16px;
+        right: 6px;
+        font-size: 84px;
+      }
+      @include extraSmall {
+        display: none;
+        top: 16px;
+        right: 6px;
+        font-size: 84px;
+      }
+    }
+    hr {
+      width: 100px;
+      margin-left: 0;
+      border: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      background: $primaryColor;
+      transition: $setTransition;
+      @include extraSmall {
+        width: 30%;
+        margin: 0 auto;
+      }
+    }
+    ul {
+      margin-top: 10px;
+      padding: 10px 0 0 0px;
+      @include large {
+        padding: 10px 0 0 0;
+      }
+      li {
+        font-size: 14px;
+        font-weight: 300;
+        color: lighten($primaryTextColor2, 15%);
+        margin-bottom: 8px;
+        padding-left: 12px;
+        transition: $setTransition;
+        position: relative;
+        @include medium {
+          font-size: 14px;
+        }
+        @include small {
+          font-size: 14px;
+        }
+        @include extraSmall {
+          font-size: 14px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          transition: $setTransition;
+          background-color: darken($primaryTextColor2, 20%);
+        }
       }
     }
   }
@@ -216,19 +496,70 @@ section#resume {
   .swiper-wrapper {
     .item {
       padding: 25px 20px 35px;
-      height: 270px;
+      will-change: transform; // 以避免在元素發生改變時出現卡頓或者閃爍等的問題。
+      height: fit-content;
+      min-height: 350px;
+      @include large {
+        padding: 25px 15px 35px;
+        min-height: 350px;
+      }
+      @include medium {
+        padding: 25px 20px 35px;
+        min-height: 350px;
+      }
+      @include small {
+        padding: 25px 20px 35px;
+        min-height: 350px;
+      }
+      @include extraSmall {
+        padding: 25px 20px 35px;
+        min-height: 350px;
+      }
+      &:hover {
+        p {
+          color: $primaryColor2;
+          border: 1px solid $primaryColor2;
+        }
+      }
+      h6.date {
+        margin-bottom: 85px;
+      }
       h5.title {
         font-size: 18px;
         font-weight: 400;
         color: #fff;
         font-family: "Roboto", "Montserrat", sans-serif;
+        @include large {
+          font-size: 16px;
+        }
+        @include medium {
+          font-size: 18px;
+        }
+        @include small {
+          font-size: 18px;
+        }
+        @include extraSmall {
+          font-size: 18px;
+        }
       }
       h4.school {
         font-size: 20px;
-        margin-top: 5px;
+        margin-top: 8px;
         color: #fff;
         display: block;
         letter-spacing: 1px;
+        @include medium {
+          margin-top: 7px;
+          font-size: 20px;
+        }
+        @include small {
+          margin-top: 7px;
+          font-size: 22px;
+        }
+        @include extraSmall {
+          margin-top: 7px;
+          font-size: 22px;
+        }
       }
       p {
         font-size: 15px;
@@ -236,29 +567,109 @@ section#resume {
         margin-top: 30px;
         display: inline-block;
         padding: 6px 16px;
+        transition: $setTransition;
         border: 1px solid darken($primaryColor, 20%);
+        @include medium {
+          margin-top: 40px;
+        }
+        @include small {
+          margin-top: 40px;
+        }
+        @include extraSmall {
+          margin-top: 40px;
+        }
       }
     }
   }
 }
+
 :deep(#pane-awards) {
   .swiper-wrapper {
     .item {
-      padding: 25px 30px 35px;
-      height: 480px;
+      padding: 25px 20px 35px;
+      will-change: transform; // 以避免在元素發生改變時出現卡頓或者閃爍等的問題。
+      height: fit-content;
+      min-height: 480px;
+      @include large {
+        padding: 25px 15px 35px;
+        min-height: 480px;
+      }
+      @include medium {
+        padding: 35px 30px 45px;
+        min-height: 614px;
+      }
+      @include small {
+        padding: 35px 30px 45px;
+        min-height: 614px;
+      }
+      @include extraSmall {
+        padding: 35px 30px 45px;
+        min-height: 614px;
+      }
+      &:hover {
+        ul > li {
+          color: #fff;
+          &::before {
+            background-color: $primaryColor2;
+          }
+        }
+        span.title {
+          color: #fff;
+          &::before {
+            background-color: $primaryColor2;
+          }
+        }
+        .awards > span.iconify,
+        .awards > span.ranking {
+          color: $primaryColor2;
+        }
+      }
       ul {
         margin-top: 30px;
         text-align: center;
-        padding: 10px 0 0 25px;
+        padding: 10px 0 0 20px;
+        @include medium {
+          padding: 10px 0 0 0;
+        }
+        @include small {
+          padding: 10px 0 0 0;
+        }
+        @include extraSmall {
+          padding: 10px 0 0 0;
+        }
         li {
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          padding-left: 15px;
+          padding-left: 12px;
           margin-bottom: 5px;
           position: relative;
+          @include medium {
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom: 1px dashed #3d3d3d;
+          }
+          @include small {
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom: 1px dashed #3d3d3d;
+          }
+          @include extraSmall {
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom: 1px dashed #3d3d3d;
+          }
           &:last-child {
             margin-bottom: 0;
+            @include medium {
+              border-bottom: none;
+            }
+            @include small {
+              border-bottom: none;
+            }
+            @include extraSmall {
+              border-bottom: none;
+            }
           }
           &::before {
             content: "";
@@ -268,26 +679,76 @@ section#resume {
             width: 5px;
             height: 5px;
             border-radius: 50%;
+            transition: $setTransition;
             background-color: darken($primaryTextColor2, 20%);
           }
         }
         span.title {
           font-size: 14px;
           font-weight: 300;
-          color: lighten($primaryTextColor2, 20%);
-        }
-        span.iconify {
-          width: 15px;
-          height: 15px;
-          color: $primaryColor;
-          margin-left: 10px;
-        }
-        span.ranking {
-          font-size: 14px;
-          font-weight: 400;
-          color: $primaryColor;
           display: inline-block;
-          margin-left: 5px;
+          transition: $setTransition;
+          color: lighten($primaryTextColor2, 15%);
+          @include medium {
+            font-size: 13px;
+          }
+          @include small {
+            font-size: 15px;
+          }
+          @include extraSmall {
+            font-size: 15px;
+          }
+        }
+        .awards {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include medium {
+            margin-top: 2px;
+          }
+          @include small {
+            margin-top: 2px;
+          }
+          @include extraSmall {
+            margin-top: 2px;
+          }
+          span.iconify {
+            width: 15px;
+            height: 15px;
+            color: $primaryColor;
+            display: inline-block;
+            transition: $setTransition;
+            margin-left: 10px;
+            @include medium {
+              width: 16px;
+              height: 16px;
+            }
+            @include small {
+              width: 16px;
+              height: 16px;
+            }
+            @include extraSmall {
+              width: 16px;
+              height: 16px;
+            }
+          }
+          span.ranking {
+            font-size: 14px;
+            font-weight: 400;
+            color: $primaryColor;
+            display: inline-block;
+            transition: $setTransition;
+            margin-left: 5px;
+            @include medium {
+              font-size: 15px;
+            }
+            @include small {
+              font-size: 15px;
+            }
+            @include extraSmall {
+              font-size: 15px;
+            }
+          }
         }
       }
     }

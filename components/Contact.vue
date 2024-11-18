@@ -2,48 +2,56 @@
   <section id="contact">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-12">
           <SectionTitle>
             <template #tw> 聯絡我 </template>
             <template #en> Contact Us </template>
           </SectionTitle>
         </div>
-        <div class="col-lg-5">
+        <div class="col-12 col-lg-5 col-xl-5">
           <div class="item">
-            <Icon name="bi:telephone"></Icon>
-            <h6>Phone</h6>
+            <div class="icon">
+              <Icon name="bi:telephone"></Icon>
+              <h6>Phone</h6>
+            </div>
             <p>0922-641-110</p>
           </div>
           <div class="item">
-            <Icon name="bi:envelope"></Icon>
-            <h6>Email</h6>
+            <div class="icon">
+              <Icon name="bi:envelope"></Icon>
+              <h6>Email</h6>
+            </div>
             <a href="mailto:march.24@gmail.com">march.24@gmail.com</a>
           </div>
           <div class="item">
-            <Icon name="bi:geo-alt"></Icon>
-            <h6>Address</h6>
+            <div class="icon">
+              <Icon name="bi:geo-alt"></Icon>
+              <h6>Address</h6>
+            </div>
             <p>Neihu Dist., Taipei City, Taiwan</p>
           </div>
           <div class="item">
-            <Icon name="lineicons:website"></Icon>
-            <h6>Website</h6>
+            <div class="icon">
+              <Icon name="lineicons:website"></Icon>
+              <h6>Website</h6>
+            </div>
             <p>www.jedchang.com.tw/resume</p>
           </div>
         </div>
-        <div class="col-lg-7">
+        <div class="col-12 col-lg-7 col-xl-7">
           <el-form ref="ruleFormRef" :model="ruleForm" :rules="rules">
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-12 col-lg-6 col-xl-6">
                 <el-form-item label="您的姓名" prop="name">
                   <el-input v-model="ruleForm.name" />
                 </el-form-item>
               </div>
-              <div class="col-lg-6">
+              <div class="col-12 col-lg-6 col-xl-6">
                 <el-form-item label="您的電子郵件" prop="email">
                   <el-input v-model="ruleForm.email" />
                 </el-form-item>
               </div>
-              <div class="col-lg-12">
+              <div class="col-12 col-lg-12 col-xl-12">
                 <el-form-item label="您的留言" prop="message">
                   <el-input v-model="ruleForm.message" type="textarea" />
                 </el-form-item>
@@ -195,6 +203,30 @@
 <style lang="scss" scoped>
   @import '../assets/scss/components/_contact.scss';
   @import '../assets/scss/components/_button.scss';
+
+  :deep(.section-title) {
+    h3.tw {
+      span {
+        &::before {
+          right: 100x;
+          @include extraSmall {
+            right: 115%;
+            top: 50%;
+          }
+        }
+        &::after {
+          left: 100px;
+          @include extraSmall {
+            left: 105%;
+            top: 50%;
+          }
+        }
+      }
+    }
+    h2.en {
+      background-image: linear-gradient(180deg, #fdd196, #b18b59 50%, #242529);
+    }
+  }
 
   form#hidden-form {
     visibility: hidden;

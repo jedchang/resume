@@ -4,74 +4,214 @@ section#skills {
   background-repeat: repeat;
   position: relative;
   z-index: 0;
-  .skill-item {
-    padding: 40px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    border-radius: 16px;
-    margin-bottom: 30px;
-    height: 395px;
-    border: 1px solid $borderColor;
-    transition: $setTransition;
-    &:hover {
-      border: 1px solid $primaryColor;
-      // transform: translate(0, -5px);
-      .skill-name {
-        // -webkit-text-stroke-width: 1px;
-        // -webkit-text-stroke-color: $primaryColor;
-        // color: transparent;
-        color: #fff;
-        &::before {
-          opacity: 1;
-          visibility: visible;
-        }
+  @include medium {
+    padding: 120px 0;
+  }
+  @include small {
+    padding: 120px 0;
+  }
+  @include extraSmall {
+    padding: 80px 0;
+  }
+}
+
+.skill-main {
+  &:nth-last-of-type(1) {
+    .skill-item {
+      margin-bottom: 0;
+    }
+  }
+  &:nth-last-of-type(2) {
+    .skill-item {
+      margin-bottom: 0;
+      @include small {
+        margin-bottom: 20px;
       }
+      @include extraSmall {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &:nth-last-of-type(3) {
+    .skill-item {
+      margin-bottom: 0;
+      @include large {
+        margin-bottom: 40px;
+      }
+      @include medium {
+        margin-bottom: 8%;
+      }
+      @include small {
+        margin-bottom: 20px;
+      }
+      @include extraSmall {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.skill-item {
+  width: 98%;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 16px;
+  margin-bottom: 35px;
+  height: 395px;
+  border: 1px solid $borderColor;
+  transition: $setTransition;
+  @include large {
+    width: 96%;
+    height: 387px;
+    margin-bottom: 40px;
+  }
+  @include medium {
+    width: 100%;
+    height: 350px;
+    padding: 20px;
+    margin-bottom: 8%;
+  }
+  @include small {
+    width: 96%;
+    height: auto;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  @include extraSmall {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    &:active {
+      border: 1px solid $primaryColor;
       .skill-icon span.iconify {
         filter: saturate(100%) grayscale(0%);
         opacity: 1;
+      }
+      .skill-content {
+        .skill-name {
+          color: #fff;
+          &::before {
+            opacity: 1;
+            background: linear-gradient(90deg, $primaryColor, $primaryColor2)
+              repeat scroll 0 0;
+          }
+        }
+        ul li {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &:hover {
+    border: 1px solid $primaryColor;
+    .skill-icon span.iconify {
+      filter: saturate(100%) grayscale(0%);
+      opacity: 1;
+    }
+    .skill-content {
+      .skill-name {
+        color: #fff;
+        &::before {
+          opacity: 1;
+          background: linear-gradient(90deg, $primaryColor, $primaryColor2)
+            repeat scroll 0 0;
+        }
       }
       ul li {
         color: #fff;
       }
     }
-    .skill-icon {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 120px;
-      span.iconify {
-        width: 50px;
-        height: 50px;
-        filter: saturate(0%) grayscale(100%);
-        opacity: 0.5;
-        margin-right: 10px;
-        transition: $setTransition;
-        &:last-child {
-          margin-right: 0;
+  }
+  .skill-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    @include small {
+      width: 30%;
+      justify-content: center;
+      flex-direction: column;
+    }
+    @include extraSmall {
+      width: 100%;
+      justify-content: space-evenly;
+    }
+    span.iconify {
+      width: 50px;
+      height: 50px;
+      filter: saturate(0%) grayscale(100%);
+      opacity: 0.5;
+      margin-right: 10px;
+      @include small {
+        width: 70px;
+        height: 70px;
+        margin: 0 0 8px;
+      }
+      @include extraSmall {
+        width: 70px;
+        height: 70px;
+        margin: 0 0 8px;
+      }
+      &:last-child {
+        margin-right: 0;
+        @include small {
+          margin: 8px 0 8px;
+        }
+        @include extraSmall {
+          margin: 8px 0 8px;
         }
       }
+    }
+  }
+  .skill-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    transition: $setTransition;
+    @include small {
+      width: 70%;
+    }
+    @include extraSmall {
+      width: 100%;
     }
     .skill-name {
       position: relative;
       margin: 20px 0;
-      padding: 5px;
+      padding: 5px 15px;
       font-size: 30px;
       font-weight: 600;
       font-family: "Roboto", sans-serif;
       color: $primaryColor;
       transition: $setTransition;
+      @include small {
+        font-size: 32px;
+        margin: 0 0 20px;
+      }
+      @include extraSmall {
+        font-size: 7.5vmin;
+        margin: 10px 0 20px;
+        width: 100%;
+      }
       &::before {
-        opacity: 0;
-        visibility: hidden;
-        background: linear-gradient(90deg, $primaryColor, $primaryColor2) repeat
-          scroll 0 0;
+        opacity: 0.4;
+        background: #2b3648 repeat scroll 0 0;
         content: "";
-        left: -10px;
         position: absolute;
         top: 0px;
-        width: 115%;
+        left: 0;
+        width: 100%;
         height: 100%;
         z-index: -1;
         transition: $setTransition;

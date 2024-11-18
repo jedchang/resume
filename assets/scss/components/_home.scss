@@ -6,232 +6,452 @@ section#home {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  .bg-overlay {
-    background-color: rgba(23, 27, 34, 0.9); // $primaryBgColor2
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
+  @include medium {
+    padding: 0 0 120px;
   }
-  .intro-wrapper {
-    height: 100vh;
+  @include small {
+    padding: 0 0 120px;
+  }
+  @include extraSmall {
+    padding: 0 0 80px;
+  }
+}
+// .intro-hero {
+//   height: 100vh;
+//   display: flex;
+// }
+
+.bg-overlay {
+  background-color: rgba(23, 27, 34, 0.9); // $primaryBgColor2
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+.intro-wrapper {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include extraSmall {
+    height: 100%;
+  }
+  .intro-main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    @include large {
+      flex-direction: column;
+    }
+    @include medium {
+      flex-direction: column;
+    }
+    @include small {
+      flex-direction: column;
+    }
+    @include extraSmall {
+      flex-direction: column;
+      // margin-top: 10%;
+    }
+  }
+  img.ornament-drawn {
+    width: 135px;
+    height: auto;
+    max-width: 100%;
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    right: 18%;
+    opacity: 0.4;
+    z-index: 3;
+    animation: pulse-reversal 2s infinite;
+    @include extraLarge {
+      right: 4.5%;
+    }
+    @include large {
+      width: 130px;
+      top: -24px;
+      right: 6.5%;
+    }
+    @include medium {
+      width: 125px;
+      top: -80px;
+      right: 72px;
+    }
+    @include small {
+      display: none;
+    }
+    @include extraSmall {
+      display: none;
+    }
+  }
+  .intro-heading {
+    width: 100%;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    .intro-hero {
-      height: 100vh;
-      display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    @include extraLarge {
+      width: 100%;
     }
-    .intro-heading {
-      position: relative;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-direction: column;
-      // max-width: 700px;
-      margin-right: 100px;
-      h4 {
-        color: $primaryColor;
-        text-transform: capitalize;
-        font-size: 22px;
-        font-weight: 500;
-        font-family: "Montserrat", sans-serif;
-        margin-bottom: 10px;
-        padding-left: 5px;
+    @include large {
+      width: 100%;
+    }
+    @include medium {
+      width: 100%;
+    }
+    @include small {
+      width: 100%;
+    }
+    @include extraSmall {
+      width: 100%;
+      height: calc(var(--vh) * 100);
+      justify-content: center;
+      padding-top: 60px; // Mobile navBar
+    }
+    h1 {
+      color: #fff;
+      font-size: 85px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: capitalize;
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 40px;
+      text-align: left;
+      margin-top: 0;
+      // @include extraLarge {
+      //   font-size: 74px;
+      // }
+      @include large {
+        font-size: 68px;
       }
-      h1 {
-        color: #fff;
-        margin-bottom: 30px;
-        font-size: 58px;
-        line-height: 1.2;
-        text-transform: capitalize;
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        // font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-        // font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-        text-align: left;
-        margin-top: 0;
-        span {
-          width: auto;
+      @include medium {
+        font-size: 62px;
+      }
+      @include small {
+        font-size: 82px;
+      }
+      @include extraSmall {
+        font-size: 16vmin;
+        margin-bottom: 5%;
+        font-weight: 700;
+      }
+      span.name {
+        color: $primaryColor;
+        display: inline-block;
+        // @include medium {
+        //   display: block;
+        // }
+        // @include small {
+        //   display: block;
+        // }
+        @include extraSmall {
+          display: block;
+          // display: inline-block;
+        }
+        span.dot {
+          color: #ffffff;
           display: inline-block;
         }
-        span.and {
-          -webkit-text-stroke: 2px #cecece;
-          -webkit-text-fill-color: transparent;
-          font-family: "Poppins", sans-serif;
-          font-weight: 800;
-          font-size: 52px;
-          margin: 0 10px;
-        }
-      }
-      h2 {
-        opacity: 0.6;
-        font-size: 32px;
-        font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-        span.and {
-          font-family: "Poppins", sans-serif;
-          font-weight: 700;
-          -webkit-text-stroke: 1px #fff;
-          -webkit-text-fill-color: transparent;
-        }
-      }
-      .list-btn {
-        width: 550px;
-        margin-top: 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .item {
-          display: flex;
-          &:last-child {
-            margin-left: 30px;
-          }
-        }
-        button.btn {
-          width: 300px;
-        }
-        // a.btn {
-        //   padding: 16px 48px;
-        //   margin-top: -10px;
-        //   text-transform: capitalize;
-        //   font-weight: 600;
-        //   font-size: 14px;
-        //   font-family: "Montserrat", sans-serif;
-        //   display: flex;
-        //   justify-content: center;
-        //   align-items: center;
-        //   color: $primaryColor;
-        //   border: 1px solid $primaryColor;
-        //   &.btn-primary {
-        //     color: $primaryTextColor;
-        //     background-color: $primaryColor;
-        //     border-color: $primaryColor;
-        //   }
-        //   span.iconify {
-        //     width: 24px;
-        //     height: 24px;
-        //     margin-right: 8px;
-        //   }
-        // }
-      }
-      img.ornament-drawn {
-        width: 105px;
-        height: auto;
-        max-width: 100%;
-        display: inline-block;
-        position: absolute;
-        bottom: -30px;
-        right: -90px;
-        opacity: 0.7;
-        z-index: 3;
-        animation: pulse 2s infinite;
-      }
-      img.ornament-arrow {
-        width: 137px;
-        height: auto;
-        max-width: 100%;
-        display: inline-block;
-        position: absolute;
-        bottom: -80px;
-        left: 202px;
-        animation: pulse 2s infinite;
       }
     }
-    .intro-photo {
-      position: relative;
-      .intro-circle {
-        border-radius: 50%;
-        background-color: #27262b;
+    ul {
+      display: inline-block;
+      background: rgba(45, 45, 52, 0.82);
+      margin: 0 0 10px;
+      padding: 10px 30px 10px 15px;
+      @include small {
+        padding: 5px 25px 5px 10px;
+      }
+      @include extraSmall {
+        margin: 0 0 10px;
+        padding: 5px 13px 5px 8px;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        top: -35px;
-        left: 80%;
-        padding: 4px;
-        z-index: 3;
-        img {
-          width: 100px;
-          height: 100px;
-          animation: circle-around 15s linear infinite;
+      }
+      li {
+        letter-spacing: 2px;
+        display: inline;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: $primaryTextColor2;
+        text-transform: capitalize;
+        position: relative;
+        @include small {
+          font-size: 14px;
         }
-        .icon {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: $primaryColor;
-          span.iconify {
-            width: 18px;
-            height: 18px;
+        @include extraSmall {
+          font-size: 3.5vmin;
+          letter-spacing: 0px;
+        }
+        &:first-of-type::before {
+          top: -1px;
+          content: " ";
+          font-size: 11px;
+          position: relative;
+          color: currentcolor;
+          padding: 0 15px 0 0;
+          @include extraSmall {
+            padding: 0 5px 0 0;
+          }
+        }
+        &::before {
+          top: -1px;
+          content: "|";
+          font-size: 11px;
+          position: relative;
+          color: $primaryColor;
+          padding: 0 15px 0 17px;
+          @include extraSmall {
+            padding: 0 5px 0 7px;
           }
         }
       }
-      .intro-grid {
-        background-image: url("@/assets/images/dot-light.png");
-        position: absolute;
-        opacity: 1;
-        top: 18%;
-        right: 13px;
-        bottom: 12px;
-        left: -70px;
-        width: 400px;
+    }
+    h2 {
+      width: 80%;
+      opacity: 0.8;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.6;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      text-align: left;
+      word-break: keep-all;
+      padding-left: 7px;
+      @include extraLarge {
+        width: 100%;
       }
-      figure {
-        margin-bottom: 8px;
-        &::before {
-          content: "";
-          position: absolute;
-          background-image: url("@/assets/images/ornament-circle.svg");
-          background-repeat: no-repeat;
-          width: 240px;
-          height: 230px;
-          bottom: -55px;
-          right: -60px;
-          z-index: 1;
+      @include large {
+        width: 100%;
+        font-size: 18px;
+      }
+      @include medium {
+        width: 100%;
+        font-size: 16px;
+        word-break: normal;
+        padding-left: 0;
+      }
+      @include small {
+        width: 100%;
+        font-size: 16px;
+        word-break: normal;
+        padding-left: 0;
+      }
+      @include extraSmall {
+        width: 100%;
+        font-size: 3.75vmin;
+        word-break: normal;
+        padding-left: 0;
+        line-height: 1.8;
+      }
+    }
+    .list-btn {
+      width: 100%;
+      margin-top: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      @include medium {
+        width: 100%;
+        margin-top: 35px;
+        justify-content: flex-start;
+      }
+      @include small {
+        width: 100%;
+        margin-top: 25px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      @include extraSmall {
+        width: 100%;
+        margin-top: 6%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+      .item {
+        display: flex;
+        @include small {
+          order: 2;
+          width: 36%;
         }
-        &::after {
-          content: "";
-          position: absolute;
-          background-image: url("@/assets/images/ornament-star.svg");
-          background-repeat: no-repeat;
-          width: 70px;
-          height: 70px;
-          left: 60px;
-          top: 40px;
-          z-index: 2;
-          animation: zoom-in-out 2s ease-out infinite;
+        @include extraSmall {
+          order: 2;
+          width: 100%;
         }
-        img {
-          display: block;
-          margin: 0 auto;
-          -o-object-fit: cover;
-          object-fit: cover;
-          position: relative;
-          height: 430px;
-          border-radius: 10px;
-          z-index: 2;
+        &:first-child {
+          margin-right: 30px;
+          @include medium {
+            margin-right: 25px;
+          }
+          @include small {
+            order: 1;
+            width: 61%;
+            margin-right: 0;
+          }
+          @include extraSmall {
+            order: 1;
+            margin-right: 0;
+          }
+        }
+        &:last-child {
+          margin-left: 60px;
+          @include large {
+            margin-left: 50px;
+          }
+          @include medium {
+            margin-left: 35px;
+            width: 100%;
+          }
+          @include small {
+            order: 3;
+            margin-top: 30px;
+            margin-left: 5px;
+            width: 100%;
+          }
+          @include extraSmall {
+            order: 3;
+            width: 100%;
+            margin-left: 0;
+            margin-top: 7%;
+          }
+        }
+      }
+      button.btn {
+        width: 320px;
+        @include medium {
+          font-size: 14px;
+          padding: 15px 25px;
+          width: 250px;
+        }
+        @include small {
+          font-size: 14px;
+          padding: 15px 25px;
+          width: 100%;
+        }
+        @include extraSmall {
+          font-size: 14px;
+          padding: 15px 25px;
+          width: 100%;
+        }
+      }
+      button.btn-outline {
+        width: 260px;
+        @include medium {
+          font-size: 14px;
+          padding: 15px 25px;
+          width: 160px;
+        }
+        @include small {
+          font-size: 14px;
+          padding: 15px 25px;
+          width: 100%;
+        }
+        @include extraSmall {
+          font-size: 14px;
+          padding: 15px 25px;
+          width: 100%;
+          margin-top: 5%;
         }
       }
     }
-    & > .container {
+
+    img.ornament-arrow {
+      width: 137px;
+      height: auto;
+      max-width: 100%;
+      display: inline-block;
+      position: absolute;
+      bottom: -80px;
+      left: 11%;
+      animation: pulse 2s infinite 1s;
+      @include large {
+        left: 17%;
+      }
+      @include medium {
+        left: 123px;
+      }
+      @include small {
+        bottom: -8px;
+        left: 228px;
+      }
+      @include extraSmall {
+        display: none;
+      }
+    }
+  }
+
+  .intro-grid {
+    background-image: url("@/assets/images/dot-light.png");
+    position: absolute;
+    opacity: 1;
+    top: 18%;
+    right: 13px;
+    bottom: 12px;
+    left: -70px;
+    width: 400px;
+  }
+  figure {
+    margin-bottom: 8px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("@/assets/images/ornament-circle.svg");
+      background-repeat: no-repeat;
+      width: 240px;
+      height: 230px;
+      bottom: -55px;
+      right: -60px;
+      z-index: 1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("@/assets/images/ornament-star.svg");
+      background-repeat: no-repeat;
+      width: 70px;
+      height: 70px;
+      left: 60px;
+      top: 40px;
+      z-index: 2;
+      animation: zoom-in-out 2s ease-out infinite;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      -o-object-fit: cover;
+      object-fit: cover;
+      position: relative;
+      height: 430px;
+      border-radius: 10px;
+      z-index: 2;
+    }
+  }
+  & > .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > .row {
       display: flex;
-      justify-content: center;
-      align-content: inherit;
-      & > .row {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      @include medium {
+        width: auto;
+      }
+      @include small {
+        width: auto;
+      }
+      @include extraSmall {
+        width: auto;
       }
     }
   }
