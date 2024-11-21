@@ -1,8 +1,8 @@
 <template>
   <Overlay></Overlay>
-  <Navbar></Navbar>
-  <MobileNavbar></MobileNavbar>
   <main>
+    <Navbar></Navbar>
+    <MobileNavbar></MobileNavbar>
     <Home></Home>
     <Portfolio></Portfolio>
     <Skills></Skills>

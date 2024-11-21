@@ -1,9 +1,9 @@
 <template>
-  <nav class="navbar navbar-hover navbar-expand-lg navbar-soft">
+  <nav class="navbar">
     <div class="container">
-      <a href="#" class="navbar-brand">
+      <button type="button" class="navbar-brand" @click="scrollToTop">
         <span class="special">Jed</span>Chang.
-      </a>
+      </button>
       <div class="navbar-collapse justify-content-between collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item" :class="{ active: activeSection === 'home' }">
@@ -70,9 +70,12 @@
 </template>
 
 <script setup>
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   const handleScroll = () => {
     const navbar = document.querySelector('.navbar')
-    if (window.scrollY > 95) {
+    if (window.scrollY >= 200) {
       navbar.classList.add('sticky')
     } else {
       navbar.classList.remove('sticky')

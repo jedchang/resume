@@ -81,7 +81,15 @@ export const portfolioData = [
       'images/portfolio/details/web/details-web5_2.jpg',
       'images/portfolio/details/web/details-web5_3.jpg'
     ],
-    tag: ['HTML5', 'SCSS', 'Nuxt.js', 'RWD', 'RESTful API', 'Element UI'],
+    tag: [
+      'HTML5',
+      'SCSS',
+      'Nuxt.js',
+      'RWD',
+      'PWA',
+      'RESTful API',
+      'Element UI'
+    ],
     url: 'https://www.ecs.com.tw/tw/support/technical-support'
   },
   {
@@ -97,15 +105,15 @@ export const portfolioData = [
     tag: ['UI Design', 'Figma', 'PhotoShop'],
     url: null
   },
-  {
-    category: 'Graphic Design',
-    title: 'Graphic Design',
-    description: '平面設計內容',
-    thumbImg: 'images/portfolio/thumb/graphic/thumb-graphic1.jpg',
-    detailsImg: ['images/portfolio/details/graphic/details-graphic1_1.jpg'],
-    tag: ['UI Design', 'Figma', 'PhotoShop'],
-    url: null
-  },
+  // {
+  //   category: 'Graphic Design',
+  //   title: 'Graphic Design',
+  //   description: '平面設計內容',
+  //   thumbImg: 'images/portfolio/thumb/graphic/thumb-graphic1.jpg',
+  //   detailsImg: ['images/portfolio/details/graphic/details-graphic1_1.jpg'],
+  //   tag: ['UI Design', 'Figma', 'PhotoShop'],
+  //   url: null
+  // },
   {
     category: 'UI Design',
     title: 'Parallax 視差滾動網頁',
@@ -178,7 +186,7 @@ export const portfolioData = [
     category: 'Web Develop',
     title: '全台公車動態時刻查詢',
     description:
-      '使用 Vue CLI 開發，搭配 Leaflet API、MarkerCluster 進行實作全台公車動態時刻查詢應用服務，公車到站時刻、站序列表、地圖模式等且支援 RWD，並串接 TDX API 運輸資料流通服務所提供資訊。',
+      '使用 Vue CLI 開發，搭配 Leaflet API、MarkerCluster 進行實作全台公車動態時刻查詢應用服務，公車到站時刻、站序列表、地圖模式等且支援 RWD，串接 TDX 運輸資料流通服務所提供 API 資訊。',
     thumbImg: 'images/portfolio/thumb/web/thumb-web8.jpg',
     detailsImg: [
       'images/portfolio/details/web/details-web8_1.jpg',
@@ -275,13 +283,13 @@ export const portfolioData = [
       'vee-validate',
       'Vue Router'
     ],
-    url: 'https://jedchang.github.io/TheF2E-Vue-Payments/dist/'
+    url: 'https://jedchang.github.io/Payments'
   },
   {
     category: 'Web Develop',
     title: '自行車道地圖資訊整合網',
     description:
-      '使用 Vue 實作自行車道地圖資訊整合網，自行車道路線圖功能、每個 YouBike 租借站位點，目前的租借狀況。串接 TDX API 運輸資料流通服務所提供資訊。',
+      '使用 Vue 實作自行車道地圖資訊整合網，自行車道路線圖功能、每個 YouBike 租借站位點，目前的租借狀況。串接 TDX 運輸資料流通服務所提供 API 資訊。',
     thumbImg: 'images/portfolio/thumb/web/thumb-web11.jpg',
     detailsImg: [
       'images/portfolio/details/web/details-web11_1.jpg',
@@ -312,5 +320,199 @@ export const portfolioData = [
     ],
     tag: ['UI Design', 'Figma', 'PhotoShop'],
     url: 'https://jedchang.github.io/ClocksStore/'
+  },
+  {
+    category: 'Web Develop',
+    title: 'SH20JL1 筆記型電腦',
+    description:
+      '使用 Nuxt2 進行開發，搭配 Aos.js 滾動框架動畫且支援 RWD，串接後端 API 資料，呈現互動體驗的產品介紹頁面。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web12.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web12_1.jpg',
+      'images/portfolio/details/web/details-web12_2.jpg'
+    ],
+    tag: ['HTML5', 'SCSS', 'Nuxt.js', 'RWD', 'RESTful API', 'Aos.js'],
+    url: 'https://www.ecs.com.tw/tw/Product/Laptop/SH20JL1_11.6/overview'
+  },
+  {
+    category: 'Web Develop',
+    title: 'SH20JL2 筆記型電腦',
+    description:
+      '使用 Nuxt2 進行開發，搭配 Aos.js 滾動框架動畫且支援 RWD，串接後端 API 資料，呈現互動體驗的產品介紹頁面。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web13.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web13_1.jpg',
+      'images/portfolio/details/web/details-web13_2.jpg'
+    ],
+    tag: ['HTML5', 'SCSS', 'Nuxt.js', 'RWD', 'RESTful API', 'Aos.js'],
+    url: 'https://www.ecs.com.tw/tw/Product/Laptop/SH20JL2_11.6/overview'
+  },
+  {
+    category: 'Web Develop',
+    title: '臺灣旅遊景點導覽',
+    description:
+      '使用 Vue CLI 實作臺灣旅遊景點導覽，串接 TDX 運輸資料流通服務所提供 API 資訊，可搜尋全台景點、美食、住宿等資訊。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web15.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web15_1.jpg',
+      'images/portfolio/details/web/details-web15_2.jpg',
+      'images/portfolio/details/web/details-web15_3.jpg',
+      'images/portfolio/details/web/details-web15_4.jpg'
+    ],
+    tag: ['HTML5', 'SCSS', 'Vue.js', 'Element UI', 'ESLint', 'Axios'],
+    url: 'https://jedchang.github.io/Taiwan-Tourism-Attraction/'
+  },
+  {
+    category: 'Web Develop',
+    title: 'Mask Map 口罩地圖',
+    description:
+      '使用 Vue 實作口罩地圖資訊網，串接衛福部提供 API 資料並搭配 OpenStreetMap 開放地圖顯示口罩資訊。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web14.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web14_1.jpg',
+      'images/portfolio/details/web/details-web14_2.jpg',
+      'images/portfolio/details/web/details-web14_3.jpg',
+      'images/portfolio/details/web/details-web14_4.jpg'
+    ],
+    tag: [
+      'HTML5',
+      'SCSS',
+      'Vue.js',
+      'Vuex',
+      'popper.js',
+      'Leaflet.js',
+      'MarkerCluster'
+    ],
+    url: 'https://jedchang.github.io/Mask-Map/'
+  },
+  {
+    category: 'Web Develop',
+    title: 'BIOS Live Update Utility',
+    description:
+      '使用 JavaScript 開發 eBLU BIOS 更新下載平台，搭配 GSAP scrollTrigger 滑動效果，讓使用者可以透過此平台即時更新 BIOS 應用程式。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web16.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web16_1.jpg',
+      'images/portfolio/details/web/details-web16_2.jpg',
+      'images/portfolio/details/web/details-web16_3.jpg',
+      'images/portfolio/details/web/details-web16_4.jpg'
+    ],
+    tag: ['HTML5', 'CSS', 'JavaScript', 'Bootstrap', 'jQuery', 'GSAP'],
+    url: 'https://jedchang.com.tw/portfolio/eBLU/'
+  },
+  {
+    category: 'Web Develop',
+    title: 'LIVA Q 迷你電腦',
+    description:
+      '運用 JavaScript 開發 LIVA Q 產品頁面，透過 fullPage.js 和 TweenMax 實現流暢滾動效果，呈現引人入勝的互動式產品介紹。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web17.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web17_1.jpg',
+      'images/portfolio/details/web/details-web17_2.jpg',
+      'images/portfolio/details/web/details-web17_3.jpg',
+      'images/portfolio/details/web/details-web17_4.jpg'
+    ],
+    tag: ['HTML5', 'CSS', 'JavaScript', 'jQuery', 'fullPage.js', 'TweenMax'],
+    url: 'https://jedchang.com.tw/portfolio/LIVA-Q/'
+  },
+  {
+    category: 'Web Develop',
+    title: 'LIVA Z Plus 迷你電腦',
+    description:
+      '以 JavaScript 開發 LIVA Z Plus 產品頁面，整合 fullPage.js、TweenMax 與 Adobe Animate，打造生動且有趣的互動式產品體驗，吸引用戶目光。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web18.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web18_1.jpg',
+      'images/portfolio/details/web/details-web18_2.jpg',
+      'images/portfolio/details/web/details-web18_3.jpg',
+      'images/portfolio/details/web/details-web18_4.jpg'
+    ],
+    tag: ['HTML5', 'CSS', 'JavaScript', 'jQuery', 'fullPage.js', 'TweenMax'],
+    url: 'https://jedchang.com.tw/portfolio/LIVA-Z-Plus/'
+  },
+  {
+    category: 'Web Develop',
+    title: 'ECS 全球人力資源網',
+    description:
+      '運用 JavaScript 開發全球人力資源網頁，結合 Carousel 與 Magnific Popup 等套件，實現動態展示與精緻彈窗互動，提升用戶瀏覽體驗。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web19.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web19_1.jpg',
+      'images/portfolio/details/web/details-web19_2.jpg',
+      'images/portfolio/details/web/details-web19_3.jpg',
+      'images/portfolio/details/web/details-web19_4.jpg'
+    ],
+    tag: [
+      'HTML5',
+      'SCSS',
+      'JavaScript',
+      'jQuery',
+      'Bootstrap',
+      'RWD',
+      'Owl Carousel'
+    ],
+    url: 'https://jedchang.com.tw/portfolio/Global-HR/'
+  },
+  {
+    category: 'Web Develop',
+    title: 'Home Security',
+    description:
+      '採用 JavaScript 開發 Home Security 解決方案頁面，結合 jQuery 與 Carousel 套件，呈現流暢的影片動畫與精美的文字介紹，打造專業且直觀的用戶體驗。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web20.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web20_1.jpg',
+      'images/portfolio/details/web/details-web20_2.jpg',
+      'images/portfolio/details/web/details-web20_3.jpg',
+      'images/portfolio/details/web/details-web20_4.jpg'
+    ],
+    tag: ['HTML5', 'CSS', 'JavaScript', 'jQuery', 'RWD', 'Owl Carousel'],
+    url: 'https://jedchang.com.tw/portfolio/Home-Security'
+  },
+  {
+    category: 'Web Develop',
+    title: 'EWCR RX 無線充電接收器',
+    description:
+      '運用 JavaScript 開發 EWCR RX 無線充電接收器產品頁面，整合 fullPage.js 與 fancyBox.js，呈現流暢的滾動效果與高品質的彈窗互動，打造專業且直觀的用戶體驗。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web21.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web21_1.jpg',
+      'images/portfolio/details/web/details-web21_2.jpg',
+      'images/portfolio/details/web/details-web21_3.jpg',
+      'images/portfolio/details/web/details-web21_4.jpg'
+    ],
+    tag: [
+      'HTML5',
+      'CSS',
+      'JavaScript',
+      'jQuery',
+      'RWD',
+      'fullPage.js',
+      'fancyBox.js'
+    ],
+    url: 'https://jedchang.com.tw/portfolio/EWCR-RX'
+  },
+  {
+    category: 'Web Develop',
+    title: 'EWCT TX 無線充電接收器',
+    description:
+      '運用 JavaScript 開發 EWCT TX 無線充電接收器產品頁面，整合 fullPage.js 與 fancyBox.js，呈現流暢的滾動效果與高品質的彈窗互動，打造專業且直觀的用戶體驗。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web22.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web22_1.jpg',
+      'images/portfolio/details/web/details-web22_2.jpg',
+      'images/portfolio/details/web/details-web22_3.jpg',
+      'images/portfolio/details/web/details-web22_4.jpg',
+      'images/portfolio/details/web/details-web22_5.jpg'
+    ],
+    tag: [
+      'HTML5',
+      'CSS',
+      'JavaScript',
+      'jQuery',
+      'RWD',
+      'fullPage.js',
+      'fancyBox.js'
+    ],
+    url: 'https://jedchang.com.tw/portfolio/EWCT-TX'
   }
 ]

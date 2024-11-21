@@ -1,19 +1,20 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900;
   box-shadow: none;
   font-size: 14px;
-  padding: 20px 0;
-  // position: relative;
-  position: fixed;
-  width: 100%;
+  padding: 25px 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: transparent;
   transition: $setTransition;
-  z-index: 900;
-  @include medium {
-    display: none;
-  }
+  // @include medium {
+  //   display: none;
+  // }
   @include small {
     display: none;
   }
@@ -21,13 +22,16 @@
     display: none;
   }
   &.sticky {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
-    padding: 10px 0;
+    padding: 15px 0;
     backdrop-filter: blur(15px);
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.6);
     box-shadow: 0 6px 16px rgba(255, 255, 255, 0.05);
+    button.navbar-brand > span.special {
+      color: $primaryColor;
+    }
   }
   & > .container {
     display: flex;
@@ -35,7 +39,7 @@
     align-items: center;
   }
 }
-a.navbar-brand {
+button.navbar-brand {
   line-height: 1;
   display: inline-block;
   vertical-align: middle;
@@ -44,8 +48,11 @@ a.navbar-brand {
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   color: #fff;
+  @include medium {
+    font-size: 22px;
+  }
   span.special {
-    color: $primaryColor;
+    color: #fff;
   }
 }
 .navbar-collapse {
@@ -63,6 +70,9 @@ a.navbar-brand {
     margin-left: auto;
     .nav-item {
       margin: 0 15px;
+      @include medium {
+        margin: 0 10px;
+      }
       &.active {
         button.nav-link {
           color: $primaryColor2;
@@ -76,6 +86,10 @@ a.navbar-brand {
         font-size: 14px;
         text-transform: uppercase;
         transition: $setTransition;
+        @include medium {
+          font-size: 14px;
+          padding: 12px 5px;
+        }
         &:hover {
           color: $primaryColor2;
         }

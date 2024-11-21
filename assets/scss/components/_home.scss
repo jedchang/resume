@@ -54,17 +54,16 @@ section#home {
     }
     @include extraSmall {
       flex-direction: column;
-      // margin-top: 10%;
     }
   }
   img.ornament-drawn {
-    width: 135px;
+    width: 115px;
     height: auto;
     max-width: 100%;
     display: inline-block;
     position: absolute;
-    top: -20px;
-    right: 18%;
+    top: 5px;
+    right: 17%;
     opacity: 0.4;
     z-index: 3;
     animation: pulse-reversal 2s infinite;
@@ -72,14 +71,12 @@ section#home {
       right: 4.5%;
     }
     @include large {
-      width: 130px;
-      top: -24px;
+      width: 110px;
+      top: 0px;
       right: 6.5%;
     }
     @include medium {
-      width: 125px;
-      top: -80px;
-      right: 72px;
+      display: none;
     }
     @include small {
       display: none;
@@ -106,11 +103,15 @@ section#home {
     }
     @include small {
       width: 100%;
+      height: calc(var(--vh) * 100);
+      justify-content: center;
+      padding-top: 60px; // Mobile navBar
     }
     @include extraSmall {
       width: 100%;
       height: calc(var(--vh) * 100);
       justify-content: center;
+      align-items: center;
       padding-top: 60px; // Mobile navBar
     }
     h1 {
@@ -133,12 +134,14 @@ section#home {
         font-size: 62px;
       }
       @include small {
-        font-size: 82px;
+        font-size: 76px;
+        margin-bottom: 20px;
       }
       @include extraSmall {
-        font-size: 16vmin;
+        font-size: 14vmin;
         margin-bottom: 5%;
         font-weight: 700;
+        text-align: center;
       }
       span.name {
         color: $primaryColor;
@@ -165,7 +168,7 @@ section#home {
       margin: 0 0 10px;
       padding: 10px 30px 10px 15px;
       @include small {
-        padding: 5px 25px 5px 10px;
+        padding: 5px 15px 5px 10px;
       }
       @include extraSmall {
         margin: 0 0 10px;
@@ -199,6 +202,9 @@ section#home {
           position: relative;
           color: currentcolor;
           padding: 0 15px 0 0;
+          @include small {
+            padding: 0 7px 0 0;
+          }
           @include extraSmall {
             padding: 0 5px 0 0;
           }
@@ -210,6 +216,9 @@ section#home {
           position: relative;
           color: $primaryColor;
           padding: 0 15px 0 17px;
+          @include small {
+            padding: 0 8px 0 10px;
+          }
           @include extraSmall {
             padding: 0 5px 0 7px;
           }
@@ -379,8 +388,7 @@ section#home {
         left: 123px;
       }
       @include small {
-        bottom: -8px;
-        left: 228px;
+        display: none;
       }
       @include extraSmall {
         display: none;

@@ -1,8 +1,8 @@
 <template>
   <nav class="m-navbar">
-    <a href="#" class="m-navbar-brand">
+    <button type="button" class="m-navbar-brand" @click="scrollToTop">
       <span class="special">Jed</span>Chang.
-    </a>
+    </button>
     <div class="m-toggle" :class="{ active: toggle }" @click="handleToggle()">
       <span></span>
       <span></span>
@@ -74,7 +74,9 @@
 
 <script setup>
   const toggle = ref(false)
-
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   const handleToggle = () => {
     toggle.value = !toggle.value
     const body = document.querySelector('body')

@@ -27,3 +27,12 @@
     @content;
   }
 }
+
+@mixin smallAndExtraSmall {
+  @include small {
+    @content;
+  }
+  @include extraSmall {
+    @content;
+  }
+}
