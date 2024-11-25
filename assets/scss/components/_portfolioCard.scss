@@ -57,6 +57,8 @@
       height: 100%;
       object-fit: cover;
       transition: $setTransition;
+      // &.graphic {
+      // }
     }
     .overlay {
       position: absolute;
@@ -201,6 +203,24 @@
                 height: 22px;
               }
             }
+            &.i-fa6-solid\:eye {
+              top: 49%;
+              left: 49%;
+              width: 18px;
+              height: 18px;
+              @include medium {
+                width: 22px;
+                height: 22px;
+              }
+              @include small {
+                width: 22px;
+                height: 22px;
+              }
+              @include extraSmall {
+                width: 22px;
+                height: 22px;
+              }
+            }
           }
         }
       }
@@ -285,6 +305,7 @@
       }
     }
     .info {
+      width: 100%;
       font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
       @include medium {
         margin-bottom: 30px;
@@ -442,6 +463,26 @@
         .swiper-pagination {
           bottom: 0;
         }
+      }
+    }
+  }
+  // Graphic Design
+  :deep(.graphic-dialog) {
+    padding: 10px 20px 25px 20px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .info.graphic {
+        width: 100%;
+        h3 {
+          margin-bottom: 15px;
+        }
+      }
+      img.graphic {
+        width: auto;
+        // width: calc(100% - 400px);
       }
     }
   }

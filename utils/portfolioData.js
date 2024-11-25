@@ -1,6 +1,21 @@
 export const portfolioData = [
   {
     category: 'Web Develop',
+    title: 'ESG 永續網',
+    description:
+      '透過 Nuxt3 高效開發框架，結合 Element UI 提升使用者體驗，搭配 ECharts.js 精準呈現客製化數據圖表，實現直觀、美觀且功能強大的永續發展網站，讓企業價值與永續目標完美融合！',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web29.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web29_1.jpg',
+      'images/portfolio/details/web/details-web29_2.jpg',
+      'images/portfolio/details/web/details-web29_3.jpg',
+      'images/portfolio/details/web/details-web29_4.jpg'
+    ],
+    tag: ['HTML5', 'SCSS', 'Nuxt 3', 'Element UI', 'ECharts.js'],
+    url: 'https://www.ecs.com.tw/esg'
+  },
+  {
+    category: 'Web Develop',
     title: 'Parallax 視差滾動網頁',
     description:
       '透過 JavaScript、 CSS animation 實作視差滾動互動式網站，透過滑鼠滾動讓多層背景以不同的速度移動，形成立體的運動效果，帶來特別的視覺體驗。搭配 jQuery、GSAP、Parallax.js、Typed.js 等套件開發，首頁動畫共 2 種，每次進入前隨機出現 (Super Engineer、Super Designer)。',
@@ -96,7 +111,7 @@ export const portfolioData = [
     category: 'UI Design',
     title: '電動車充電樁頁面',
     description:
-      '電動車充電樁 (Electric Vehicle Charging) 登陸頁面 UI 設計，使用 Figma 進行製作。',
+      '設計電動車充電樁 (Electric Vehicle Charging) 登陸頁面 UI，運用 Figma 精細製作，突顯充電樁的核心功能與便利性，透過直觀的佈局與現代化設計，提供清晰易用的用戶體驗，吸引目標用戶了解更多服務內容。',
     thumbImg: 'images/portfolio/thumb/ui/thumb-ui1.jpg',
     detailsImg: [
       'images/portfolio/details/ui/details-ui1_1.jpg',
@@ -105,20 +120,20 @@ export const portfolioData = [
     tag: ['UI Design', 'Figma', 'PhotoShop'],
     url: null
   },
-  // {
-  //   category: 'Graphic Design',
-  //   title: 'Graphic Design',
-  //   description: '平面設計內容',
-  //   thumbImg: 'images/portfolio/thumb/graphic/thumb-graphic1.jpg',
-  //   detailsImg: ['images/portfolio/details/graphic/details-graphic1_1.jpg'],
-  //   tag: ['UI Design', 'Figma', 'PhotoShop'],
-  //   url: null
-  // },
+  {
+    category: 'Graphic Design',
+    title: 'LIVA X 創意短片競賽海報',
+    description: null,
+    thumbImg: 'images/portfolio/thumb/graphic/thumb-graphic1.jpg',
+    detailsImg: ['images/portfolio/details/graphic/details-graphic1.jpg'],
+    tag: null,
+    url: null
+  },
   {
     category: 'UI Design',
     title: 'Parallax 視差滾動網頁',
     description:
-      'Parallax 視差滾動網頁 UI 設計，使用 Figma、PhotoShop 進行製作。',
+      '設計 Parallax 視差滾動網頁 UI，巧妙運用 Figma 和 Photoshop 精心製作，透過視差滾動效果創造深度感與沉浸式體驗，增強頁面互動性與視覺吸引力。',
     thumbImg: 'images/portfolio/thumb/ui/thumb-ui2.jpg',
     detailsImg: [
       'images/portfolio/details/ui/details-ui2_1.jpg',
@@ -131,7 +146,7 @@ export const portfolioData = [
     category: 'UI Design',
     title: 'CR60RL5 筆記型電腦',
     description:
-      'CR60RL5 筆記型電腦產品網頁 UI 設計，使用 Figma、PhotoShop 進行製作。',
+      '設計 CR60RL5 筆記型電腦產品網頁 UI，結合 Figma 和 Photoshop 精緻打造，突顯產品性能與設計亮點，提供視覺吸引力強且使用者友好的瀏覽體驗。',
     thumbImg: 'images/portfolio/thumb/ui/thumb-ui3.jpg',
     detailsImg: [
       'images/portfolio/details/ui/details-ui3_1.jpg',
@@ -211,7 +226,8 @@ export const portfolioData = [
   {
     category: 'UI Design',
     title: 'Scrum 介紹互動遊戲',
-    description: 'Scrum 介紹互動遊戲 UI 設計，使用 Figma、PhotoShop 進行製作。',
+    description:
+      '設計 Scrum 介紹互動遊戲的 UI，採用 Figma 和 Photoshop 精心製作，呈現創意且引人入勝的介面，幫助用戶透過遊戲化方式輕鬆了解 Scrum 的核心概念與流程。',
     thumbImg: 'images/portfolio/thumb/ui/thumb-ui4.jpg',
     detailsImg: [
       'images/portfolio/details/ui/details-ui4_1.jpg',
@@ -224,7 +240,7 @@ export const portfolioData = [
     category: 'UI Design',
     title: 'SG20AN1 筆記型電腦',
     description:
-      'SG20AN1 筆記型電腦產品網頁 UI 設計，使用 Figma、PhotoShop 進行製作。',
+      '設計 SG20AN1 筆記型電腦產品網頁 UI，利用 Figma 和 Photoshop 打造精緻的視覺介面，突顯產品特色，提供用戶流暢的瀏覽體驗。',
     thumbImg: 'images/portfolio/thumb/ui/thumb-ui5.jpg',
     detailsImg: [
       'images/portfolio/details/ui/details-ui5_1.jpg',
@@ -237,7 +253,7 @@ export const portfolioData = [
     category: 'UI Design',
     title: 'SG20AN2 筆記型電腦',
     description:
-      'SG20AN2 筆記型電腦產品網頁 UI 設計，使用 Figma、PhotoShop 進行製作。',
+      '設計 SG20AN2 筆記型電腦產品網頁 UI，利用 Figma 和 Photoshop 打造精緻的視覺介面，突顯產品特色，提供用戶流暢的瀏覽體驗。',
     thumbImg: 'images/portfolio/thumb/ui/thumb-ui6.jpg',
     detailsImg: [
       'images/portfolio/details/ui/details-ui6_1.jpg',
@@ -309,10 +325,36 @@ export const portfolioData = [
     url: 'https://jedchang.github.io/Bicycle-Lane-Map/'
   },
   {
+    category: 'Web Develop',
+    title: 'ECSIPC 精強科技官網',
+    description:
+      '使用 Nuxt2 進行開發，採用前後端分離架構，搭配 SCSS、Bootstrap Grid 建置且支援 RWD，採用 RESTful API 進行後台資料交換，採用 Vuex、Element UI 進行後台管理。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web30.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web30_1.jpg',
+      'images/portfolio/details/web/details-web30_2.jpg',
+      'images/portfolio/details/web/details-web30_3.jpg'
+    ],
+    tag: [
+      'HTML5',
+      'SCSS',
+      'Nuxt.js',
+      'RWD',
+      'Bootstrap',
+      'RESTful API',
+      'Vuex',
+      'vue-meta',
+      'PWA',
+      'Element UI',
+      'PM2'
+    ],
+    url: 'https://www.ecsipc.com/en'
+  },
+  {
     category: 'UI Design',
     title: 'CLOCKS STORE 購物平台',
     description:
-      'CLOCKS STORE 購物平台 UI 設計，使用 Figma、PhotoShop 進行製作。',
+      '設計 CLOCKS STORE 購物平台 UI，運用 Figma 和 Photoshop 精心打造，結合簡潔時尚的視覺風格與直觀的操作介面，突顯時鐘產品的多樣性與品牌特色，提供流暢且愉悅的購物體驗。',
     thumbImg: 'images/portfolio/thumb/ui/thumb-ui7.jpg',
     detailsImg: [
       'images/portfolio/details/ui/details-ui7_1.jpg',
@@ -434,7 +476,7 @@ export const portfolioData = [
     category: 'Web Develop',
     title: 'ECS 全球人力資源網',
     description:
-      '運用 JavaScript 開發全球人力資源網頁，結合 Carousel 與 Magnific Popup 等套件，實現動態展示與精緻彈窗互動，提升用戶瀏覽體驗。',
+      '使用 JavaScript 開發全球人力資源網頁，結合 Carousel 與 Magnific Popup 等套件，實現動態展示與精緻彈窗互動，提升用戶瀏覽體驗。',
     thumbImg: 'images/portfolio/thumb/web/thumb-web19.jpg',
     detailsImg: [
       'images/portfolio/details/web/details-web19_1.jpg',
@@ -451,13 +493,13 @@ export const portfolioData = [
       'RWD',
       'Owl Carousel'
     ],
-    url: 'https://jedchang.com.tw/portfolio/Global-HR/'
+    url: 'https://www.ecs.com.tw/hr/'
   },
   {
     category: 'Web Develop',
     title: 'Home Security',
     description:
-      '採用 JavaScript 開發 Home Security 解決方案頁面，結合 jQuery 與 Carousel 套件，呈現流暢的影片動畫與精美的文字介紹，打造專業且直觀的用戶體驗。',
+      '使用 JavaScript 開發 Home Security 解決方案頁面，結合 jQuery 與 Carousel 套件，呈現流暢的影片動畫與精美的文字介紹，打造專業且直觀的用戶體驗。',
     thumbImg: 'images/portfolio/thumb/web/thumb-web20.jpg',
     detailsImg: [
       'images/portfolio/details/web/details-web20_1.jpg',
@@ -472,7 +514,7 @@ export const portfolioData = [
     category: 'Web Develop',
     title: 'EWCR RX 無線充電接收器',
     description:
-      '運用 JavaScript 開發 EWCR RX 無線充電接收器產品頁面，整合 fullPage.js 與 fancyBox.js，呈現流暢的滾動效果與高品質的彈窗互動，打造專業且直觀的用戶體驗。',
+      '使用 JavaScript 開發 EWCR RX 無線充電接收器產品頁面，整合 fullPage.js 與 fancyBox.js，呈現流暢的滾動效果與高品質的彈窗互動，打造專業且直觀的用戶體驗。',
     thumbImg: 'images/portfolio/thumb/web/thumb-web21.jpg',
     detailsImg: [
       'images/portfolio/details/web/details-web21_1.jpg',
@@ -495,7 +537,7 @@ export const portfolioData = [
     category: 'Web Develop',
     title: 'EWCT TX 無線充電接收器',
     description:
-      '運用 JavaScript 開發 EWCT TX 無線充電接收器產品頁面，整合 fullPage.js 與 fancyBox.js，呈現流暢的滾動效果與高品質的彈窗互動，打造專業且直觀的用戶體驗。',
+      '使用 JavaScript 開發 EWCT TX 無線充電接收器產品頁面，整合 fullPage.js 與 fancyBox.js，呈現流暢的滾動效果與高品質的彈窗互動，打造專業且直觀的用戶體驗。',
     thumbImg: 'images/portfolio/thumb/web/thumb-web22.jpg',
     detailsImg: [
       'images/portfolio/details/web/details-web22_1.jpg',
@@ -514,5 +556,169 @@ export const portfolioData = [
       'fancyBox.js'
     ],
     url: 'https://jedchang.com.tw/portfolio/EWCT-TX'
+  },
+  {
+    category: 'Web Develop',
+    title: 'ECS 企業實習專區',
+    description:
+      '使用 JavaScript、jQuery 開發企業實習專區網頁，並採用 Bootstrap Grid 製作 RWD 響應式網頁，實現動態展示與精緻彈窗互動，提升用戶瀏覽體驗。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web23.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web23_1.jpg',
+      'images/portfolio/details/web/details-web23_2.jpg',
+      'images/portfolio/details/web/details-web23_3.jpg',
+      'images/portfolio/details/web/details-web23_4.jpg'
+    ],
+    tag: ['HTML5', 'CSS', 'JavaScript', 'jQuery', 'RWD', 'Bootstrap'],
+    url: 'https://www.ecs.com.tw/Internship/'
+  },
+  {
+    category: 'Web Develop',
+    title: 'DURATHON 2',
+    description:
+      '使用 JavaScript 和 jQuery 開發 DURATHON 2 網頁，首頁巧妙運用 parallax.js，呈現出生動流暢的視差效果，帶給用戶沉浸式的瀏覽體驗。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web24.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web24_1.jpg',
+      'images/portfolio/details/web/details-web24_2.jpg',
+      'images/portfolio/details/web/details-web24_3.jpg',
+      'images/portfolio/details/web/details-web24_4.jpg'
+    ],
+    tag: ['HTML5', 'CSS', 'JavaScript', 'jQuery', 'parallax.js', 'RWD'],
+    url: 'https://jedchang.com.tw/portfolio/DURATHON-2/'
+  },
+  {
+    category: 'UI Design',
+    title: 'ECS IoT System',
+    description:
+      '設計 ECS IoT System APP 的介面 UI，運用 Adobe XD、Photoshop 和 Illustrator 等工具製作，打造直觀且功能性強的用戶體驗。',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui8.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui8_1.jpg',
+      'images/portfolio/details/ui/details-ui8_2.jpg'
+    ],
+    tag: ['UI Design', 'Adobe XD', 'PhotoShop', 'Illustrator'],
+    url: null
+  },
+  {
+    category: 'Web Develop',
+    title: 'LIVA Blossom 迷你電腦',
+    description:
+      'LIVA Blossom 產品頁面融合 JavaScript、jQuery、fullPage.js 和 TweenMax 開發，帶來流暢且引人入勝的互動體驗。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web25.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web25_1.jpg',
+      'images/portfolio/details/web/details-web25_2.jpg',
+      'images/portfolio/details/web/details-web25_3.jpg',
+      'images/portfolio/details/web/details-web25_4.jpg'
+    ],
+    tag: ['HTML5', 'CSS', 'JavaScript', 'jQuery', 'fullPage.js', 'TweenMax'],
+    url: 'https://jedchang.com.tw/portfolio/LIVA-Blossom/'
+  },
+  {
+    category: 'Web Develop',
+    title: 'LIVA Core 迷你電腦',
+    description:
+      'LIVA Core 產品頁面融合 JavaScript、jQuery、fullPage.js 和 TweenMax 開發，帶來流暢且引人入勝的互動體驗。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web26.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web26_1.jpg',
+      'images/portfolio/details/web/details-web26_2.jpg',
+      'images/portfolio/details/web/details-web26_3.jpg',
+      'images/portfolio/details/web/details-web26_4.jpg'
+    ],
+    tag: ['HTML5', 'CSS', 'JavaScript', 'jQuery', 'fullPage.js', 'TweenMax'],
+    url: 'https://jedchang.com.tw/portfolio/LIVA-Core/'
+  },
+  {
+    category: 'Web Develop',
+    title: 'LIVA One 迷你電腦',
+    description:
+      'LIVA One 產品頁面融合 JavaScript、jQuery、fullPage.js 和 TweenMax 開發，帶來流暢且引人入勝的互動體驗。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web27.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web27_1.jpg',
+      'images/portfolio/details/web/details-web27_2.jpg',
+      'images/portfolio/details/web/details-web27_3.jpg',
+      'images/portfolio/details/web/details-web27_4.jpg'
+    ],
+    tag: ['HTML5', 'CSS', 'JavaScript', 'jQuery', 'fullPage.js', 'TweenMax'],
+    url: 'https://jedchang.com.tw/portfolio/LIVA-One/'
+  },
+  {
+    category: 'UI Design',
+    title: 'OMS 管理介面',
+    description:
+      '設計 OMS (Order Management System) UI 系統管理介面，利用 Adobe XD 和 Photoshop 打造視覺化的功能頁面，包括登入 (Login)、註冊 (Register)、以及儀表板 (Dashboard)，提供直觀操作與強大功能，提升用戶的使用體驗與工作效率。',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui9.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui9_1.jpg',
+      'images/portfolio/details/ui/details-ui9_2.jpg'
+    ],
+    tag: ['UI Design', 'Adobe XD', 'PhotoShop'],
+    url: null
+  },
+  {
+    category: 'Web Develop',
+    title: 'Back to Hogwarts 活動網頁',
+    description:
+      '打造 Back to Hogwarts 開學季活動網頁，運用 JavaScript、jQuery 與 parallax.js 創建沉浸式互動體驗，結合流暢的動畫效果與視覺設計，為用戶帶來趣味十足且充滿魔法氛圍的開學之旅。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web28.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web28_1.jpg',
+      'images/portfolio/details/web/details-web28_2.jpg',
+      'images/portfolio/details/web/details-web28_3.jpg',
+      'images/portfolio/details/web/details-web28_4.jpg'
+    ],
+    tag: ['HTML5', 'CSS', 'JavaScript', 'jQuery', 'parallax.js'],
+    url: 'https://jedchang.com.tw/portfolio/Back-to-Hogwarts/'
+  },
+  {
+    category: 'Graphic Design',
+    title: 'Design Your Own LIVA 海報',
+    description: null,
+    thumbImg: 'images/portfolio/thumb/graphic/thumb-graphic2.jpg',
+    detailsImg: ['images/portfolio/details/graphic/details-graphic2.jpg'],
+    tag: null,
+    url: null
+  },
+  {
+    category: 'UI Design',
+    title: 'LIVA Microsite',
+    description:
+      '設計 LIVA Microsite 微型電腦網站，小巧精緻，性能強大，LIVA 微型電腦以活力橘點燃創新靈感，搭配簡約直觀的 UI 設計，流暢操作與美觀界面完美結合，無論是工作、學習還是娛樂，皆能輕鬆應對，為你的數位生活注入更多可能！',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui10.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui10_1.jpg',
+      'images/portfolio/details/ui/details-ui10_2.jpg'
+    ],
+    tag: ['UI Design', 'PhotoShop'],
+    url: null
+  },
+  {
+    category: 'UI Design',
+    title: '留言拿好康分享抽 LIVA',
+    description:
+      '留言拿好康分享抽 LIVA 活動網站規劃與整體風格樣式設計，以小巧精緻的視覺語言展現 LIVA 微型電腦的強大性能，結合簡約且直觀的整體風格，打造充滿創新靈感的智慧生活專屬活動平台！',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui11.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui11_1.jpg',
+      'images/portfolio/details/ui/details-ui11_2.jpg'
+    ],
+    tag: ['UI Design', 'PhotoShop'],
+    url: null
+  },
+  {
+    category: 'UI Design',
+    title: '精英友禮三重送',
+    description:
+      '精英友禮三重送活動網站設計，以產品形象代言人為核心主視覺，結合活動贈品與詳盡內容，採用簡約直觀的設計風格，完美呈現產品特點與活動亮點，打造一個充滿創新靈感的專屬互動平台！',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui12.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui12_1.jpg',
+      'images/portfolio/details/ui/details-ui12_2.jpg'
+    ],
+    tag: ['UI Design', 'PhotoShop'],
+    url: null
   }
 ]

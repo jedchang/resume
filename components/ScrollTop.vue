@@ -28,7 +28,6 @@
     // ProgressBar
     const bodyHeight = (document.body.scrollHeight - window.innerHeight) / 10 // 計算 body 的高度並減去視窗高度
     const scrollHeight = window.scrollY // 取得當前的滾動位置
-    console.log('scrollHeight:', scrollHeight)
     const percentage = ((scrollHeight / bodyHeight) * 100) / 10 // 計算卷軸進度百分比
 
     // 將結果應用到目標元素上
