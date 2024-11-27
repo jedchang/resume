@@ -15,7 +15,6 @@
         <div></div>
       </div>
     </button>
-    <!-- 沒資料可以顯示 button 應該要消失 -->
   </div>
 </template>
 
@@ -24,15 +23,22 @@
     loadState: {
       type: Boolean,
       required: true
+    },
+    category: {
+      type: String,
+      required: true
     }
   })
   const { $mitt } = useNuxtApp()
   const isVisible = ref(true) // 按鈕是否可見
-  const isActive = ref(false)
+  const isActive = ref(false) // 按鈕執行狀態
 
   const handleLoadMore = () => {
     isActive.value = true
-    $mitt.emit('loadMore') // 當按鈕被點擊時，發送 'loadMore' 事件
+    // 發送 'loadMore' 事件，帶上分類名稱
+    $mitt.emit('loadMore', (category) => {
+      activeLoadMore(category) // 父組件處理邏輯
+    })
     // 模擬延遲處理，移除 `active` 類名
     setTimeout(() => {
       isActive.value = false
@@ -40,52 +46,63 @@
   }
 
   onMounted(() => {
-    $mitt.on('noMore', () => {
-      isVisible.value = false // 隱藏按鈕
+    $mitt.on('noMore', (category) => {
+      if (category === props.category) {
+        isVisible.value = false // 僅隱藏對應分類的按鈕
+      }
     })
   })
 </script>
 
 <style lang="scss">
   .load-more {
+    display: inline-block;
     margin-top: 50px;
+    @include medium {
+      width: 50%;
+    }
+    @include small {
+      width: 70%;
+    }
+    @include extraSmall {
+      width: 100%;
+    }
     button {
-      width: 210px;
+      width: 260px;
       padding: 12px 45px;
       height: 46px;
       border-radius: 25px;
-      border: 1px solid $primaryColor;
-      background-color: transparent;
+      border: 1px solid $borderColor;
+      background-color: rgba(20, 25, 32, 1);
       margin: 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: $setTransition;
       @include medium {
-        width: 60%;
+        width: 100%;
         height: 50px;
         line-height: 50px;
       }
       @include small {
         width: 100%;
-        height: 55px;
-        line-height: 55px;
+        height: 50px;
+        line-height: 50px;
         border-radius: 30px;
       }
       @include extraSmall {
-        width: 100%;
+        width: 98%;
         height: 55px;
-        line-height: 55px;
+        line-height: 0;
         border-radius: 30px;
       }
       &.active {
         cursor: default;
         pointer-events: none;
-        background-color: $primaryColor;
       }
       span {
-        color: $primaryColor;
-        font-size: 15px;
+        color: $primaryTextColor2;
+        font-size: 14px;
         font-weight: 600;
         text-transform: uppercase;
         font-family: '微軟正黑體', Oswald, sans-serif;
@@ -100,7 +117,6 @@
       }
       &:hover {
         cursor: pointer;
-        // color: $primaryColor;
         background-color: $primaryColor;
         border: 1px solid $primaryColor;
         span {
@@ -119,7 +135,7 @@
           width: 10px;
           height: 10px;
           border-radius: 50%;
-          background: #fff;
+          background: $primaryColor;
           animation-timing-function: cubic-bezier(0, 1, 1, 0);
           &:nth-child(1) {
             left: 8px;

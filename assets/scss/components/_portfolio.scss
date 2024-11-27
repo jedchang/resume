@@ -27,18 +27,25 @@ section#portfolio {
     height: auto;
     border-bottom: none;
     margin-bottom: 30px;
+    position: sticky;
+    top: 70px;
     @include medium {
+      top: 90px;
       margin-bottom: 15px;
     }
     @include small {
+      position: relative;
+      top: 0;
       margin-bottom: 0px;
     }
     @include extraSmall {
+      position: relative;
+      top: 0;
       margin-bottom: 0px;
     }
     .el-tabs__nav {
       float: none;
-      height: 55px;
+      height: 85px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -63,45 +70,38 @@ section#portfolio {
     .el-tabs__item {
       height: 46px;
       color: $primaryTextColor2;
-      padding: 12px 45px;
+      padding: 12px 60px;
       border: 1px solid $borderColor;
       border-radius: 25px;
-      background: rgba(0, 0, 0, 0.15);
+      background: rgba(20, 25, 32, 1);
+      backdrop-filter: blur(4px);
       margin: 0 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px 0px #0b0d10;
       transition: $setTransition;
-      @include large {
-        padding: 12px 35px;
-        margin: 0 8px;
-      }
       @include medium {
         width: 46%;
-        height: 55px;
+        height: 50px;
         border-radius: 30px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
       @include small {
         width: 46%;
-        height: 55px;
+        height: 50px;
         border-radius: 30px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
       @include extraSmall {
-        width: 100%;
+        width: 98%;
         height: 55px;
         border-radius: 30px;
-        margin: 0 0 12px;
+        margin: 0 0 15px;
       }
       &:nth-child(2) {
-        padding-left: 45px;
-        @include large {
-          padding-right: 35px;
-        }
+        padding-left: 60px;
       }
       &:last-child {
-        padding-right: 45px;
-        @include large {
-          padding-right: 35px;
-        }
+        padding-right: 60px;
       }
       &:hover {
         color: $primaryColor;
@@ -111,19 +111,50 @@ section#portfolio {
         cursor: default;
         pointer-events: none;
         color: #fff;
-        border: 1px solid $primaryColor;
-        background-color: $primaryColor;
+        border: 1px solid darken($primaryColor, 5%);
+        background-color: darken($primaryColor, 5%);
+        backdrop-filter: blur(4px);
+        span.count {
+          color: lighten($primaryColor, 10%);
+        }
       }
       span.item-title {
         font-size: 14px;
         font-weight: 500;
         text-transform: uppercase;
         font-family: "Montserrat", sans-serif;
+        z-index: 1;
         @include small {
           font-size: 16px;
         }
         @include extraSmall {
           font-size: 16px;
+        }
+      }
+      span.count {
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        color: $borderColor;
+        position: absolute;
+        top: 50%;
+        right: 4px;
+        transform: translateY(-50%);
+        z-index: 0;
+        opacity: 0.6;
+        transition: $setTransition;
+        @include medium {
+          font-size: 42px;
+          right: 14px;
+        }
+        @include small {
+          font-size: 42px;
+          right: 2px;
+        }
+        @include extraSmall {
+          font-size: 12vmin;
+          right: 5%;
         }
       }
     }
