@@ -111,7 +111,6 @@ section#home {
       width: 100%;
       height: calc(var(--vh) * 100);
       justify-content: center;
-      align-items: center;
       padding-top: 60px; // Mobile navBar
     }
     h1 {
@@ -138,10 +137,9 @@ section#home {
         margin-bottom: 20px;
       }
       @include extraSmall {
-        font-size: 14vmin;
+        font-size: 15.5vmin;
         margin-bottom: 5%;
         font-weight: 700;
-        text-align: center;
       }
       span.name {
         color: $primaryColor;
@@ -367,7 +365,7 @@ section#home {
           font-size: 14px;
           padding: 15px 25px;
           width: 100%;
-          margin-top: 5%;
+          margin-top: 10px;
         }
       }
     }

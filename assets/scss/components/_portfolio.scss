@@ -15,7 +15,8 @@ section#portfolio {
   }
 }
 
-:deep(.el-tabs--card) {
+:deep(.el-tabs) {
+  padding-top: 25px;
   .el-tabs__content {
     min-height: 300px;
     padding: 15px;
@@ -26,7 +27,7 @@ section#portfolio {
   .el-tabs__header {
     height: auto;
     border-bottom: none;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     position: sticky;
     top: 70px;
     @include medium {
@@ -89,13 +90,13 @@ section#portfolio {
         width: 46%;
         height: 50px;
         border-radius: 30px;
-        margin-bottom: 15px;
+        margin: 0 0 10px;
       }
       @include extraSmall {
         width: 98%;
         height: 55px;
         border-radius: 30px;
-        margin: 0 0 15px;
+        margin: 0 0 10px;
       }
       &:nth-child(2) {
         padding-left: 60px;

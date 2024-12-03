@@ -1,6 +1,6 @@
-import { webDevelopData } from './webDevelopData'
-import { uiDesignData } from './uiDesignData'
-import { graphicDesignData } from './graphicDesignData'
+import { webDevelopData } from './webDevelop'
+import { uiDesignData } from './uiDesign'
+import { graphicDesignData } from './graphicDesign'
 
 // 合併資料
 export const rawPortfolioData = [

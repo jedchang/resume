@@ -27,11 +27,11 @@ section#contact {
       margin-bottom: 12px;
     }
     @include small {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     @include extraSmall {
       padding: 12px 12px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     &:last-child {
       margin-bottom: 0;
@@ -42,7 +42,7 @@ section#contact {
         margin-bottom: 50px;
       }
       @include extraSmall {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
       }
     }
     &::before {
@@ -214,6 +214,7 @@ section#contact {
         border-radius: 10px;
         background-color: transparent;
         box-shadow: none;
+        overflow: hidden; // 右下方會有一個小白點
         .el-textarea__inner {
           min-height: 195px !important;
           width: 100% !important;
@@ -296,6 +297,14 @@ section#contact {
       padding-top: 8px;
       padding-left: 8px;
       font-size: 14px;
+      @include small {
+        padding-top: 5px;
+        font-size: 13px;
+      }
+      @include extraSmall {
+        padding-top: 5px;
+        font-size: 13px;
+      }
     }
   }
 }

@@ -1,6 +1,5 @@
 export const uiDesignData = [
   {
-    id: 16,
     category: 'UI Design',
     title: '電動車充電樁頁面',
     description:
@@ -14,7 +13,6 @@ export const uiDesignData = [
     url: null
   },
   {
-    id: 17,
     category: 'UI Design',
     title: 'Parallax 視差滾動網頁',
     description:
@@ -28,7 +26,6 @@ export const uiDesignData = [
     url: 'https://jedchang.github.io/Parallax-Interactive-Website/'
   },
   {
-    id: 36,
     category: 'UI Design',
     title: 'CR60RL5 筆記型電腦',
     description:
@@ -42,7 +39,6 @@ export const uiDesignData = [
     url: null
   },
   {
-    id: 37,
     category: 'UI Design',
     title: 'Scrum 介紹互動遊戲',
     description:
@@ -56,7 +52,6 @@ export const uiDesignData = [
     url: 'https://jedchang.github.io/Scrum-Interactive-Game/'
   },
   {
-    id: 38,
     category: 'UI Design',
     title: 'SG20AN1 筆記型電腦',
     description:
@@ -70,7 +65,6 @@ export const uiDesignData = [
     url: null
   },
   {
-    id: 41,
     category: 'UI Design',
     title: 'SG20AN2 筆記型電腦',
     description:
@@ -84,7 +78,6 @@ export const uiDesignData = [
     url: null
   },
   {
-    id: 42,
     category: 'UI Design',
     title: 'CLOCKS STORE 購物平台',
     description:
@@ -98,7 +91,19 @@ export const uiDesignData = [
     url: 'https://jedchang.github.io/ClocksStore/'
   },
   {
-    id: 43,
+    category: 'UI Design',
+    title: 'ESG 永續網',
+    description:
+      '設計 ESG 永續網站界面，運用 Figma 與 Photoshop 精心打造，精確呈現客製化數據圖表，打造直觀、美觀且功能強大的永續發展平台，完美結合企業價值與永續目標。',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui20.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui20_1.jpg',
+      'images/portfolio/details/ui/details-ui20_2.jpg'
+    ],
+    tag: ['UI Design', 'Figma', 'PhotoShop'],
+    url: 'https://www.ecs.com.tw/esg'
+  },
+  {
     category: 'UI Design',
     title: 'ECS IoT System',
     description:
@@ -112,7 +117,19 @@ export const uiDesignData = [
     url: null
   },
   {
-    id: 44,
+    category: 'UI Design',
+    title: 'ECS 精英電腦官網',
+    description:
+      '設計 ECS 精英電腦官網界面，運用 Figma 與 Photoshop 精心打造，強調產品性能與設計特色，創造具視覺吸引力且易於使用的瀏覽體驗。',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui18.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui18_1.jpg',
+      'images/portfolio/details/ui/details-ui18_2.jpg'
+    ],
+    tag: ['UI Design', 'Figma', 'PhotoShop'],
+    url: 'https://www.ecs.com.tw/tw'
+  },
+  {
     category: 'UI Design',
     title: 'OMS 管理介面',
     description:
@@ -126,7 +143,19 @@ export const uiDesignData = [
     url: null
   },
   {
-    id: 45,
+    category: 'UI Design',
+    title: 'ECSIPC 精強科技官網',
+    description:
+      '設計 ECSIPC 精強科技官網界面，運用 Figma 與 Photoshop 精心打造，強調產品性能與設計特色，創造具視覺吸引力且易於使用的瀏覽體驗。',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui19.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui19_1.jpg',
+      'images/portfolio/details/ui/details-ui19_2.jpg'
+    ],
+    tag: ['UI Design', 'Figma', 'PhotoShop'],
+    url: 'https://www.ecsipc.com/en'
+  },
+  {
     category: 'UI Design',
     title: 'LIVA Microsite',
     description:
@@ -140,7 +169,6 @@ export const uiDesignData = [
     url: null
   },
   {
-    id: 46,
     category: 'UI Design',
     title: '留言拿好康分享抽 LIVA',
     description:
@@ -154,7 +182,6 @@ export const uiDesignData = [
     url: null
   },
   {
-    id: 47,
     category: 'UI Design',
     title: '精英友禮三重送',
     description:
@@ -163,6 +190,79 @@ export const uiDesignData = [
     detailsImg: [
       'images/portfolio/details/ui/details-ui12_1.jpg',
       'images/portfolio/details/ui/details-ui12_2.jpg'
+    ],
+    tag: ['UI Design', 'PhotoShop'],
+    url: null
+  },
+  {
+    category: 'UI Design',
+    title: '水相室內設計',
+    description:
+      '以 "水" 為主題的室內設計官網，採用流動曲線、漸層灰色調等元素展現水的柔和與透明感。設計風格以簡約直觀為核心，結合流暢動畫與互動效果，強調資訊層級與視覺焦點，打造沉浸式的現代化使用體驗，同時凸顯品牌的專業與創意特質。',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui14.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui14_1.jpg',
+      'images/portfolio/details/ui/details-ui14_2.jpg',
+      'images/portfolio/details/ui/details-ui14_3.jpg',
+      'images/portfolio/details/ui/details-ui14_4.jpg'
+    ],
+    tag: ['UI Design', 'PhotoShop'],
+    url: null
+  },
+  {
+    category: 'UI Design',
+    title: '路克影視製作有限公司',
+    description:
+      '結合影視道具、設備與器材元素，設計出路克影視製作有限公司官網，以動態影像與直觀布局展現專業性與創意。整體風格融入工業質感與科技元素，搭配高效導航與互動體驗，全面體現影視製作的精湛技術與品牌形象。',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui15.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui15_1.jpg',
+      'images/portfolio/details/ui/details-ui15_2.jpg',
+      'images/portfolio/details/ui/details-ui15_3.jpg',
+      'images/portfolio/details/ui/details-ui15_4.jpg'
+    ],
+    tag: ['UI Design', 'PhotoShop'],
+    url: null
+  },
+  {
+    category: 'UI Design',
+    title: '飛力思創意廣告有限公司',
+    description:
+      '融合地圖與復古元素，設計飛力思創意廣告有限公司官網，透過懷舊色調與手繪字體風格地圖展現品牌故事與創意。搭配簡約布局與互動設計，營造兼具懷舊韻味與現代感的視覺體驗，彰顯品牌獨特性與專業形象。',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui16.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui16_1.jpg',
+      'images/portfolio/details/ui/details-ui16_2.jpg',
+      'images/portfolio/details/ui/details-ui16_3.jpg',
+      'images/portfolio/details/ui/details-ui16_4.jpg'
+    ],
+    tag: ['UI Design', 'PhotoShop'],
+    url: null
+  },
+  {
+    category: 'UI Design',
+    title: 'JaZuMi 糙米粥',
+    description:
+      'JaZuMi 糙米粥品牌網頁，視覺設計以自然健康為核心，運用溫暖的米色調搭配清新的綠色元素，展現純淨與安心的品牌形象。簡約的排版與直觀的互動設計，強調產品特性與品牌故事，營造自然、溫馨且專業的使用體驗。',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui17.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui17_1.jpg',
+      'images/portfolio/details/ui/details-ui17_2.jpg',
+      'images/portfolio/details/ui/details-ui17_3.jpg',
+      'images/portfolio/details/ui/details-ui17_4.jpg'
+    ],
+    tag: ['UI Design', 'PhotoShop'],
+    url: null
+  },
+  {
+    category: 'UI Design',
+    title: 'Remote Controller GUI',
+    description:
+      'IPTV 遙控器軟體 GUI 介面，設計採用簡約科技感風格，搭配深色背景與高對比色調，強調按鈕與互動區域的辨識度；整體呈現圓角設計與柔和動態效果，提升使用體驗的直覺性與現代感。',
+    thumbImg: 'images/portfolio/thumb/ui/thumb-ui13.jpg',
+    detailsImg: [
+      'images/portfolio/details/ui/details-ui13_1.jpg',
+      'images/portfolio/details/ui/details-ui13_2.jpg'
     ],
     tag: ['UI Design', 'PhotoShop'],
     url: null

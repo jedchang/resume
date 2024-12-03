@@ -27,6 +27,14 @@
             >
               <Icon name="fa6-solid:magnifying-glass"></Icon>
             </a>
+            <!-- <a
+              v-if="portfolio.category === 'Graphic Design'"
+              href="javascript:void(0);"
+              class="view"
+              @click="handleClickDialog(portfolio)"
+            >
+              <Icon name="fa6-solid:eye"></Icon>
+            </a> -->
             <a
               v-if="portfolio.category === 'Graphic Design'"
               href="javascript:void(0);"
@@ -53,25 +61,25 @@
     >
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <div class="content">
-              <div class="info graphic">
-                <span class="category">{{ currentItem.category }}</span>
-                <h3>{{ currentItem.title }}</h3>
-                <!-- <p>{{ currentItem.description }}</p> -->
-                <!-- <ul class="tag">
+          <!-- <div class="col-12"> -->
+          <div class="content">
+            <div class="info graphic">
+              <span class="category">{{ currentItem.category }}</span>
+              <h3>{{ currentItem.title }}</h3>
+              <!-- <p>{{ currentItem.description }}</p> -->
+              <!-- <ul class="tag">
                   <li v-for="tag in currentItem.tag" :key="tag">
                     <span> {{ tag }}</span>
                   </li>
                 </ul> -->
-              </div>
-              <img
-                :src="currentItem.detailsImg"
-                class="graphic"
-                alt="Portfolio Details"
-              />
             </div>
+            <img
+              :src="currentItem.detailsImg"
+              class="graphic"
+              alt="Portfolio Details"
+            />
           </div>
+          <!-- </div> -->
         </div>
       </div>
     </el-dialog>
@@ -86,7 +94,7 @@
     >
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-12 col-lg-5 col-xl-5 a">
+          <div class="col-12 col-md-12 col-lg-5 col-xl-5">
             <div class="info">
               <span class="category">{{ currentItem.category }}</span>
               <h3>{{ currentItem.title }}</h3>
@@ -107,7 +115,7 @@
               </a>
             </div>
           </div>
-          <div class="col-12 col-md-12 col-lg-7 col-xl-7 b">
+          <div class="col-12 col-md-12 col-lg-7 col-xl-7">
             <Swiper
               v-if="currentItem.detailsImg.length > 1 && showSwiper"
               v-bind="swiperOptions"
@@ -157,14 +165,19 @@
   const watchWidth = () => {
     if (window.innerWidth > 1200) {
       dialogWidth.value = '1140px'
+      // graphicWidth.value = '1140px'
     } else if (window.innerWidth > 992 && window.innerWidth < 1199) {
       dialogWidth.value = '960px'
+      // graphicWidth.value = '960px'
     } else if (window.innerWidth > 768 && window.innerWidth < 991) {
       dialogWidth.value = '720px'
+      // graphicWidth.value = '720px'
     } else if (window.innerWidth > 576 && window.innerWidth < 767) {
       dialogWidth.value = '540px'
+      graphicWidth.value = '96%'
     } else {
-      dialogWidth.value = '92%'
+      dialogWidth.value = '96%'
+      graphicWidth.value = '96%'
     }
   }
   onMounted(() => {

@@ -1,6 +1,5 @@
 export const webDevelopData = [
   {
-    id: 1,
     category: 'Web Develop',
     title: 'ESG 永續網',
     description:
@@ -16,7 +15,6 @@ export const webDevelopData = [
     url: 'https://www.ecs.com.tw/esg'
   },
   {
-    id: 2,
     category: 'Web Develop',
     title: 'Parallax 視差滾動網頁',
     description:
@@ -32,7 +30,6 @@ export const webDevelopData = [
     url: 'https://jedchang.github.io/Parallax-Interactive-Website/'
   },
   {
-    id: 3,
     category: 'Web Develop',
     title: 'ECS 精英電腦官網',
     description:
@@ -59,21 +56,6 @@ export const webDevelopData = [
     url: 'https://www.ecs.com.tw/tw'
   },
   {
-    id: 4,
-    category: 'Web Develop',
-    title: 'Shopping Sites',
-    description:
-      'Shopping Sites 線上購物網頁，使用 jQuery、Bootstrap、particles.js 進行製作並串接後端 API 且支援 RWD。',
-    thumbImg: 'images/portfolio/thumb/web/thumb-web6.jpg',
-    detailsImg: [
-      'images/portfolio/details/web/details-web6_1.jpg',
-      'images/portfolio/details/web/details-web6_2.jpg'
-    ],
-    tag: ['jQuery', 'Bootstrap', 'RWD', 'particles.js', 'RESTful API'],
-    url: 'https://campaign.ecs.com.tw/work-from-home/shop.html'
-  },
-  {
-    id: 5,
     category: 'Web Develop',
     title: 'CLOCKS STORE 購物平台',
     description:
@@ -103,7 +85,6 @@ export const webDevelopData = [
     url: 'https://jedchang.github.io/ClocksStore/'
   },
   {
-    id: 6,
     category: 'Web Develop',
     title: '全台公車動態時刻查詢',
     description:
@@ -130,7 +111,6 @@ export const webDevelopData = [
     url: 'https://jedchang.github.io/Taiwan-Bus-Timetable/'
   },
   {
-    id: 7,
     category: 'Web Develop',
     title: 'Scrum 介紹互動遊戲',
     description:
@@ -147,7 +127,6 @@ export const webDevelopData = [
     url: 'https://jedchang.github.io/Scrum-Interactive-Game/'
   },
   {
-    id: 8,
     category: 'Web Develop',
     title: 'SE40AN 筆記型電腦',
     description:
@@ -162,7 +141,6 @@ export const webDevelopData = [
     url: 'https://www.ecs.com.tw/tw/Product/Laptop/SE40AN_14/overview'
   },
   {
-    id: 9,
     category: 'Web Develop',
     title: '技術支援表單頁面',
     description:
@@ -185,7 +163,6 @@ export const webDevelopData = [
     url: 'https://www.ecs.com.tw/tw/support/technical-support'
   },
   {
-    id: 10,
     category: 'Web Develop',
     title: 'Shopping Sites',
     description:
@@ -199,105 +176,6 @@ export const webDevelopData = [
     url: 'https://campaign.ecs.com.tw/work-from-home/shop.html'
   },
   {
-    id: 11,
-    category: 'Web Develop',
-    title: 'CLOCKS STORE 購物平台',
-    description:
-      '使用 Vue 開發手錶購物平台，串接後端 API 所提供資訊。包含前、後台登入介面，上架產品頁面，訂單、優惠券管理、購物車、願望清單等功能。',
-    thumbImg: 'images/portfolio/thumb/web/thumb-web10.jpg',
-    detailsImg: [
-      'images/portfolio/details/web/details-web10_1.jpg',
-      'images/portfolio/details/web/details-web10_2.jpg',
-      'images/portfolio/details/web/details-web10_3.jpg',
-      'images/portfolio/details/web/details-web10_4.jpg',
-      'images/portfolio/details/web/details-web10_5.jpg',
-      'images/portfolio/details/web/details-web10_6.jpg',
-      'images/portfolio/details/web/details-web10_7.jpg',
-      'images/portfolio/details/web/details-web10_8.jpg'
-    ],
-    tag: [
-      'HTML5',
-      'SCSS',
-      'Vue.js',
-      'Vuex',
-      'RWD',
-      'Bootstrap',
-      'Swiper.js',
-      'popper.js',
-      'vee-validate'
-    ],
-    url: 'https://jedchang.github.io/ClocksStore/'
-  },
-  {
-    id: 12,
-    category: 'Web Develop',
-    title: '全台公車動態時刻查詢',
-    description:
-      '使用 Vue CLI 開發，搭配 Leaflet API、MarkerCluster 進行實作全台公車動態時刻查詢應用服務，公車到站時刻、站序列表、地圖模式等且支援 RWD，串接 TDX 運輸資料流通服務所提供 API 資訊。',
-    thumbImg: 'images/portfolio/thumb/web/thumb-web8.jpg',
-    detailsImg: [
-      'images/portfolio/details/web/details-web8_1.jpg',
-      'images/portfolio/details/web/details-web8_2.jpg',
-      'images/portfolio/details/web/details-web8_3.jpg',
-      'images/portfolio/details/web/details-web8_4.jpg',
-      'images/portfolio/details/web/details-web8_5.jpg'
-    ],
-    tag: [
-      'HTML5',
-      'SCSS',
-      'Vue CLI',
-      'RWD',
-      'Element UI',
-      'Leaflet.js',
-      'MarkerCluster',
-      'jsSHA',
-      'Wicket'
-    ],
-    url: 'https://jedchang.github.io/Taiwan-Bus-Timetable/'
-  },
-  {
-    id: 13,
-    category: 'Web Develop',
-    title: 'PDF Web 簽名服務',
-    description:
-      '使用 Vue 開發並透過 Canvas、PDF.js、fabric.js、jsPDF 實作 PDF Web 版本簽名服務網站。',
-    thumbImg: 'images/portfolio/thumb/web/thumb-web9.jpg',
-    detailsImg: [
-      'images/portfolio/details/web/details-web9_1.jpg',
-      'images/portfolio/details/web/details-web9_2.jpg',
-      'images/portfolio/details/web/details-web9_3.jpg',
-      'images/portfolio/details/web/details-web9_4.jpg',
-      'images/portfolio/details/web/details-web9_5.jpg'
-    ],
-    tag: ['HTML5', 'SCSS', 'Vue.js', 'RWD', 'PDF.js', 'fabric.js', 'jsPDF'],
-    url: 'https://jedchang.github.io/PDF-Signature/'
-  },
-  {
-    id: 14,
-    category: 'Web Develop',
-    title: 'Payments 線上支付',
-    description:
-      '使用 Vue CLI 進行開發，搭配 Element UI、vee-validate 表單驗證。',
-    thumbImg: 'images/portfolio/thumb/web/thumb-web7.jpg',
-    detailsImg: [
-      'images/portfolio/details/web/details-web7_1.jpg',
-      'images/portfolio/details/web/details-web7_2.jpg',
-      'images/portfolio/details/web/details-web7_3.jpg',
-      'images/portfolio/details/web/details-web7_4.jpg'
-    ],
-    tag: [
-      'HTML5',
-      'SCSS',
-      'Vue.js',
-      'Element UI',
-      'RWD',
-      'vee-validate',
-      'Vue Router'
-    ],
-    url: 'https://jedchang.github.io/Payments'
-  },
-  {
-    id: 15,
     category: 'Web Develop',
     title: '自行車道地圖資訊整合網',
     description:
@@ -321,7 +199,22 @@ export const webDevelopData = [
     url: 'https://jedchang.github.io/Bicycle-Lane-Map/'
   },
   {
-    id: 19,
+    category: 'Web Develop',
+    title: 'PDF Web 簽名服務',
+    description:
+      '使用 Vue 開發並透過 Canvas、PDF.js、fabric.js、jsPDF 實作 PDF Web 版本簽名服務網站。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web9.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web9_1.jpg',
+      'images/portfolio/details/web/details-web9_2.jpg',
+      'images/portfolio/details/web/details-web9_3.jpg',
+      'images/portfolio/details/web/details-web9_4.jpg',
+      'images/portfolio/details/web/details-web9_5.jpg'
+    ],
+    tag: ['HTML5', 'SCSS', 'Vue.js', 'RWD', 'PDF.js', 'fabric.js', 'jsPDF'],
+    url: 'https://jedchang.github.io/PDF-Signature/'
+  },
+  {
     category: 'Web Develop',
     title: 'ECSIPC 精強科技官網',
     description:
@@ -348,7 +241,6 @@ export const webDevelopData = [
     url: 'https://www.ecsipc.com/en'
   },
   {
-    id: 21,
     category: 'Web Develop',
     title: 'SH20JL1 筆記型電腦',
     description:
@@ -362,7 +254,6 @@ export const webDevelopData = [
     url: 'https://www.ecs.com.tw/tw/Product/Laptop/SH20JL1_11.6/overview'
   },
   {
-    id: 22,
     category: 'Web Develop',
     title: 'SH20JL2 筆記型電腦',
     description:
@@ -376,7 +267,6 @@ export const webDevelopData = [
     url: 'https://www.ecs.com.tw/tw/Product/Laptop/SH20JL2_11.6/overview'
   },
   {
-    id: 23,
     category: 'Web Develop',
     title: '臺灣旅遊景點導覽',
     description:
@@ -392,7 +282,6 @@ export const webDevelopData = [
     url: 'https://jedchang.github.io/Taiwan-Tourism-Attraction/'
   },
   {
-    id: 24,
     category: 'Web Develop',
     title: 'Mask Map 口罩地圖',
     description:
@@ -416,7 +305,6 @@ export const webDevelopData = [
     url: 'https://jedchang.github.io/Mask-Map/'
   },
   {
-    id: 25,
     category: 'Web Develop',
     title: 'BIOS Live Update Utility',
     description:
@@ -432,7 +320,29 @@ export const webDevelopData = [
     url: 'https://jedchang.com.tw/portfolio/eBLU/'
   },
   {
-    id: 26,
+    category: 'Web Develop',
+    title: 'Payments 線上支付',
+    description:
+      '使用 Vue CLI 進行開發，搭配 Element UI、vee-validate 表單驗證。',
+    thumbImg: 'images/portfolio/thumb/web/thumb-web7.jpg',
+    detailsImg: [
+      'images/portfolio/details/web/details-web7_1.jpg',
+      'images/portfolio/details/web/details-web7_2.jpg',
+      'images/portfolio/details/web/details-web7_3.jpg',
+      'images/portfolio/details/web/details-web7_4.jpg'
+    ],
+    tag: [
+      'HTML5',
+      'SCSS',
+      'Vue.js',
+      'Element UI',
+      'RWD',
+      'vee-validate',
+      'Vue Router'
+    ],
+    url: 'https://jedchang.github.io/Payments'
+  },
+  {
     category: 'Web Develop',
     title: 'LIVA Q 迷你電腦',
     description:
@@ -448,7 +358,6 @@ export const webDevelopData = [
     url: 'https://jedchang.com.tw/portfolio/LIVA-Q/'
   },
   {
-    id: 27,
     category: 'Web Develop',
     title: 'LIVA Z Plus 迷你電腦',
     description:
@@ -464,7 +373,6 @@ export const webDevelopData = [
     url: 'https://jedchang.com.tw/portfolio/LIVA-Z-Plus/'
   },
   {
-    id: 28,
     category: 'Web Develop',
     title: 'ECS 全球人力資源網',
     description:
@@ -488,7 +396,6 @@ export const webDevelopData = [
     url: 'https://www.ecs.com.tw/hr/'
   },
   {
-    id: 29,
     category: 'Web Develop',
     title: 'Home Security',
     description:
@@ -504,7 +411,6 @@ export const webDevelopData = [
     url: 'https://jedchang.com.tw/portfolio/Home-Security'
   },
   {
-    id: 30,
     category: 'Web Develop',
     title: 'EWCR RX 無線充電接收器',
     description:
@@ -528,7 +434,6 @@ export const webDevelopData = [
     url: 'https://jedchang.com.tw/portfolio/EWCR-RX'
   },
   {
-    id: 31,
     category: 'Web Develop',
     title: 'EWCT TX 無線充電接收器',
     description:
@@ -553,7 +458,6 @@ export const webDevelopData = [
     url: 'https://jedchang.com.tw/portfolio/EWCT-TX'
   },
   {
-    id: 32,
     category: 'Web Develop',
     title: 'ECS 企業實習專區',
     description:
@@ -569,7 +473,6 @@ export const webDevelopData = [
     url: 'https://www.ecs.com.tw/Internship/'
   },
   {
-    id: 33,
     category: 'Web Develop',
     title: 'DURATHON 2',
     description:
@@ -585,7 +488,6 @@ export const webDevelopData = [
     url: 'https://jedchang.com.tw/portfolio/DURATHON-2/'
   },
   {
-    id: 34,
     category: 'Web Develop',
     title: 'LIVA Blossom 迷你電腦',
     description:
@@ -601,7 +503,6 @@ export const webDevelopData = [
     url: 'https://jedchang.com.tw/portfolio/LIVA-Blossom/'
   },
   {
-    id: 35,
     category: 'Web Develop',
     title: 'LIVA Core 迷你電腦',
     description:
@@ -617,7 +518,6 @@ export const webDevelopData = [
     url: 'https://jedchang.com.tw/portfolio/LIVA-Core/'
   },
   {
-    id: 39,
     category: 'Web Develop',
     title: 'LIVA One 迷你電腦',
     description:
@@ -633,7 +533,6 @@ export const webDevelopData = [
     url: 'https://jedchang.com.tw/portfolio/LIVA-One/'
   },
   {
-    id: 40,
     category: 'Web Develop',
     title: 'Back to Hogwarts 活動網頁',
     description:

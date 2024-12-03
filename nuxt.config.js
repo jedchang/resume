@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/' : '/'
+    baseURL: process.env.NODE_ENV === 'production' ? '/resume' : '/'
     // buildAssetsDir: '/public/'
   },
   devServer: {

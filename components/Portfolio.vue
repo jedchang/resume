@@ -9,7 +9,12 @@
           </SectionTitle>
         </div>
         <div class="col-12">
-          <el-tabs v-model="activeName" type="card" @tab-click="handleCategory">
+          <el-tabs
+            id="myTabs"
+            v-model="activeName"
+            type="card"
+            @tab-click="handleCategory"
+          >
             <!-- All -->
             <el-tab-pane label="All" name="all">
               <template #label>
@@ -91,9 +96,9 @@
 
 <script setup>
   const { $mitt } = useNuxtApp()
-  import { webDevelopData } from '@/utils/webDevelopData.js'
-  import { uiDesignData } from '@/utils/uiDesignData.js'
-  import { graphicDesignData } from '@/utils/graphicDesignData.js'
+  import { webDevelopData } from '~/utils/webDevelop.js'
+  import { uiDesignData } from '~/utils/uiDesign.js'
+  import { graphicDesignData } from '~/utils/graphicDesign.js'
   // import { portfolioData } from '@/utils/portfolioData.js'
 
   // 合併資料
@@ -115,9 +120,9 @@
   // 設置當前顯示筆數
   const counts = ref({
     all: 16,
-    webDevelop: 4,
-    uiDesign: 4,
-    graphicDesign: 4
+    webDevelop: 16,
+    uiDesign: 16,
+    graphicDesign: 16
   })
   // 判斷是否還有更多資料
   const hasMore = computed(() => {
@@ -192,7 +197,16 @@
   })
 
   const handleCategory = (tab) => {
-    activeName.value = tab.props.name
+    const tabsElement = document.getElementById('myTabs')
+    if (tabsElement) {
+      // 設置偏移量
+      const scrollToPosition = tabsElement.offsetTop - 40
+      // 先執行滾動
+      window.scrollTo({
+        top: scrollToPosition,
+        behavior: 'smooth'
+      })
+    }
   }
 </script>
 

@@ -28,7 +28,7 @@
     button.btn {
       display: flex;
       width: 100%;
-      height: 53px;
+      height: 55px;
       justify-content: center;
       align-items: center;
       cursor: pointer;

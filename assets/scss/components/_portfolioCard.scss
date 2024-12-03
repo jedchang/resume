@@ -13,10 +13,10 @@
     animation: scale-zoom-in 0.3s;
     transition: $setTransition;
     @include small {
-      margin: 8px 0 12px;
+      margin: 5px 0 12px;
     }
     @include extraSmall {
-      margin: 8px 0 12px;
+      margin: 5px 0 12px;
       &:active {
         .overlay {
           opacity: 1;
@@ -57,8 +57,6 @@
       height: 100%;
       object-fit: cover;
       transition: $setTransition;
-      // &.graphic {
-      // }
     }
     .overlay {
       position: absolute;
@@ -239,12 +237,18 @@
     @include small {
       padding: 20px 15px 20px 15px;
       margin: 3% auto;
-      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      // overflow-y: scroll;
     }
     @include extraSmall {
-      padding: 20px 15px 20px 15px;
-      margin: 3% auto;
-      overflow-y: scroll;
+      padding: 20px 10px 20px 10px;
+      margin: 2% auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      // overflow-y: scroll;
     }
     .el-dialog__header {
       @include medium {
@@ -274,9 +278,11 @@
       @include extraSmall {
         position: fixed;
         width: 48px;
-        top: 45px;
-        right: 54px;
         height: 48px;
+        top: 4%;
+        // top: 45px;
+        right: 7%;
+        // right: 54px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -469,21 +475,52 @@
   // Graphic Design
   :deep(.graphic-dialog) {
     padding: 10px 20px 25px 20px;
+    @include small {
+      padding: 20px 15px 20px 15px;
+      margin: 3% auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    @include extraSmall {
+      padding: 20px 10px 20px 10px;
+      margin: 2% auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
     .content {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @include extraSmall {
+        padding: 0 0 0;
+      }
       .info.graphic {
         width: 100%;
+        margin-bottom: 5px;
+        @include extraSmall {
+          width: 96%;
+          margin-top: 10%;
+        }
         h3 {
           margin-bottom: 15px;
         }
       }
       img.graphic {
-        width: auto;
+        width: 437px;
+        // width: auto;
         // width: calc(100% - 400px);
+        @include extraSmall {
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }
 }
+
+// :deep(.swiper-pagination-bullets.swiper-pagination-horizontal) {
+//   bottom: 0px;
+// }
