@@ -15,7 +15,13 @@ export default defineNuxtConfig({
     }
   },
   css: ['~/assets/scss/main.scss', 'element-plus/dist/index.css'],
-  modules: ['@nuxt/icon', '@pinia/nuxt', '@element-plus/nuxt', 'nuxt-swiper'],
+  modules: [
+    '@nuxt/icon',
+    '@pinia/nuxt',
+    '@element-plus/nuxt',
+    'nuxt-swiper',
+    'nuxt-easy-lightbox'
+  ],
   vite: {
     define: {
       'process.env': process.env

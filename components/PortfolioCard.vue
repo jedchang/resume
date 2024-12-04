@@ -5,41 +5,16 @@
       :key="portfolio.name"
       class="col-12 col-md-6 col-lg-4 col-xl-3"
     >
-      <div class="card-item">
+      <!-- Graphic Design -->
+      <div v-if="portfolio.category === 'Graphic Design'" class="card-item">
         <img :src="portfolio.thumbImg" :alt="portfolio.category" />
         <div class="overlay"></div>
         <div class="caption">
           <div class="container">
             <a
-              v-if="portfolio.category !== 'Graphic Design'"
-              :href="portfolio.url"
-              class="link"
-              target="_blank"
-              :class="{ disabled: portfolio.url === null }"
-            >
-              <Icon name="fa6-solid:link"></Icon>
-            </a>
-            <a
-              v-if="portfolio.category !== 'Graphic Design'"
               href="javascript:void(0);"
               class="view"
-              @click="handleClickDialog(portfolio)"
-            >
-              <Icon name="fa6-solid:magnifying-glass"></Icon>
-            </a>
-            <!-- <a
-              v-if="portfolio.category === 'Graphic Design'"
-              href="javascript:void(0);"
-              class="view"
-              @click="handleClickDialog(portfolio)"
-            >
-              <Icon name="fa6-solid:eye"></Icon>
-            </a> -->
-            <a
-              v-if="portfolio.category === 'Graphic Design'"
-              href="javascript:void(0);"
-              class="view"
-              @click="handleClickDialog(portfolio)"
+              @click="showImg(portfolio)"
             >
               <Icon name="fa6-solid:eye"></Icon>
             </a>
@@ -48,44 +23,52 @@
           <p class="category">{{ portfolio.category }}</p>
         </div>
       </div>
-    </div>
-    <!-- dialog -->
-    <el-dialog
-      v-if="currentItem.category === 'Graphic Design'"
-      v-model="dialogVisible"
-      class="graphic-dialog"
-      :width="graphicWidth"
-      align-center
-      :lock-scroll="false"
-      @close="handleDialogClose"
-    >
-      <div class="container">
-        <div class="row">
-          <!-- <div class="col-12"> -->
-          <div class="content">
-            <div class="info graphic">
-              <span class="category">{{ currentItem.category }}</span>
-              <h3>{{ currentItem.title }}</h3>
-              <!-- <p>{{ currentItem.description }}</p> -->
-              <!-- <ul class="tag">
-                  <li v-for="tag in currentItem.tag" :key="tag">
-                    <span> {{ tag }}</span>
-                  </li>
-                </ul> -->
-            </div>
-            <img
-              :src="currentItem.detailsImg"
-              class="graphic"
-              alt="Portfolio Details"
-            />
+      <!-- Web Develop、UI Design  -->
+      <div v-else class="card-item">
+        <img :src="portfolio.thumbImg" :alt="portfolio.category" />
+        <div class="overlay"></div>
+        <div class="caption">
+          <div class="container">
+            <a
+              :href="portfolio.url"
+              class="link"
+              target="_blank"
+              :class="{ disabled: portfolio.url === null }"
+            >
+              <Icon name="fa6-solid:link"></Icon>
+            </a>
+            <a
+              href="javascript:void(0);"
+              class="view"
+              @click="handleClickDialog(portfolio)"
+            >
+              <Icon name="fa6-solid:magnifying-glass"></Icon>
+            </a>
           </div>
-          <!-- </div> -->
+          <h4 class="title">{{ portfolio.title }}</h4>
+          <p class="category">{{ portfolio.category }}</p>
         </div>
       </div>
-    </el-dialog>
+    </div>
+    <!-- Easy Lightbox -->
+    <VueEasyLightbox
+      :visible="visible"
+      :imgs="[currentImg]"
+      :index="0"
+      :rotate-disabled="true"
+      :scroll-disabled="false"
+      :move-disabled="true"
+      @hide="hideImg"
+    >
+      <!-- 隱藏工具列 -->
+      <template #toolbar>
+        <div style="display: none"></div>
+      </template>
+    </VueEasyLightbox>
 
+    <!-- Dialog -->
     <el-dialog
-      v-else
+      v-if="currentItem.category !== 'Graphic Design'"
       v-model="dialogVisible"
       :width="dialogWidth"
       align-center
@@ -160,24 +143,18 @@
   }
 
   const dialogWidth = ref('60%')
-  const graphicWidth = ref('auto')
 
   const watchWidth = () => {
     if (window.innerWidth > 1200) {
       dialogWidth.value = '1140px'
-      // graphicWidth.value = '1140px'
     } else if (window.innerWidth > 992 && window.innerWidth < 1199) {
       dialogWidth.value = '960px'
-      // graphicWidth.value = '960px'
     } else if (window.innerWidth > 768 && window.innerWidth < 991) {
       dialogWidth.value = '720px'
-      // graphicWidth.value = '720px'
     } else if (window.innerWidth > 576 && window.innerWidth < 767) {
       dialogWidth.value = '540px'
-      graphicWidth.value = '96%'
     } else {
       dialogWidth.value = '96%'
-      graphicWidth.value = '96%'
     }
   }
   onMounted(() => {
@@ -206,6 +183,20 @@
     },
     slidesPerView: 1,
     grabCursor: true
+  }
+
+  const visible = ref(false)
+  const currentImg = ref('')
+  // 顯示 Lightbox
+  const showImg = (portfolio) => {
+    if (portfolio && portfolio.detailsImg && portfolio.detailsImg.length > 0) {
+      currentImg.value = portfolio.detailsImg[0] // 顯示第一張細節圖片
+      visible.value = true // 開啟 Lightbox
+    }
+  }
+  // 隱藏 Lightbox
+  const hideImg = () => {
+    visible.value = false
   }
 </script>
 

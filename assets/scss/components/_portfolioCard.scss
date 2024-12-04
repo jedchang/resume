@@ -225,26 +225,30 @@
     }
   }
   // dialog
+  :deep(.el-overlay) {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
   :deep(.el-dialog) {
+    position: static; // 和 easy lightbox 一樣，close btn 在同位置
     text-align: left;
     padding: 30px 30px 45px 20px;
     background: #25292e;
     @include medium {
       padding: 20px 15px 20px 15px;
       margin: 25px auto;
-      overflow-y: scroll;
+      // overflow-y: scroll;
     }
     @include small {
       padding: 20px 15px 20px 15px;
-      margin: 3% auto;
+      margin: 12% auto;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       // overflow-y: scroll;
     }
     @include extraSmall {
-      padding: 20px 10px 20px 10px;
-      margin: 2% auto;
+      padding: 15px 10px 15px 10px;
+      margin: auto;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -254,60 +258,73 @@
       @include medium {
         position: fixed;
         width: 48px;
-        top: 45px;
-        right: 54px;
         height: 48px;
+        top: 25px;
+        right: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0 !important;
-        background: #383c3f;
+        background: transparent;
       }
       @include small {
         position: fixed;
         width: 48px;
-        top: 45px;
-        right: 54px;
         height: 48px;
+        top: 14px;
+        right: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0 !important;
-        background: #383c3f;
+        background: transparent;
       }
       @include extraSmall {
         position: fixed;
-        width: 48px;
-        height: 48px;
-        top: 4%;
-        // top: 45px;
-        right: 7%;
-        // right: 54px;
+        width: 28px;
+        height: 28px;
+        top: 1%;
+        right: 2%;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0 !important;
-        background: #383c3f;
+        background: transparent;
       }
     }
     .el-dialog__headerbtn {
-      top: 5px;
+      top: 34px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
       @include medium {
         top: 0;
+        right: 0;
       }
       @include small {
         top: 0;
+        right: 0;
       }
       @include extraSmall {
         top: 0;
+        right: 0;
+        width: 28px;
+        height: 28px;
       }
       &:hover {
         .el-dialog__close {
           color: $primaryColor;
+          opacity: 1;
         }
       }
       .el-dialog__close {
-        font-size: 22px;
+        font-size: 32px;
+        color: #fff;
+        opacity: 0.7;
+        transition: $setTransition;
+        @include extraSmall {
+          font-size: 24px;
+        }
       }
     }
     .info {
@@ -320,7 +337,7 @@
         margin-bottom: 30px;
       }
       @include extraSmall {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
       }
       h3 {
         font-size: 26px;
@@ -335,7 +352,8 @@
           font-size: 24px;
         }
         @include extraSmall {
-          font-size: 24px;
+          font-size: 22px;
+          padding: 5px 0 12px;
         }
       }
       p {
@@ -351,7 +369,7 @@
           padding: 10px 0 20px;
         }
         @include extraSmall {
-          padding: 10px 0 20px;
+          padding: 10px 0 16px;
         }
       }
       span.category {
@@ -372,6 +390,7 @@
         }
         @include extraSmall {
           margin-top: 0;
+          font-size: 13px;
         }
       }
       ul {
@@ -394,8 +413,8 @@
           margin-bottom: 20px;
         }
         @include extraSmall {
-          margin-top: 10px;
-          margin-bottom: 20px;
+          margin-top: 0px;
+          margin-bottom: 12px;
         }
         li {
           border-radius: 4px;
@@ -510,8 +529,6 @@
       }
       img.graphic {
         width: 437px;
-        // width: auto;
-        // width: calc(100% - 400px);
         @include extraSmall {
           width: 100%;
           height: auto;
@@ -521,6 +538,56 @@
   }
 }
 
-// :deep(.swiper-pagination-bullets.swiper-pagination-horizontal) {
-//   bottom: 0px;
-// }
+// easy lightbox
+:deep(.vel-modal) {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+:deep(.vel-img-wrapper) {
+  cursor: default !important;
+  @include small {
+    transform: translate(-50%, -50%) scale(1.8) !important;
+  }
+  @include extraSmall {
+    transform: translate(-50%, -50%) scale(1.8) !important;
+  }
+}
+:deep(.vel-btns-wrapper) {
+  .btn__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 58px;
+    right: 20px;
+    color: #fff;
+    opacity: 0.7;
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+    will-change: transform; // 以避免在元素發生改變時出現卡頓或者閃爍等的問題。
+    &:hover {
+      color: $primaryColor;
+    }
+    @include small {
+      top: 34px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @include extraSmall {
+      top: 3%;
+      right: 2%;
+      width: 28px;
+      height: 28px;
+      font-size: 24px;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
