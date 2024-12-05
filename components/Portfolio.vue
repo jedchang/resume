@@ -99,16 +99,27 @@
   import { webDevelopData } from '~/utils/webDevelop.js'
   import { uiDesignData } from '~/utils/uiDesign.js'
   import { graphicDesignData } from '~/utils/graphicDesign.js'
-  // import { portfolioData } from '@/utils/portfolioData.js'
 
-  // 合併資料
+  // 掃描 assets 資料夾中的圖片，使用 Vite 的批次導入功能import.meta.glob
+  const images = import.meta.glob('@/assets/images/portfolio/**/*', {
+    eager: true
+  })
+
+  // 根據圖片路徑取得圖片 URL
+  const getImageUrl = (path) => {
+    const imageKey = `/assets/${path}`
+    return images[imageKey]?.default || '' // '?.'可選串連運算子，如果圖片不存在，返回空字串
+  }
+  // 合併資料並處理圖片路徑
   const portfolioData = [
     ...webDevelopData,
     ...uiDesignData,
     ...graphicDesignData
-  ]
-  // console.log('portfolioData:', portfolioData)
-  // console.log('webDevelopData:', webDevelopData)
+  ].map((item) => ({
+    ...item,
+    thumbImg: getImageUrl(item.thumbImg), // 動態載入 thumbImg
+    detailsImg: item.detailsImg.map((detail) => getImageUrl(detail)) // 動態載入多張 detailsImg
+  }))
 
   // 設置總數計算
   const totals = ref({
@@ -117,6 +128,7 @@
     uiDesign: uiDesignData.length,
     graphicDesign: graphicDesignData.length
   })
+
   // 設置當前顯示筆數
   const counts = ref({
     all: 16,
@@ -124,9 +136,9 @@
     uiDesign: 16,
     graphicDesign: 16
   })
+
   // 判斷是否還有更多資料
   const hasMore = computed(() => {
-    // if (!totals.value || !counts.value) return {} // 加入檢查
     return {
       all: counts.value.all < totals.value.all,
       webDevelop: counts.value.webDevelop < totals.value.webDevelop,
@@ -145,9 +157,11 @@
     }
   })
 
+  const loading = ref(false)
+  const activeName = ref('all')
+
   // 加載更多方法
   const activeLoadMore = (category) => {
-    // if (!hasMore.value[category]) return // 如果沒有更多資料，直接返回
     loading.value = true
     setTimeout(() => {
       // 更新該分類的顯示筆數
@@ -165,31 +179,47 @@
     return portfolioData.slice(0, counts.value.all)
   })
   const limitedWebDevelop = computed(() => {
-    return webDevelopData.slice(0, counts.value.webDevelop)
+    // .filter() 逐一檢查 portfolioData 中的每一個 item
+    // .some() 判斷 webDevelopData 中是否存在與 portfolioData 的某一項匹配的 category
+    // .slice(0, counts.value.webDevelop) 限制返回資料的數量
+    return portfolioData
+      .filter((item) =>
+        webDevelopData.some((webItem) => webItem.category === item.category)
+      )
+      .slice(0, counts.value.webDevelop)
   })
   const limitedUiDesign = computed(() => {
-    return uiDesignData.slice(0, counts.value.uiDesign)
+    return portfolioData
+      .filter((item) =>
+        uiDesignData.some((uiItem) => uiItem.category === item.category)
+      )
+      .slice(0, counts.value.uiDesign)
   })
   const limitedGraphicDesign = computed(() => {
-    return graphicDesignData.slice(0, counts.value.graphicDesign)
+    return portfolioData
+      .filter((item) =>
+        graphicDesignData.some(
+          (graphicItem) => graphicItem.category === item.category
+        )
+      )
+      .slice(0, counts.value.graphicDesign)
   })
-  // console.log('limitedUiDesign:', limitedUiDesign.value)
 
-  const loading = ref(false)
-  const activeName = ref('all')
   // 計算並返回過濾後的資料
   const filteredPortfolio = computed(() => {
-    if (activeName.value === 'all') {
-      return limitedAll.value
-    } else if (activeName.value === 'web-develop') {
-      return limitedWebDevelop.value
-    } else if (activeName.value === 'ui-design') {
-      return limitedUiDesign.value
-    } else if (activeName.value === 'graphic-design') {
-      return limitedGraphicDesign.value
+    switch (activeName.value) {
+      case 'all':
+        return limitedAll.value
+      case 'web-develop':
+        return limitedWebDevelop.value
+      case 'ui-design':
+        return limitedUiDesign.value
+      case 'graphic-design':
+        return limitedGraphicDesign.value
+      default:
+        return []
     }
   })
-  // console.log('filteredPortfolio:', filteredPortfolio.value)
 
   // 在組件掛載時監聽事件
   onMounted(() => {

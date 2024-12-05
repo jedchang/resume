@@ -122,12 +122,6 @@
 
 <script setup>
   const props = defineProps({
-    selectedWorks: {
-      type: Array,
-      default() {
-        return []
-      }
-    },
     portfolioData: {
       type: Array,
       default: () => []
