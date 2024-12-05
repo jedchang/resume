@@ -100,10 +100,11 @@
           </div>
           <div class="col-12 col-md-12 col-lg-7 col-xl-7">
             <Swiper
-              v-if="currentItem.detailsImg.length > 1 && showSwiper"
               v-bind="swiperOptions"
               :initial-slide="0"
               :pagination="{ clickable: true }"
+              :preload-images="false"
+              :lazy="true"
             >
               <SwiperSlide
                 v-for="(img, index) in currentItem.detailsImg"
@@ -112,7 +113,6 @@
                 <img :src="img" alt="Portfolio Details" />
               </SwiperSlide>
             </Swiper>
-            <img v-else :src="currentItem.detailsImg" alt="Portfolio Details" />
           </div>
         </div>
       </div>
