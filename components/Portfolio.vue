@@ -100,26 +100,12 @@
   import { uiDesignData } from '~/utils/uiDesign.js'
   import { graphicDesignData } from '~/utils/graphicDesign.js'
 
-  // 掃描 assets 資料夾中的圖片，使用 Vite 的批次導入功能import.meta.glob
-  const images = import.meta.glob('@/assets/images/portfolio/**/*', {
-    eager: true
-  })
-
-  // 根據圖片路徑取得圖片 URL
-  const getImageUrl = (path) => {
-    const imageKey = `/assets/${path}`
-    return images[imageKey]?.default || '' // '?.'可選串連運算子，如果圖片不存在，返回空字串
-  }
-  // 合併資料並處理圖片路徑
+  // 合併資料
   const portfolioData = [
     ...webDevelopData,
     ...uiDesignData,
     ...graphicDesignData
-  ].map((item) => ({
-    ...item,
-    thumbImg: getImageUrl(item.thumbImg), // 動態載入 thumbImg
-    detailsImg: item.detailsImg.map((detail) => getImageUrl(detail)) // 動態載入多張 detailsImg
-  }))
+  ]
 
   // 設置總數計算
   const totals = ref({
@@ -179,31 +165,15 @@
     return portfolioData.slice(0, counts.value.all)
   })
   const limitedWebDevelop = computed(() => {
-    // .filter() 逐一檢查 portfolioData 中的每一個 item
-    // .some() 判斷 webDevelopData 中是否存在與 portfolioData 的某一項匹配的 category
-    // .slice(0, counts.value.webDevelop) 限制返回資料的數量
-    return portfolioData
-      .filter((item) =>
-        webDevelopData.some((webItem) => webItem.category === item.category)
-      )
-      .slice(0, counts.value.webDevelop)
+    return webDevelopData.slice(0, counts.value.webDevelop)
   })
   const limitedUiDesign = computed(() => {
-    return portfolioData
-      .filter((item) =>
-        uiDesignData.some((uiItem) => uiItem.category === item.category)
-      )
-      .slice(0, counts.value.uiDesign)
+    return uiDesignData.slice(0, counts.value.uiDesign)
   })
   const limitedGraphicDesign = computed(() => {
-    return portfolioData
-      .filter((item) =>
-        graphicDesignData.some(
-          (graphicItem) => graphicItem.category === item.category
-        )
-      )
-      .slice(0, counts.value.graphicDesign)
+    return graphicDesignData.slice(0, counts.value.graphicDesign)
   })
+  // console.log('limitedUiDesign:', limitedUiDesign.value)
 
   // 計算並返回過濾後的資料
   const filteredPortfolio = computed(() => {
