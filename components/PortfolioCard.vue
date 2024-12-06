@@ -101,10 +101,9 @@
           <div class="col-12 col-md-12 col-lg-7 col-xl-7">
             <Swiper
               v-bind="swiperOptions"
+              :key="swiperResetKey"
               :initial-slide="0"
               :pagination="{ clickable: true }"
-              :preload-images="false"
-              :lazy="true"
             >
               <SwiperSlide
                 v-for="(img, index) in currentItem.detailsImg"
@@ -160,12 +159,14 @@
   })
 
   // el-dialog 關閉後 Swiper 回到第一張
-  const showSwiper = ref(true)
+  const swiperReset = ref(0) // 這個變數用來控制 Swiper 顯示的初始幻燈片。
+  const swiperResetKey = ref(0) // 這個變數用來強制 Swiper 重新渲染。Vue 中動態改變組件的 key 屬性時，會將該組件銷毀並重新創建!
+
   const handleDialogClose = () => {
-    showSwiper.value = false
     setTimeout(() => {
-      showSwiper.value = true // 重新顯示 Swiper，重置 initialSlide
-    }, 800)
+      swiperReset.value = 0 // 確保在重新渲染後依然回到第一張
+      swiperResetKey.value++ // 增加 key 值來強制 Swiper 重新渲染
+    }, 100)
   }
 
   const swiperOptions = {
