@@ -51,23 +51,6 @@
               />
             </div>
           </div>
-          <!-- <div class="col-4">
-            <div class="intro-photo">
-              <div class="intro-circle">
-                <img src="~/assets/images/icon-rotate.svg" alt="Icon Rotate" />
-                <div class="icon">
-                  <Icon name="icon-park-solid:good-one"></Icon>
-                </div>
-              </div>
-              <div class="intro-grid"></div>
-              <figure>
-                <img
-                  src="~/assets/images/hero-profile.jpg"
-                  alt="Hero Profile"
-                />
-              </figure>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>
@@ -75,6 +58,9 @@
 </template>
 
 <script setup>
+  import { useActiveSectionStore } from '~/stores/activeSection.js'
+  const activeSectionStore = useActiveSectionStore()
+
   const scrollToSection = (sectionId) => {
     const section = document.querySelector(`#${sectionId}`)
     if (section) {
