@@ -123,9 +123,6 @@ section#home {
       margin-bottom: 40px;
       text-align: left;
       margin-top: 0;
-      // @include extraLarge {
-      //   font-size: 74px;
-      // }
       @include large {
         font-size: 68px;
       }
@@ -138,21 +135,14 @@ section#home {
       }
       @include extraSmall {
         font-size: 15.5vmin;
-        margin-bottom: 5%;
+        margin-bottom: 3%;
         font-weight: 700;
       }
       span.name {
         color: $primaryColor;
         display: inline-block;
-        // @include medium {
-        //   display: block;
-        // }
-        // @include small {
-        //   display: block;
-        // }
         @include extraSmall {
           display: block;
-          // display: inline-block;
         }
         span.dot {
           color: #ffffff;
@@ -169,7 +159,7 @@ section#home {
         padding: 5px 15px 5px 10px;
       }
       @include extraSmall {
-        margin: 0 0 10px;
+        margin: 0 0 6px;
         padding: 5px 13px 5px 8px;
         display: flex;
         justify-content: center;
@@ -224,38 +214,31 @@ section#home {
       }
     }
     h2 {
-      width: 80%;
+      width: 990px;
       opacity: 0.8;
       font-size: 20px;
       font-weight: 400;
       line-height: 1.6;
       font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
       text-align: left;
-      word-break: keep-all;
       padding-left: 7px;
-      @include extraLarge {
-        width: 100%;
-      }
       @include large {
-        width: 100%;
+        width: 900px;
         font-size: 18px;
       }
       @include medium {
         width: 100%;
         font-size: 16px;
-        word-break: normal;
         padding-left: 0;
       }
       @include small {
         width: 100%;
         font-size: 16px;
-        word-break: normal;
         padding-left: 0;
       }
       @include extraSmall {
         width: 100%;
         font-size: 3.75vmin;
-        word-break: normal;
         padding-left: 0;
         line-height: 1.8;
       }
