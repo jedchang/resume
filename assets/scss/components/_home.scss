@@ -5,7 +5,7 @@ section#home {
   background: url("@/assets/images/hero-bg.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
+  // background-attachment: fixed; // web 正常、IOS 失效沒底圖畫面
   @include medium {
     padding: 0 0 120px;
   }
