@@ -225,7 +225,7 @@
       date: '2005',
       tournament: [
         {
-          title: '全國網頁設計比賽',
+          title: '第六屆全國網頁設計比賽',
           ranking: '社會組‧第一名'
         }
       ]
@@ -234,12 +234,12 @@
       date: '2004',
       tournament: [
         {
-          title: '國防部網路心戰傳單賽',
-          ranking: '第一名'
-        },
-        {
           title: '第五屆全國網頁設計比賽',
           ranking: '人文獎'
+        },
+        {
+          title: '國防部網路心戰傳單設計比賽',
+          ranking: '第一名'
         },
         {
           title: '第四十屆國軍文藝金像獎',
@@ -280,18 +280,6 @@
       date: '2002',
       tournament: [
         {
-          title: '三久牧場商標徵選',
-          ranking: '第三名'
-        },
-        {
-          title: '交通安全宣導海報設計',
-          ranking: '第三名'
-        },
-        {
-          title: '91資訊月網站設計比賽',
-          ranking: '佳作'
-        },
-        {
           title: '四健會五十週年網頁設計',
           ranking: '最佳視覺獎'
         },
@@ -302,6 +290,18 @@
         {
           title: '空氣汙染防制網頁設計比賽',
           ranking: '佳作'
+        },
+        {
+          title: '91資訊月網站設計比賽',
+          ranking: '佳作'
+        },
+        {
+          title: '三久牧場商標徵選',
+          ranking: '第三名'
+        },
+        {
+          title: '交通安全宣導海報設計',
+          ranking: '第三名'
         },
         {
           title: '台灣農業策略聯盟基金會會徽',

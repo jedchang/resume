@@ -3,7 +3,7 @@ export const webDevelopData = [
     category: 'Web Develop',
     title: 'ESG 永續網',
     description:
-      '透過 Nuxt3 高效開發框架，結合 Element UI 提升使用者體驗，搭配 ECharts.js 精準呈現客製化數據圖表，實現直觀、美觀且功能強大的永續發展網站，讓企業價值與永續目標完美融合！',
+      '以 Nuxt 3 高效開發框架為基礎，結合 Element UI 提升使用者體驗，透過 RWD 設計與 ECharts.js 精準呈現客製化數據圖表，打造直觀、美觀且功能強大的永續發展網站。同時整合 Google CSE 自訂搜尋功能，完美融合企業價值與永續目標，彰顯品牌深度與創新力！',
     thumbImg: 'images/portfolio/thumb/web/thumb-web29.jpg',
     detailsImg: [
       'images/portfolio/details/web/details-web29_1.jpg',
@@ -11,8 +11,16 @@ export const webDevelopData = [
       'images/portfolio/details/web/details-web29_3.jpg',
       'images/portfolio/details/web/details-web29_4.jpg'
     ],
-    tag: ['HTML5', 'SCSS', 'Nuxt 3', 'Element UI', 'ECharts.js'],
-    url: 'https://www.ecs.com.tw/esg'
+    tag: [
+      'HTML5',
+      'SCSS',
+      'Nuxt 3',
+      'Google CSE',
+      'RWD',
+      'Element UI',
+      'ECharts.js'
+    ],
+    url: 'https://www.jedchang.com.tw/portfolio/ESG/'
   },
   {
     category: 'Web Develop',

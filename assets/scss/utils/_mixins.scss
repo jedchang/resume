@@ -1,3 +1,12 @@
+@mixin smallAndExtraSmall {
+  @include small {
+    @content;
+  }
+  @include extraSmall {
+    @content;
+  }
+}
+
 @mixin extraSmall {
   @media (max-width: 575px) {
     @content;
@@ -24,15 +33,6 @@
 
 @mixin extraLarge {
   @media (min-width: 1200px) and (max-width: 1399px) {
-    @content;
-  }
-}
-
-@mixin smallAndExtraSmall {
-  @include small {
-    @content;
-  }
-  @include extraSmall {
     @content;
   }
 }

@@ -25,10 +25,14 @@
               </h2>
               <div class="list-btn">
                 <div class="item">
-                  <button type="button" class="btn">
+                  <a
+                    href="https://www.jedchang.com.tw/download/resume.pdf"
+                    class="btn"
+                    target="_blank"
+                  >
                     <Icon name="mdi:tray-download"></Icon>
                     Download Resume
-                  </button>
+                  </a>
                 </div>
                 <div class="item">
                   <button

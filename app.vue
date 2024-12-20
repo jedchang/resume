@@ -58,6 +58,11 @@
       lang: 'zh-hant'
     },
     meta: [
+      { property: 'og:url', content: 'https://www.jedchang.com.tw/resume' },
+      {
+        property: 'og:image',
+        content: 'https://www.jedchang.com.tw/images/og-image.jpg'
+      },
       {
         name: 'description',
         content:
