@@ -44,7 +44,15 @@
       })
   }
 
+  const setVh = () => {
+    const vh = window.innerHeight * 0.01 // 計算 1% 的視窗高度
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  }
+
   onMounted(() => {
+    setVh()
+    window.addEventListener('resize', setVh) // 視窗大小變化時更新
+
     handlePreloader()
     // const timer = setInterval(() => {
     //   if (document.readyState === 'complete') {
@@ -57,6 +65,10 @@
     //     // handlePreloader()
     //   }
     // })
+  })
+
+  onUnmounted(() => {
+    window.removeEventListener('resize', setVh) // 組件卸載時清理事件監聽
   })
 
   useHead({
