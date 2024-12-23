@@ -36,7 +36,8 @@
       })
       .then(() => {
         setTimeout(() => {
-          preloader.style = 'display:none'
+          preloader.style = 'opacity:0'
+          // preloader.style = 'display:none'
           preloader.classList.remove('active')
           isActive.value = false
         }, 2000)
@@ -45,17 +46,17 @@
 
   onMounted(() => {
     handlePreloader()
-    const timer = setInterval(() => {
-      if (document.readyState === 'complete') {
-        window.scrollTo(0, 0)
-        clearInterval(timer)
+    // const timer = setInterval(() => {
+    //   if (document.readyState === 'complete') {
+    //     window.scrollTo(0, 0)
+    //     clearInterval(timer)
 
-        setTimeout(() => {
-          handlePreloader()
-        }, 1200)
-        // handlePreloader()
-      }
-    })
+    //     setTimeout(() => {
+    //       handlePreloader()
+    //     }, 1200)
+    //     // handlePreloader()
+    //   }
+    // })
   })
 
   useHead({
