@@ -25,7 +25,7 @@
   const handlePreloader = () => {
     const preloader = document.querySelector('.preloader')
 
-    preloader.style = 'display:flex'
+    // preloader.style = 'display:flex'
     Promise.resolve()
       .then(() => {
         setTimeout(() => {
@@ -44,6 +44,7 @@
   }
 
   onMounted(() => {
+    handlePreloader()
     const timer = setInterval(() => {
       if (document.readyState === 'complete') {
         window.scrollTo(0, 0)
