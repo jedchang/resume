@@ -26,22 +26,22 @@
     const preloader = document.querySelector('.preloader')
 
     // preloader.style = 'display:flex'
-    Promise.resolve()
-      .then(() => {
-        setTimeout(() => {
-          isActive.value = true
-          window.scrollTo(0, 0)
-          preloader.classList.add('active')
-        }, 1200)
-      })
-      .then(() => {
-        setTimeout(() => {
-          preloader.style = 'opacity:0'
-          // preloader.style = 'display:none'
-          preloader.classList.remove('active')
-          isActive.value = false
-        }, 2000)
-      })
+    // Promise.resolve()
+    //   .then(() => {
+    //     setTimeout(() => {
+    //       isActive.value = true
+    //       window.scrollTo(0, 0)
+    //       preloader.classList.add('active')
+    //     }, 1200)
+    //   })
+    //   .then(() => {
+    //     setTimeout(() => {
+    //       preloader.style = 'opacity:0'
+    //       // preloader.style = 'display:none'
+    //       preloader.classList.remove('active')
+    //       isActive.value = false
+    //     }, 2000)
+    //   })
   }
 
   const setVh = () => {
