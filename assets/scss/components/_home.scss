@@ -10,16 +10,12 @@ section#home {
     padding: 0 0 120px;
   }
   @include small {
-    padding: 0 0 120px;
+    padding: 6px 0;
   }
   @include extraSmall {
-    padding: 0 0 80px;
+    padding: 6px 0;
   }
 }
-// .intro-hero {
-//   height: 100vh;
-//   display: flex;
-// }
 
 .bg-overlay {
   background-color: rgba(23, 27, 34, 0.9); // $primaryBgColor2
@@ -103,15 +99,19 @@ section#home {
     }
     @include small {
       width: 100%;
-      height: calc(var(--vh) * 100);
+      height: auto;
+      // height: calc(var(--vh) * 100);
       justify-content: center;
-      padding-top: 60px; // Mobile navBar
+      // padding-top: 60px; // Mobile navBar
+      padding: 120px 0 80px;
     }
     @include extraSmall {
       width: 100%;
-      height: calc(var(--vh) * 100);
+      height: auto;
+      // height: calc(var(--vh) * 100);
       justify-content: center;
-      padding-top: 60px; // Mobile navBar
+      // padding-top: 60px; // Mobile navBar
+      padding: 120px 0 80px;
     }
     h1 {
       color: #fff;

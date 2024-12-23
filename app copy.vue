@@ -1,11 +1,10 @@
 <template>
-  <Overlay></Overlay>
-  <div class="preloader" :class="{ active: isActive }">
-    <div class="logo"><span class="special">Jed</span>Chang</div>
-    <div class="text">Loading</div>
-  </div>
-
   <main>
+    <Overlay></Overlay>
+    <div class="preloader" :class="{ active: isActive }">
+      <div class="logo"><span class="special">Jed</span>Chang</div>
+      <div class="text">Loading</div>
+    </div>
     <Navbar></Navbar>
     <MobileNavbar></MobileNavbar>
     <Home></Home>
@@ -15,8 +14,8 @@
     <About></About>
     <Contact></Contact>
     <Footer></Footer>
-    <ScrollTop></ScrollTop>
   </main>
+  <ScrollTop></ScrollTop>
 </template>
 
 <script setup>
@@ -24,19 +23,19 @@
 
   const handlePreloader = () => {
     const preloader = document.querySelector('.preloader')
-    // preloader.style = 'display:flex'
+    preloader.style = 'display:flex'
     Promise.resolve()
       .then(() => {
         setTimeout(() => {
           isActive.value = true
           window.scrollTo(0, 0)
-          preloader.classList.add('active')
+          // preloader.classList.add('active')
         }, 1200)
       })
       .then(() => {
         setTimeout(() => {
           preloader.style = 'display:none'
-          preloader.classList.remove('active')
+          // preloader.classList.remove('active')
           isActive.value = false
         }, 2000)
       })
@@ -47,11 +46,7 @@
       if (document.readyState === 'complete') {
         window.scrollTo(0, 0)
         clearInterval(timer)
-
-        setTimeout(() => {
-          handlePreloader()
-        }, 1200)
-        // handlePreloader()
+        handlePreloader()
       }
     })
   })

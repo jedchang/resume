@@ -73,17 +73,17 @@
     }
   }
 
-  onMounted(() => {
-    const setVh = () => {
-      const vh = window.innerHeight * 0.01
-      document.documentElement.style.setProperty('--vh', `${vh}px`)
-    }
-    // 初始化時設定
-    setVh()
+  // onMounted(() => {
+  //   const setVh = () => {
+  //     const vh = window.innerHeight * 0.01
+  //     document.documentElement.style.setProperty('--vh', `${vh}px`)
+  //   }
+  //   // 初始化時設定
+  //   setVh()
 
-    // 當視窗調整大小時重新設定
-    window.addEventListener('resize', setVh)
-  })
+  //   // 當視窗調整大小時重新設定
+  //   window.addEventListener('resize', setVh)
+  // })
 </script>
 
 <style lang="scss" scoped>
