@@ -24,7 +24,8 @@
 
   const handlePreloader = () => {
     const preloader = document.querySelector('.preloader')
-    // preloader.style = 'display:flex'
+
+    preloader.style = 'display:flex'
     Promise.resolve()
       .then(() => {
         setTimeout(() => {
