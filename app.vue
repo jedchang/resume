@@ -1,9 +1,9 @@
 <template>
   <Overlay></Overlay>
-  <div class="preloader" :class="{ active: isActive }">
+  <!-- <div class="preloader" :class="{ active: isActive }">
     <div class="logo"><span class="special">Jed</span>Chang</div>
     <div class="text">Loading</div>
-  </div>
+  </div> -->
   <main>
     <Navbar></Navbar>
     <MobileNavbar></MobileNavbar>
