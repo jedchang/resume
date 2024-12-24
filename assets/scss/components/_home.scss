@@ -36,9 +36,9 @@ section#home {
   display: flex;
   justify-content: center;
   align-items: center;
-  @include extraSmall {
-    height: 100%;
-  }
+  // @include extraSmall {
+  //   height: 100%;
+  // }
   .intro-main {
     display: flex;
     justify-content: flex-start;
@@ -52,12 +52,12 @@ section#home {
     }
     @include small {
       display: block;
-      padding: 0;
+      // padding: 0;
       // flex-direction: column;
     }
     @include extraSmall {
       display: block;
-      padding: 0;
+      // padding: 0;
       // flex-direction: column;
     }
   }
@@ -439,6 +439,12 @@ section#home {
     display: flex;
     justify-content: center;
     align-items: center;
+    @include small {
+      display: block;
+    }
+    @include extraSmall {
+      display: block;
+    }
     & > .row {
       display: flex;
       justify-content: space-around;
@@ -450,13 +456,13 @@ section#home {
       }
       @include small {
         // width: auto;
-        width: 100%;
-        display: block;
+        width: auto;
+        // display: block;
       }
       @include extraSmall {
         // width: auto;
-        width: 100%;
-        display: block;
+        width: auto;
+        // display: block;
       }
     }
   }
