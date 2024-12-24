@@ -40,15 +40,15 @@
   //     })
   // }
 
-  onMounted(() => {
-    const timer = setInterval(() => {
-      if (document.readyState === 'complete') {
-        window.scrollTo(0, 0)
-        clearInterval(timer)
-        // handlePreloader()
-      }
-    })
-  })
+  // onMounted(() => {
+  //   const timer = setInterval(() => {
+  //     if (document.readyState === 'complete') {
+  //       window.scrollTo(0, 0)
+  //       clearInterval(timer)
+  //       // handlePreloader()
+  //     }
+  //   })
+  // })
 
   useHead({
     title: 'Jed Chang',
