@@ -8,9 +8,9 @@
     <Navbar></Navbar>
     <MobileNavbar></MobileNavbar>
     <Home></Home>
-    <Portfolio></Portfolio>
+    <!-- <Portfolio></Portfolio>
     <Skills></Skills>
-    <Resume></Resume>
+    <Resume></Resume> -->
     <About></About>
     <Contact></Contact>
     <Footer></Footer>
