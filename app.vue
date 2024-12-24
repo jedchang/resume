@@ -4,9 +4,9 @@
     <div class="logo"><span class="special">Jed</span>Chang</div>
     <div class="text">Loading</div>
   </div>
+  <Navbar></Navbar>
+  <MobileNavbar></MobileNavbar>
   <main>
-    <Navbar></Navbar>
-    <MobileNavbar></MobileNavbar>
     <Home></Home>
     <!-- <Portfolio></Portfolio> -->
     <!-- <Skills></Skills>

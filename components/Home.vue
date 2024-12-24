@@ -4,7 +4,18 @@
     <div class="intro-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-12 intro-main">
+          <div class="col-12">
+            <h1>
+              Hello, I'm
+              <span class="name">Jed Chang<span class="dot">.</span></span>
+            </h1>
+            <h2>
+              我是一名前端工程師 <span class="and">&</span> UI/UX
+              設計師，專注於網頁開發與設計，致力於將視覺美感與互動體驗融入每一個細節。擅長將設計理念轉化為高效、流暢的前端頁面，提供優質的使用者體驗與視覺呈現。
+            </h2>
+          </div>
+
+          <!-- <div class="col-12 intro-main">
             <img
               class="ornament-drawn"
               src="~/assets/images/ornament-drawn.svg"
@@ -54,7 +65,7 @@
                 alt="Ornament"
               />
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
