@@ -1,9 +1,9 @@
 <template>
   <Overlay></Overlay>
-  <!-- <div class="preloader" :class="{ active: isActive }">
+  <div class="preloader" :class="{ active: isActive }">
     <div class="logo"><span class="special">Jed</span>Chang</div>
     <div class="text">Loading</div>
-  </div> -->
+  </div>
   <main>
     <Navbar></Navbar>
     <MobileNavbar></MobileNavbar>
@@ -41,6 +41,9 @@
   // }
 
   onMounted(() => {
+    setTimeout(() => {
+      isActive.value = true
+    }, 2000)
     // handlePreloader()
     // window.scrollTo(0, 0)
     // console.log('window.scrollTo(0, 0)')
