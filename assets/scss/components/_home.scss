@@ -106,13 +106,13 @@ section#home {
       width: 100%;
       height: calc(var(--vh) * 100);
       justify-content: center;
-      padding-top: 60px; // Mobile navBar
+      padding-top: calc(60px - 30px); // Mobile navBar
     }
     @include extraSmall {
       width: 100%;
       height: calc(var(--vh) * 100);
       justify-content: center;
-      padding-top: 60px; // Mobile navBar
+      padding-top: calc(60px - 30px); // Mobile navBar
     }
     h1 {
       color: #fff;
