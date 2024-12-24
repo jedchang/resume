@@ -5,8 +5,8 @@
     <div class="text">Loading</div>
   </div> -->
   <main>
-    <Navbar></Navbar>
-    <MobileNavbar></MobileNavbar>
+    <!-- <Navbar></Navbar>
+    <MobileNavbar></MobileNavbar> -->
     <Home></Home>
     <Portfolio></Portfolio>
     <Skills></Skills>

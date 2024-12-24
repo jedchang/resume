@@ -51,10 +51,14 @@ section#home {
       flex-direction: column;
     }
     @include small {
-      flex-direction: column;
+      display: block;
+      padding: 0;
+      // flex-direction: column;
     }
     @include extraSmall {
-      flex-direction: column;
+      display: block;
+      padding: 0;
+      // flex-direction: column;
     }
   }
   img.ornament-drawn {
@@ -445,10 +449,14 @@ section#home {
         width: auto;
       }
       @include small {
-        width: auto;
+        // width: auto;
+        width: 100%;
+        display: block;
       }
       @include extraSmall {
-        width: auto;
+        // width: auto;
+        width: 100%;
+        display: block;
       }
     }
   }
