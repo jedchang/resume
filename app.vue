@@ -8,11 +8,11 @@
   <MobileNavbar></MobileNavbar>
   <main>
     <Home></Home>
-    <!-- <Portfolio></Portfolio> -->
-    <!-- <Skills></Skills>
-    <Resume></Resume> -->
+    <Portfolio></Portfolio>
+    <Skills></Skills>
+    <Resume></Resume>
     <About></About>
-    <!-- <Contact></Contact> -->
+    <Contact></Contact>
     <Footer></Footer>
   </main>
   <ScrollTop></ScrollTop>
@@ -22,41 +22,38 @@
   const runtimeConfig = useRuntimeConfig()
   const isActive = ref(false)
 
-  // const handlePreloader = () => {
-  //   const preloader = document.querySelector('.preloader')
-  //   preloader.style = 'display:flex'
-  //   Promise.resolve()
-  //     .then(() => {
-  //       setTimeout(() => {
-  //         isActive.value = true
-  //         window.scrollTo(0, 0)
-  //       }, 1200)
-  //     })
-  //     .then(() => {
-  //       setTimeout(() => {
-  //         preloader.style = 'display:none'
-  //         isActive.value = false
-  //       }, 2000)
-  //     })
-  // }
+  const handlePreloader = () => {
+    const preloader = document.querySelector('.preloader')
+    preloader.style = 'display:flex'
+    Promise.resolve()
+      .then(() => {
+        setTimeout(() => {
+          isActive.value = true
+          window.scrollTo(0, 0)
+        }, 1200)
+      })
+      .then(() => {
+        setTimeout(() => {
+          preloader.style = 'display:none'
+          isActive.value = false
+        }, 2000)
+      })
+  }
 
-  onMounted(() => {
-    setTimeout(() => {
-      isActive.value = true
-    }, 2000)
-    // handlePreloader()
-    // window.scrollTo(0, 0)
-    // console.log('window.scrollTo(0, 0)')
-    // const timer = setInterval(() => {
-    //   if (document.readyState === 'complete') {
-    //     window.scrollTo(0, 0)
-    //     clearInterval(timer)
-    //     console.log('complete')
-    //     // handlePreloader()
-    //   }
-    //   console.log('!== complete')
-    // })
+  onBeforeMount(() => {
+    window.scrollTo(0, 0)
+    handlePreloader()
   })
+
+  // onMounted(() => {
+  //   const timer = setInterval(() => {
+  //     if (document.readyState === 'complete') {
+  //       window.scrollTo(0, 0)
+  //       clearInterval(timer)
+  //       handlePreloader()
+  //     }
+  //   })
+  // })
 
   useHead({
     title: 'Jed Chang',
