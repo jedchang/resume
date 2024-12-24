@@ -7,12 +7,12 @@
   <main>
     <Navbar></Navbar>
     <MobileNavbar></MobileNavbar>
-    <Home></Home>
-    <!-- <Portfolio></Portfolio>
-    <Skills></Skills>
+    <!-- <Home></Home> -->
+    <!-- <Portfolio></Portfolio> -->
+    <!-- <Skills></Skills>
     <Resume></Resume> -->
     <About></About>
-    <Contact></Contact>
+    <!-- <Contact></Contact> -->
     <Footer></Footer>
   </main>
   <ScrollTop></ScrollTop>
