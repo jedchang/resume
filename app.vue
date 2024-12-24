@@ -1,10 +1,9 @@
 <template>
-  <!-- <Overlay></Overlay> -->
-  <div class="preloader" :class="{ active: isActive }">
+  <Overlay></Overlay>
+  <!-- <div class="preloader" :class="{ active: isActive }">
     <div class="logo"><span class="special">Jed</span>Chang</div>
     <div class="text">Loading</div>
-  </div>
-
+  </div> -->
   <main>
     <Navbar></Navbar>
     <MobileNavbar></MobileNavbar>
@@ -15,60 +14,40 @@
     <About></About>
     <Contact></Contact>
     <Footer></Footer>
-    <ScrollTop></ScrollTop>
   </main>
+  <ScrollTop></ScrollTop>
 </template>
 
 <script setup>
+  const runtimeConfig = useRuntimeConfig()
   const isActive = ref(false)
 
-  const handlePreloader = () => {
-    const preloader = document.querySelector('.preloader')
-
-    // preloader.style = 'display:flex'
-    // Promise.resolve()
-    //   .then(() => {
-    //     setTimeout(() => {
-    //       isActive.value = true
-    //       window.scrollTo(0, 0)
-    //       preloader.classList.add('active')
-    //     }, 1200)
-    //   })
-    //   .then(() => {
-    //     setTimeout(() => {
-    //       preloader.style = 'opacity:0'
-    //       // preloader.style = 'display:none'
-    //       preloader.classList.remove('active')
-    //       isActive.value = false
-    //     }, 2000)
-    //   })
-  }
-
-  const setVh = () => {
-    const vh = window.innerHeight * 0.01 // 計算 1% 的視窗高度
-    document.documentElement.style.setProperty('--vh', `${vh}px`)
-  }
+  // const handlePreloader = () => {
+  //   const preloader = document.querySelector('.preloader')
+  //   preloader.style = 'display:flex'
+  //   Promise.resolve()
+  //     .then(() => {
+  //       setTimeout(() => {
+  //         isActive.value = true
+  //         window.scrollTo(0, 0)
+  //       }, 1200)
+  //     })
+  //     .then(() => {
+  //       setTimeout(() => {
+  //         preloader.style = 'display:none'
+  //         isActive.value = false
+  //       }, 2000)
+  //     })
+  // }
 
   onMounted(() => {
-    setVh()
-    window.addEventListener('resize', setVh) // 視窗大小變化時更新
-
-    handlePreloader()
-    // const timer = setInterval(() => {
-    //   if (document.readyState === 'complete') {
-    //     window.scrollTo(0, 0)
-    //     clearInterval(timer)
-
-    //     setTimeout(() => {
-    //       handlePreloader()
-    //     }, 1200)
-    //     // handlePreloader()
-    //   }
-    // })
-  })
-
-  onUnmounted(() => {
-    window.removeEventListener('resize', setVh) // 組件卸載時清理事件監聽
+    const timer = setInterval(() => {
+      if (document.readyState === 'complete') {
+        window.scrollTo(0, 0)
+        clearInterval(timer)
+        // handlePreloader()
+      }
+    })
   })
 
   useHead({
@@ -81,7 +60,7 @@
       { property: 'og:url', content: 'https://www.jedchang.com.tw/resume' },
       {
         property: 'og:image',
-        content: 'https://www.jedchang.com.tw/images/og-image.jpg'
+        content: `${runtimeConfig.public.baseURL}/images/og-image.jpg`
       },
       {
         name: 'description',

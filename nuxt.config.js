@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/resume/' : '/',
-    buildAssetsDir: '/static/'
+    baseURL: process.env.NODE_ENV === 'production' ? '/resume/' : '/'
+    // buildAssetsDir: '/public/'
   },
   devServer: {
     host: process.env.HOST || 'localhost',
@@ -12,6 +12,15 @@ export default defineNuxtConfig({
     https: {
       key: 'localhost-key.pem',
       cert: 'localhost.pem'
+    }
+  },
+  runtimeConfig: {
+    public: {
+      // og:image
+      baseURL:
+        process.env.NODE_ENV === 'production'
+          ? process.env.BASE_URL || 'https://www.jedchang.com.tw/resume'
+          : `https://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`
     }
   },
   css: ['~/assets/scss/main.scss', 'element-plus/dist/index.css'],

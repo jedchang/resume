@@ -2,6 +2,7 @@ section#home {
   position: relative;
   padding: 0;
   width: 100%;
+  height: 100%; // 瀏覽器高度才能與 --vh 一樣
   background: url("@/assets/images/hero-bg.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
@@ -9,13 +10,17 @@ section#home {
   @include medium {
     padding: 0 0 120px;
   }
-  @include small {
-    padding: 6px 0;
-  }
-  @include extraSmall {
-    padding: 6px 0;
-  }
+  // @include small {
+  //   padding: 0 0 120px;
+  // }
+  // @include extraSmall {
+  //   padding: 0 0 80px;
+  // }
 }
+// .intro-hero {
+//   height: 100vh;
+//   display: flex;
+// }
 
 .bg-overlay {
   background-color: rgba(23, 27, 34, 0.9); // $primaryBgColor2
@@ -99,19 +104,15 @@ section#home {
     }
     @include small {
       width: 100%;
-      height: auto;
-      // height: calc(var(--vh) * 100);
+      height: calc(var(--vh) * 100);
       justify-content: center;
-      // padding-top: 60px; // Mobile navBar
-      padding: 120px 0 80px;
+      padding-top: 60px; // Mobile navBar
     }
     @include extraSmall {
       width: 100%;
-      height: auto;
-      // height: calc(var(--vh) * 100);
+      height: calc(var(--vh) * 100);
       justify-content: center;
-      // padding-top: 60px; // Mobile navBar
-      padding: 120px 0 80px;
+      padding-top: 60px; // Mobile navBar
     }
     h1 {
       color: #fff;
@@ -253,6 +254,7 @@ section#home {
         width: 100%;
         margin-top: 35px;
         justify-content: flex-start;
+        flex-wrap: wrap;
       }
       @include small {
         width: 100%;
@@ -268,6 +270,10 @@ section#home {
       }
       .item {
         display: flex;
+        @include medium {
+          order: 2;
+          width: 46%;
+        }
         @include small {
           order: 2;
           width: 36%;
@@ -297,7 +303,8 @@ section#home {
             margin-left: 50px;
           }
           @include medium {
-            margin-left: 35px;
+            margin-left: 0;
+            margin-top: 30px;
             width: 100%;
           }
           @include small {
@@ -319,7 +326,7 @@ section#home {
         @include medium {
           font-size: 14px;
           padding: 15px 25px;
-          width: 250px;
+          width: 100%;
         }
         @include small {
           font-size: 14px;
@@ -337,7 +344,7 @@ section#home {
         @include medium {
           font-size: 14px;
           padding: 15px 25px;
-          width: 160px;
+          width: 100%;
         }
         @include small {
           font-size: 14px;
@@ -366,7 +373,8 @@ section#home {
         left: 17%;
       }
       @include medium {
-        left: 123px;
+        left: 273px;
+        bottom: -15px;
       }
       @include small {
         display: none;

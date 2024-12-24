@@ -6,6 +6,12 @@
   width: 202px;
   transition: all 1.5s ease;
   z-index: 2;
+  @include medium {
+    width: 35%;
+  }
+  @include small {
+    width: 61%;
+  }
   @include extraSmall {
     width: 100%;
   }
@@ -21,10 +27,12 @@
     justify-content: space-between;
     align-items: center;
     @include medium {
-      width: 185px;
+      width: 100%;
+      justify-content: space-around;
     }
     @include small {
-      width: 180px;
+      width: 100%;
+      justify-content: space-around;
     }
     @include extraSmall {
       width: 100%;
